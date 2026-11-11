@@ -102,4 +102,4 @@ python3 scripts/build-report.py
 
 `analyze.py` 从测量JTL和监控序列生成论文图表。`generate-html.py` 将原始毫秒时间戳转换为上海时区日期的临时展示副本，输出至忽略目录 `work/html/`；原始JTL保持不变。JMeter百分位统计窗口设为200万条，大于单次正式测量的采样数。报告中的自绘百分位使用完整正式窗口数据计算。
 
-本次报告修订采用英文署名 CHIKIN WEN，报告文件名统一为“实验四实验报告”。已补拍两库的Edge Network接口图和12组JMeter原生汇总页；正文新增读写200线程的APDEX、请求饼图及Statistics截图。数据库图4—7等待Ghostty终端原图替换，[截图命令已实测](docs/Ghostty截图操作.md)。
+本次报告修订采用英文署名 CHIKIN WEN，报告文件名统一为“实验四实验报告”。已补拍两库的Edge Network接口图和12组JMeter原生汇总页；正文新增读写200线程的APDEX、请求饼图及Statistics截图。图4—7已替换为作者提供的5张Ghostty真实终端原图，原图、裁切坐标与校验值见 `screenshots/ghostty-manifest.json`。[截图复现命令](docs/Ghostty截图操作.md)。

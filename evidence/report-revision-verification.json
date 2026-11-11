@@ -4,79 +4,36 @@
   "pages": 20,
   "figures": 28,
   "tables": 7,
-  "render_directory": "work/render-13",
+  "render_directory": "work/render-15",
   "reviewed_changed_pages": [
-    1,
-    4,
-    5,
-    18,
-    19
+    6,
+    7
   ],
-  "unchanged_body_page_pairs": [
-    [
-      2,
-      2
-    ],
-    [
-      3,
-      3
-    ],
-    [
-      5,
-      6
-    ],
-    [
-      6,
-      7
-    ],
-    [
-      7,
-      8
-    ],
-    [
-      8,
-      9
-    ],
-    [
-      9,
-      10
-    ],
-    [
-      10,
-      11
-    ],
-    [
-      11,
-      12
-    ],
-    [
-      12,
-      13
-    ],
-    [
-      13,
-      14
-    ],
-    [
-      14,
-      15
-    ],
-    [
-      15,
-      16
-    ],
-    [
-      16,
-      17
-    ],
-    [
-      17,
-      20
-    ]
-  ],
-  "unchanged_comparison": "Pixel-identical above y=1850 to previously reviewed render-12 pages; page numbers updated",
+  "unchanged_comparison": "Pixel-identical to previously reviewed render-13 pages",
   "contact_sheets_reviewed_pages": "1-20",
   "database_capture_commands_verified": true,
-  "database_state_restored": "MongoDB and application running; MySQL stopped",
-  "pending": "Four Ghostty screenshots from author"
+  "database_state_restored": "MongoDB and application running; health UP; MySQL stopped",
+  "pending": null,
+  "unchanged_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "ghostty_original_screenshots": 5,
+  "ghostty_panels_verified": true
 }

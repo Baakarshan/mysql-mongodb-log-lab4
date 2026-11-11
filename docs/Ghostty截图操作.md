@@ -42,4 +42,4 @@ ssh root@120.46.176.79 'docker start lab4-app'
 
 记录截图会显示当前总数和补拍接口产生的演示记录数。MySQL正式末次运行后为765118条，MongoDB为766808条；本次Edge补拍各增加1条，因此当前总数应为765119、766809。原始正式测量及其记录核验保持原有数值。
 
-把四张截图发回当前聊天，标明MySQL记录、MySQL索引、MongoDB记录、MongoDB索引。最终正文按内容更新图号。
+作者已提供5张Ghostty原图，其中MongoDB执行计划分为上下两张。文件映射、原图SHA256及正文裁切坐标保存在 `screenshots/ghostty-manifest.json`，对应正文图4—7。截图后已恢复MongoDB与应用，健康检查为UP。

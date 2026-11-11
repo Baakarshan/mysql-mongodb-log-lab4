@@ -1,0 +1,165 @@
+{
+  "source": "Author-provided Ghostty screenshots, 2026-11-11 UTC",
+  "originals": [
+    {
+      "file": "mysql-records-ghostty-native.png",
+      "sha256": "186783603ab7d966cf4ac06e6d0c61d6ba20c91e10b8de1c072e68090b4ad44e",
+      "size": [
+        3138,
+        674
+      ]
+    },
+    {
+      "file": "mongo-records-ghostty-native.png",
+      "sha256": "ef62b680e5851fd26a19a71601b81ab3dce870259f19111d2872ea6c6c31e262",
+      "size": [
+        2352,
+        1306
+      ]
+    },
+    {
+      "file": "mongo-index-upper-ghostty-native.png",
+      "sha256": "49b1149d273a208d9a57112179dc792de99ce8f343fe35d738510c07405ddc9a",
+      "size": [
+        1606,
+        1956
+      ]
+    },
+    {
+      "file": "mongo-index-lower-ghostty-native.png",
+      "sha256": "8847e6ee018c3b3088bfd30d052a957a926382029d8c95a410eb4352990e7783",
+      "size": [
+        1378,
+        1194
+      ]
+    },
+    {
+      "file": "mysql-index-ghostty-native.png",
+      "sha256": "9e158f23fb804b4b9f6ded54233653d00a56763c16b5cb769fc2df1486d2958c",
+      "size": [
+        3200,
+        762
+      ]
+    }
+  ],
+  "report_panels": [
+    {
+      "file": "mysql-records-ghostty-report.png",
+      "sha256": "5d02a1641632331b4f2f78fe5a81de7483c72a3861443eb5e23cf54ffd7ee3eb",
+      "layout": "vertical",
+      "gap": 24,
+      "parts": [
+        {
+          "source": "mysql-records-ghostty-native.png",
+          "rect": [
+            0,
+            100,
+            1600,
+            435
+          ]
+        },
+        {
+          "source": "mysql-records-ghostty-native.png",
+          "rect": [
+            0,
+            435,
+            1265,
+            607
+          ]
+        },
+        {
+          "source": "mysql-records-ghostty-native.png",
+          "rect": [
+            1265,
+            435,
+            3138,
+            607
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mongo-records-ghostty-report.png",
+      "sha256": "4b4fc12d06ecc30ca2c731558598ca768f1998b061cce3b986baf76680217465",
+      "layout": "vertical",
+      "gap": 24,
+      "parts": [
+        {
+          "source": "mongo-records-ghostty-native.png",
+          "rect": [
+            0,
+            95,
+            2352,
+            1240
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mysql-index-ghostty-report.png",
+      "sha256": "9494ecd7243b04a1540e281552011932d1f1615f0c212e9d3022fe72e2de1b1f",
+      "layout": "vertical",
+      "gap": 24,
+      "parts": [
+        {
+          "source": "mysql-index-ghostty-native.png",
+          "rect": [
+            0,
+            90,
+            1600,
+            200
+          ]
+        },
+        {
+          "source": "mysql-index-ghostty-native.png",
+          "rect": [
+            0,
+            205,
+            1420,
+            500
+          ]
+        },
+        {
+          "source": "mysql-index-ghostty-native.png",
+          "rect": [
+            0,
+            510,
+            2540,
+            680
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mongo-index-ghostty-report.png",
+      "sha256": "10cda000b794610cc86a93d464750c5a04d6ec6a2ae2a43e9a2a09d73b25f335",
+      "layout": "horizontal",
+      "gap": 24,
+      "parts": [
+        {
+          "source": "mongo-index-upper-ghostty-native.png",
+          "rect": [
+            0,
+            195,
+            720,
+            1300
+          ]
+        },
+        {
+          "source": "mongo-index-lower-ghostty-native.png",
+          "rect": [
+            0,
+            0,
+            1378,
+            1150
+          ]
+        }
+      ]
+    }
+  ],
+  "record_counts": {
+    "mysql": 765119,
+    "mongo": 766809
+  },
+  "demo_records_per_backend": 1
+}

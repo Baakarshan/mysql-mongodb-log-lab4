@@ -11,4 +11,4 @@
 
 测量数据见 `../results/`，实际页面原图及裁切关系见 `../screenshots/`，环境和接口验收记录见 `../evidence/`。运行 `python3 scripts/build-report.py` 可重建Word和Markdown；PDF由Word导出。
 
-本次修订已替换图2、图3为Edge Network原图，并补入JMeter原生饼图、APDEX与Statistics表格。图4—7目前沿用上一版数据库记录展示，待收到作者的Ghostty终端原图后替换。操作命令见[Ghostty截图操作](../docs/Ghostty截图操作.md)。
+本次修订已替换图2、图3为Edge Network原图，并补入JMeter原生饼图、APDEX与Statistics表格。图4—7已使用作者提供的Ghostty终端原图，包含两库实际记录、联合索引和执行计划。操作命令见[Ghostty截图操作](../docs/Ghostty截图操作.md)。

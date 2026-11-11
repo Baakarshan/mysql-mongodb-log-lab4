@@ -41,4 +41,8 @@ for row in recapture['requests']:
 for b in ['mysql','mongo']:
  for part in ['post-headers','post-payload','post-response','get-headers','get-response','get-preview']:
   assert (R/'screenshots'/f'{b}-api-{part}-native.png').is_file()
-print(json.dumps({'verified':True,'jmeter_summary_screenshots':len(summary_shots),'edge_network_screenshots':12,'runs':72,'measurement_samples':count,'measurement_errors':errors,'native_jtl_files':72,'jmeter_page_screenshots':len(shots),'api_checks':28},indent=2))
+ghostty=json.loads((R/'screenshots/ghostty-manifest.json').read_text())
+assert len(ghostty['originals'])==5 and len(ghostty['report_panels'])==4
+for item in ghostty['originals']+ghostty['report_panels']:
+ assert hashlib.sha256((R/'screenshots'/item['file']).read_bytes()).hexdigest()==item['sha256']
+print(json.dumps({'verified':True,'ghostty_original_screenshots':5,'ghostty_report_panels':4,'jmeter_summary_screenshots':len(summary_shots),'edge_network_screenshots':12,'runs':72,'measurement_samples':count,'measurement_errors':errors,'native_jtl_files':72,'jmeter_page_screenshots':len(shots),'api_checks':28},indent=2))

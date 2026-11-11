@@ -31,4 +31,4 @@
 
 接口补拍通过本机HTTP请求客户端、转发器及SSH隧道连接Node2，源地址显示为127.0.0.1:18081。请求客户端只负责发起真实请求；报告使用Network面板截图。四次请求与响应保存在`evidence/interface-recapture.json`，两库各增加1条演示日志。正式性能测试继续使用Compiler经内网直连Node2的原有JTL。
 
-旧版`*-api.jpg`及对应`*-api-report.jpg`保留作历史材料，新版正文已使用Network原图。数据库图4—7当前沿用旧版展示，收到Ghostty终端原图后替换；操作见`docs/Ghostty截图操作.md`。
+旧版`*-api.jpg`及对应`*-api-report.jpg`保留作历史材料，新版正文已使用Network原图。数据库图4—7已使用5张`*-ghostty-native.png`原图；`ghostty-manifest.json`保存校验值、裁切坐标及拼接顺序。MySQL宽记录表按列上下展示，MongoDB执行计划按原输出顺序左右展示；全部文字直接来自原图。`scripts/prepare-ghostty.py`可重建正文图片。

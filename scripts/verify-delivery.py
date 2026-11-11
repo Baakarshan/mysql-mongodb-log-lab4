@@ -25,7 +25,20 @@ for b in ['mysql','mongo']:
  smoke=json.loads((R/'evidence'/f'{b}-smoke.json').read_text())
  assert smoke['passed'] and len(smoke['checks'])==14 and smoke['seed_query_count']==2497
 for ext in ['pdf','docx']:
- p=R/'report'/f'实验四实验报告-温子健.{ext}';assert p.is_file() and p.stat().st_size>100000
+ p=R/'report'/f'实验四实验报告.{ext}';assert p.is_file() and p.stat().st_size>100000
 shots=json.loads((R/'screenshots/jmeter-manifest.json').read_text())
 assert len(shots)==24 and all((R/'screenshots'/x['file']).is_file() for x in shots)
-print(json.dumps({'verified':True,'runs':72,'measurement_samples':count,'measurement_errors':errors,'native_jtl_files':72,'jmeter_page_screenshots':len(shots),'api_checks':28},indent=2))
+summary_shots=json.loads((R/'screenshots/jmeter-summary-manifest.json').read_text())
+assert len(summary_shots)==12
+for shot in summary_shots:
+ p=R/'screenshots'/shot['file']
+ assert hashlib.sha256(p.read_bytes()).hexdigest()==shot['sha256']
+ assert (R/'screenshots'/shot['report_file']).is_file()
+recapture=json.loads((R/'evidence/interface-recapture.json').read_text())
+assert len(recapture['requests'])==4 and recapture['added_demo_records']=={'mysql':1,'mongo':1}
+for row in recapture['requests']:
+ assert row['status']==(201 if row['method']=='POST' else 200)
+for b in ['mysql','mongo']:
+ for part in ['post-headers','post-payload','post-response','get-headers','get-response','get-preview']:
+  assert (R/'screenshots'/f'{b}-api-{part}-native.png').is_file()
+print(json.dumps({'verified':True,'jmeter_summary_screenshots':len(summary_shots),'edge_network_screenshots':12,'runs':72,'measurement_samples':count,'measurement_errors':errors,'native_jtl_files':72,'jmeter_page_screenshots':len(shots),'api_checks':28},indent=2))

@@ -1,0 +1,278 @@
+[
+  {
+    "run": "mongo-read-t1-r1",
+    "source": "work/html/mongo-read-t1-r1/index.html",
+    "file": "jmeter-mongo-read-t1-r1-summary-native.png",
+    "report_file": "jmeter-mongo-read-t1-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "e4d0822120b481edb8f1678dcf82496d617f61ba29af65de0bae467b41beef26",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mongo-read-t200-r1",
+    "source": "work/html/mongo-read-t200-r1/index.html",
+    "file": "jmeter-mongo-read-t200-r1-summary-native.png",
+    "report_file": "jmeter-mongo-read-t200-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "c9fa5917ae0f3159f62c73cd71ffcd2c8afcb185e4a0c605e0f1c9c18abbc8d0",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mongo-read-t25-r1",
+    "source": "work/html/mongo-read-t25-r1/index.html",
+    "file": "jmeter-mongo-read-t25-r1-summary-native.png",
+    "report_file": "jmeter-mongo-read-t25-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "34f9d7c6aa9906bd12bcdec8a6070e7e6c122db811c9a54fd714f3a774799d88",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mongo-write-t1-r1",
+    "source": "work/html/mongo-write-t1-r1/index.html",
+    "file": "jmeter-mongo-write-t1-r1-summary-native.png",
+    "report_file": "jmeter-mongo-write-t1-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "238cb4518d78af9d719b88212d6889d189e0698b276520e94183167b5ba8bcc8",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mongo-write-t200-r1",
+    "source": "work/html/mongo-write-t200-r1/index.html",
+    "file": "jmeter-mongo-write-t200-r1-summary-native.png",
+    "report_file": "jmeter-mongo-write-t200-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "18f7665b6e87fb76789d85e2d457f37246c5561f9bdc1f34e69dea84a5315d17",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mongo-write-t50-r1",
+    "source": "work/html/mongo-write-t50-r1/index.html",
+    "file": "jmeter-mongo-write-t50-r1-summary-native.png",
+    "report_file": "jmeter-mongo-write-t50-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "4cfcf85cf8615811cbcfcb55bba21aa4a8199dd34e1ba46b65e012ca71b361b0",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-read-t1-r1",
+    "source": "work/html/mysql-read-t1-r1/index.html",
+    "file": "jmeter-mysql-read-t1-r1-summary-native.png",
+    "report_file": "jmeter-mysql-read-t1-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "77f2cac5ca8dfda49635fa0da543f01817da32e54e4b17eb636a0cbad9c37ad0",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-read-t200-r1",
+    "source": "work/html/mysql-read-t200-r1/index.html",
+    "file": "jmeter-mysql-read-t200-r1-summary-native.png",
+    "report_file": "jmeter-mysql-read-t200-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "700b9c87963946c3852803b856b0eb17ab99280980b5adcf46128d1ebc269530",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-read-t25-r1",
+    "source": "work/html/mysql-read-t25-r1/index.html",
+    "file": "jmeter-mysql-read-t25-r1-summary-native.png",
+    "report_file": "jmeter-mysql-read-t25-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "7c6ed0a5bda60ae9ac114ddf3e754251b7213db1c9ccdd819c8540b978f657be",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-write-t1-r1",
+    "source": "work/html/mysql-write-t1-r1/index.html",
+    "file": "jmeter-mysql-write-t1-r1-summary-native.png",
+    "report_file": "jmeter-mysql-write-t1-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "52c10bfe3136f475147a9d81d32b0b19498395c4f2dcd0b1999f2dfdd2c28cec",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-write-t200-r1",
+    "source": "work/html/mysql-write-t200-r1/index.html",
+    "file": "jmeter-mysql-write-t200-r1-summary-native.png",
+    "report_file": "jmeter-mysql-write-t200-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "500343e928ed65fcaa8ca7cacdb0e42da8001ec3bdb0d53cb3c684fb72d1fcd5",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  },
+  {
+    "run": "mysql-write-t50-r1",
+    "source": "work/html/mysql-write-t50-r1/index.html",
+    "file": "jmeter-mysql-write-t50-r1-summary-native.png",
+    "report_file": "jmeter-mysql-write-t50-r1-summary-report.jpg",
+    "crop_boxes": [
+      [
+        540,
+        850,
+        4028,
+        1415
+      ],
+      [
+        540,
+        1500,
+        4028,
+        1960
+      ]
+    ],
+    "sha256": "6d11d43896ce5954edcb1e508281b17174d7bcbc4fbb18ee851d78e010e8f279",
+    "apdex_t_ms": 500,
+    "apdex_f_ms": 1500
+  }
+]

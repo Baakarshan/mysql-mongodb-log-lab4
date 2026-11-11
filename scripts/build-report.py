@@ -89,7 +89,7 @@ para('MySQL 与 MongoDB 日志读写性能对比','Title',False);para('温子健
 mr=d('mysql','read',200);gr=d('mongo','read',200);mw=d('mysql','write',200);gw=d('mongo','write',200)
 abstract=f'本文基于统一日志模型和REST接口，比较Spring Data JPA/MySQL与Spring Data MongoDB/MongoDB的日志读写性能。实验使用四台云主机分两轮部署，预置10万条日志，在1至200线程下测试查询与单条写入，每档重复3次。200线程时，两库查询吞吐量分别为{num(mr["throughput_rps"])}、{num(gr["throughput_rps"])}次/秒，写入吞吐量分别为{num(mw["throughput_rps"])}、{num(gw["throughput_rps"])}次/秒。72次正式测量共记录{audit["measurement_samples"]:,}次请求、{audit["measurement_errors"]:,}次错误。结合响应时间分布与资源监测，分析增加并发的吞吐收益和延迟变化。'
 p=para('摘　要：'+abstract,indent=False);para('关键词：MySQL；MongoDB；Spring Data JPA；JMeter；Prometheus',indent=False)
-p=para('Log Read and Write Performance of MySQL and MongoDB',indent=False);p.runs[0].bold=True;p.runs[0].font.size=Pt(12);para('WEN Zi-Jian',indent=False)
+p=para('Log Read and Write Performance of MySQL and MongoDB',indent=False);p.runs[0].bold=True;p.runs[0].font.size=Pt(12);para('CHIKIN WEN',indent=False)
 mr=d('mysql','read',200);gr=d('mongo','read',200);mw=d('mysql','write',200);gw=d('mongo','write',200)
 para(f'Abstract: This experiment compares Spring Data JPA/MySQL and Spring Data MongoDB/MongoDB using a shared log model and REST API. Four cloud servers are reused in two sequential rounds. Each database starts with 100,000 records. Read and write workloads use 1 to 200 concurrent threads, with three repetitions per level. JMeter measures latency, throughput and errors, while Prometheus collects resource metrics every five seconds. At 200 threads, read throughput is {mr["throughput_rps"]:.1f} requests/s for MySQL and {gr["throughput_rps"]:.1f} requests/s for MongoDB; write throughput is {mw["throughput_rps"]:.1f} and {gw["throughput_rps"]:.1f} requests/s, respectively. The analysis relates latency distributions to application, database and load-generator resource usage.',indent=False)
 para('Key words: MySQL; MongoDB; Spring Data JPA; JMeter; Prometheus',indent=False)
@@ -112,9 +112,10 @@ para('JMeter使用非GUI模式，保存完整HTTP响应时间及成功状态，�
 image(R/'screenshots/01-prometheus-targets.jpg','Prometheus的应用与四台主机采集目标全部在线')
 page();head('3.4　功能与索引验收',2)
 para('两条实现分别通过14项HTTP检查，覆盖固定数据查询、分页互斥、空结果、负页码、页大小、非法级别、正文超长、UTC毫秒精度及时间区间边界。固定查询的主键顺序与生成器计算的预期值一致。MySQL的EXPLAIN和MongoDB的执行计划保存在evidence目录，用于核对联合索引的使用。')
+para('接口图为补拍的Edge开发者工具Network原图，依次展示POST状态码、请求正文、保存结果与GET分页预览。本机请求客户端通过HTTP转发和SSH隧道连接Node2；接口验收的本地网络耗时与正式JMeter压测分别记录。两库各新增1条演示日志，固定查询仍匹配2497条。')
 for b in ['mysql','mongo']:
- p=R/'screenshots'/f'{b}-api-report.jpg'
- if p.exists():image(p,f'{db_name(b)}实际POST与GET接口响应记录',145)
+ if b=='mongo':page();head('MongoDB接口验收',3)
+ image(R/'screenshots'/f'{b}-api-network-report.jpg',f'{db_name(b)}的Edge Network读写接口验收原图裁切组合',145)
 page();head('3.5　数据库记录与索引',2)
 para('下图展示两轮压测结束后数据库中保留的记录总数及实际日志节选。记录总数与最后一次写入测试的成功请求数对应，正文节选用于核对字段落库情况。')
 for b in ['mysql','mongo']:
@@ -180,6 +181,13 @@ for op,label in [('read','查询'),('write','写入')]:
  if op=='read':
   image(R/'screenshots/prometheus-cpu-comparison.jpg','查询200线程正式窗口的Prometheus CPU页面，左MySQL，右MongoDB',155)
 
+for op,label in [('read','查询'),('write','写入')]:
+ page();head(f'5.{3 if op=="read" else 4}　{label}的JMeter原生汇总',2)
+ para('下图展示200线程第1次重复的APDEX表、Requests Summary饼图和Statistics表，均裁切自JMeter原生报告页面。低负载和转折附近的同类原图同时保存在screenshots目录。APDEX阈值为T=500 ms、F=1500 ms；饼图的PASS表示HTTP请求与断言通过，响应时间分布由APDEX及百分位指标描述。')
+ for b in ['mysql','mongo']:
+  image(R/'screenshots'/f'jmeter-{b}-{op}-t200-r1-summary-report.jpg',f'{db_name(b)}{label}200线程第1次重复的APDEX、请求饼图与统计表')
+ para('Statistics使用单次运行样本及其实际起止时刻计算吞吐量；正文对照表采用固定120秒窗口的每次请求数，再取3次中位数。两种统计口径对应的原始样本与重复编号均可在仓库中核对。')
+
 page();head('6　总结')
 para(f'本实验完成了同一日志模型和接口下的JPA/MySQL与Spring Data MongoDB/MongoDB对照实现，并在四台云主机上通过两轮部署完成72次正式测量。{high("read")}{high("write")}这些结果描述了本实验硬件、查询选择率、索引、连接池和写入确认设置下的应用链路表现。')
 para('查询返回20条数据并计算2497条匹配记录的总数，写入采用单条持久化并等待确认；两类操作承担不同的数据库工作。并发增加后的性能变化应结合吞吐量、P95/P99和主机资源判断。本文保留重复测量范围、原始错误和资源序列，使读写差异及性能转折均可追溯到具体运行。')
@@ -212,4 +220,4 @@ for p in D.paragraphs:
  if text=='Log Read and Write Performance of MySQL and MongoDB':
   for run in p.runs:run.font.size=Pt(10.45)
 D.core_properties.author='温子健';D.core_properties.title='MySQL 与 MongoDB 日志读写性能对比';D.core_properties.subject='实验四';D.core_properties.keywords='MySQL MongoDB JPA JMeter Prometheus'
-D.save(OUT/'实验四实验报告-温子健.docx');(OUT/'实验四实验报告-温子健.md').write_text('\n'.join(md));print('Created report:',len(D.paragraphs),'paragraphs,',fig,'figures,',tab,'tables')
+D.save(OUT/'实验四实验报告.docx');(OUT/'实验四实验报告.md').write_text('\n'.join(md));print('Created report:',len(D.paragraphs),'paragraphs,',fig,'figures,',tab,'tables')

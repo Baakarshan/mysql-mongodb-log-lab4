@@ -1,0 +1,25 @@
+Capture time: 2026-11-11 12:05:39 UTC
+{
+  current_log_count: 766809,
+  evidence_demo_rows: 1
+}
+[
+  {
+    _id: '01M6A6FT000000000000000WFD',
+    traceId: 'trace-00029165',
+    level: 'INFO',
+    source: 'course-service-5',
+    message: 'Log event 00029165: course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. ',
+    clientIp: '10.0.165.210',
+    createdAt: ISODate('2026-11-01T06:59:58.560Z')
+  },
+  {
+    _id: '01M6A6FT000000000000000WFC',
+    traceId: 'trace-00029164',
+    level: 'INFO',
+    source: 'course-service-4',
+    message: 'Log event 00029164: course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. ',
+    clientIp: '10.0.164.209',
+    createdAt: ISODate('2026-11-01T06:59:57.696Z')
+  }
+]

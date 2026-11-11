@@ -4,7 +4,7 @@
 
 已完成72次正式测量，共 **20,730,914次请求，0次错误**。两套实现各通过14项接口检查，全部运行的数据库记录数核对通过。
 
-[PDF实验报告](report/实验四实验报告-温子健.pdf) · [Word实验报告](report/实验四实验报告-温子健.docx) · [全部测量结果](results/all-runs.csv) · [资源统计](results/resources.csv)
+[PDF实验报告](report/实验四实验报告.pdf) · [Word实验报告](report/实验四实验报告.docx) · [全部测量结果](results/all-runs.csv) · [资源统计](results/resources.csv)
 
 以下为200线程档3次测量的中位数，完整档位及重复结果见 `results/`。
 
@@ -101,3 +101,5 @@ python3 scripts/build-report.py
 ```
 
 `analyze.py` 从测量JTL和监控序列生成论文图表。`generate-html.py` 将原始毫秒时间戳转换为上海时区日期的临时展示副本，输出至忽略目录 `work/html/`；原始JTL保持不变。JMeter百分位统计窗口设为200万条，大于单次正式测量的采样数。报告中的自绘百分位使用完整正式窗口数据计算。
+
+本次报告修订采用英文署名 CHIKIN WEN，报告文件名统一为“实验四实验报告”。已补拍两库的Edge Network接口图和12组JMeter原生汇总页；正文新增读写200线程的APDEX、请求饼图及Statistics截图。数据库图4—7等待Ghostty终端原图替换，[截图命令已实测](docs/Ghostty截图操作.md)。

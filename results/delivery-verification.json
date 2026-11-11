@@ -1,9 +1,20 @@
 {
   "verified": true,
+  "jmeter_summary_screenshots": 12,
+  "edge_network_screenshots": 12,
   "runs": 72,
   "measurement_samples": 20730914,
   "measurement_errors": 0,
   "native_jtl_files": 72,
   "jmeter_page_screenshots": 24,
-  "api_checks": 28
+  "api_checks": 28,
+  "report_pages": 20,
+  "report_figures": 28,
+  "report_tables": 7,
+  "pending_visual_replacements": [
+    "mysql-records",
+    "mongo-records",
+    "mysql-index",
+    "mongo-index"
+  ]
 }

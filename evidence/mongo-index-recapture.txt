@@ -1,0 +1,62 @@
+Capture time: 2026-11-11 12:05:41 UTC
+[
+  {
+    v: 2,
+    key: {
+      _id: 1
+    },
+    name: '_id_'
+  },
+  {
+    v: 2,
+    key: {
+      level: 1,
+      createdAt: -1,
+      _id: -1
+    },
+    name: 'idx_level_time_id'
+  }
+]
+{
+  stage: 'LIMIT',
+  limitAmount: 20,
+  inputStage: {
+    stage: 'FETCH',
+    inputStage: {
+      stage: 'IXSCAN',
+      keyPattern: {
+        level: 1,
+        createdAt: -1,
+        _id: -1
+      },
+      indexName: 'idx_level_time_id',
+      isMultiKey: false,
+      multiKeyPaths: {
+        level: [],
+        createdAt: [],
+        _id: []
+      },
+      isUnique: false,
+      isSparse: false,
+      isPartial: false,
+      indexVersion: 2,
+      direction: 'forward',
+      indexBounds: {
+        level: [
+          '["INFO", "INFO"]'
+        ],
+        createdAt: [
+          '(new Date(1793516400000), new Date(1793512800000)]'
+        ],
+        _id: [
+          '[MaxKey, MinKey]'
+        ]
+      }
+    }
+  }
+}
+{
+  nReturned: 20,
+  totalKeysExamined: 20,
+  totalDocsExamined: 20
+}

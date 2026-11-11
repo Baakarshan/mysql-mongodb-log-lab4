@@ -13,6 +13,17 @@ def remote(role,cmd,check=True):
  c=client(role);_,out,err=c.exec_command(cmd,timeout=600);s=out.read().decode();e=err.read().decode();rc=out.channel.recv_exit_status()
  if check and rc:raise RuntimeError(f'{role} exited {rc}: {e[-1200:]} {s[-1000:]}')
  return s
+def benchmark_command(cmd):
+ # A local VPN reconnect can close SSH while the remote test finishes normally.
+ # Recover the completed run without repeating writes.
+ try:
+  return remote('compiler',cmd)
+ except Exception:
+  CLIENTS.pop('compiler',None)
+  result_dir=shlex.split(cmd)[4]
+  status=remote('compiler','tail -3 '+shlex.quote(result_dir+'/console.log'),False)
+  if 'end of run' in status:return status
+  raise
 def upload(role,local,path):
  with client(role).open_sftp() as s:s.put(str(local),path)
 def fetch(role,path,local):
@@ -66,12 +77,13 @@ def collect_evidence(backend):
  (ROOT/'evidence'/f'{backend}-application-startup.txt').write_text(remote('app','docker logs lab4-app 2>&1'))
  fetch('compiler','/opt/lab4/build.log',ROOT/'evidence/build.txt')
 def run_backend(backend):
+ if all((ROOT/'results/runs'/f'{backend}-{op}-t{threads}-r{repeat}'/'summary.json').exists() for op in ['read','write'] for threads in [1,10,25,50,100,200] for repeat in [1,2,3]):return
  event(stage='validating',backend=backend);app_ready();remote('db',f'bash /opt/lab4/scripts/reset-db.sh {backend}');assert count(backend)==100000
  smoke=remote('compiler','python3 /opt/lab4/scripts/smoke.py');(ROOT/'evidence'/f'{backend}-smoke.json').write_text(smoke)
  collect_evidence(backend)
  # Short preflight verifies that JMeter, JSON assertions, and timestamp splitting work.
  for op in ['read','write']:
-  path=f'/opt/lab4/preflight/{backend}-{op}';remote('compiler',f'bash /opt/lab4/scripts/run-one.sh {op} 2 {path} 15')
+  path=f'/opt/lab4/preflight/{backend}-{op}-{int(time.time())}';remote('compiler',f'bash /opt/lab4/scripts/run-one.sh {op} 2 {path} 15')
   for f in ['all.jtl','console.log','jmeter.log']:fetch('compiler',path+'/'+f,ROOT/'evidence/preflight'/f'{backend}-{op}-{f}')
   with (ROOT/'evidence/preflight'/f'{backend}-{op}-all.jtl').open() as f:rows=[r for r in csv.DictReader(f) if r['label']==op]
   assert rows and all(r['success']=='true' for r in rows),rows[:2]
@@ -86,7 +98,7 @@ def run_backend(backend):
     reset=remote('db',f'bash /opt/lab4/scripts/reset-db.sh {backend}');(dest/'reset.txt').write_text(reset);before=count(backend);assert before==100000
     rpath='/opt/lab4/results/'+name
     event(stage='measuring',backend=backend,operation=op,threads=threads,repeat=repeat,name=name)
-    remote('compiler',f'bash /opt/lab4/scripts/run-one.sh {op} {threads} {rpath}')
+    benchmark_command(f'bash /opt/lab4/scripts/run-one.sh {op} {threads} {rpath}')
     summary=json.loads(remote('compiler',f'python3 /opt/lab4/scripts/summarize-run.py {rpath}'));after=count(backend)
     summary.update(backend=backend,operation=op,threads=threads,repeat=repeat,name=name,records_before=before,records_after=after)
     assert after==before+(summary['all_success'] if op=='write' else 0),(name,after,before,summary['all_success'])

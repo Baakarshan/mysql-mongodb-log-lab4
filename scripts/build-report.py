@@ -125,6 +125,11 @@ for op,label in [('read','查询'),('write','写入')]:
  for b in ['mysql','mongo']:
   st=stats(b,op);cpu=st['host_cpu_percent'];mem=st['host_memory_available_mib'];pieces.append(f'{b.upper()}阶段，压测机、应用机和数据库机的平均CPU使用率分别为{cpu["compiler"]["mean"]:.1f}%、{cpu["application"]["mean"]:.1f}%和{cpu["database"]["mean"]:.1f}%，压测机最小可用内存为{mem["compiler"]["min"]:.1f} MiB')
  para('；'.join(pieces)+'。上述资源序列与延迟曲线采用同一正式窗口，用于定位各运行环节的资源压力。')
+ for b in ['mysql','mongo']:
+  resource=stats(b,op)['host_cpu_percent'];role=max(['compiler','application','database'],key=lambda k:resource[k]['mean']);name={'compiler':'压测机','application':'应用机','database':'数据库机'}[role]
+  if resource[role]['mean']>=80:
+   para(f'{b.upper()}阶段，{name}的平均CPU使用率达到{resource[role]["mean"]:.1f}%，是本次监测中CPU使用率最高的测试环节。结合吞吐量与P95曲线，可以识别增加并发后的资源压力及延迟变化。')
+
 page();head('4.3　JMeter原始报告页面',2)
 para('下图直接截取JMeter HTML报告的响应时间趋势和百分位页面，报告输入为第1次重复的正式JTL。完整截图与各次原始测量文件一同保存，可按运行编号对应到统计表和监控时间窗。')
 for op,label in [('read','查询'),('write','写入')]:

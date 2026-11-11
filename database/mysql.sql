@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS lab4 CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+USE lab4;
+CREATE TABLE IF NOT EXISTS logs (
+ id CHAR(26) CHARACTER SET ascii COLLATE ascii_bin PRIMARY KEY,
+ trace_id VARCHAR(64), level VARCHAR(10) NOT NULL, source VARCHAR(128) NOT NULL,
+ message VARCHAR(4096) NOT NULL, client_ip VARCHAR(45), created_at DATETIME(6) NOT NULL,
+ INDEX idx_level_time_id (level,created_at DESC,id DESC)
+) ENGINE=InnoDB;

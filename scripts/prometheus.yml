@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+scrape_configs:
+  - job_name: hosts
+    static_configs:
+      - targets: ['172.31.13.146:9100']
+        labels: {role: compiler}
+      - targets: ['172.31.12.231:9100']
+        labels: {role: database}
+      - targets: ['172.31.12.145:9100']
+        labels: {role: application}
+      - targets: ['172.31.7.102:9100']
+        labels: {role: monitor}
+  - job_name: application
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['172.31.12.145:18080']

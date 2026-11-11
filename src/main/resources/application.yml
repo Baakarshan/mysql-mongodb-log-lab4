@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: log-benchmark
+  jackson:
+    time-zone: UTC
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info
+  metrics:
+    tags:
+      implementation: ${spring.profiles.active}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true

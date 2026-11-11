@@ -2,6 +2,19 @@
 
 作者：温子健。课程实验，使用四台 Ubuntu 18.04 云主机，分两轮测试同一日志业务的 JPA/MySQL 与 Spring Data MongoDB/MongoDB 实现。
 
+已完成72次正式测量，共 **20,730,914次请求，0次错误**。两套实现各通过14项接口检查，全部运行的数据库记录数核对通过。
+
+[PDF实验报告](report/实验四实验报告-温子健.pdf) · [Word实验报告](report/实验四实验报告-温子健.docx) · [全部测量结果](results/all-runs.csv) · [资源统计](results/resources.csv)
+
+以下为200线程档3次测量的中位数，完整档位及重复结果见 `results/`。
+
+| 实现 | 操作 | 吞吐量 次/秒 | P95 ms |
+|---|---|---:|---:|
+| MongoDB / Spring Data | 查询 | 1167.8 | 258.0 |
+| MongoDB / Spring Data | 写入 | 4236.2 | 94.0 |
+| MySQL / JPA | 查询 | 1258.0 | 305.0 |
+| MySQL / JPA | 写入 | 4608.5 | 123.0 |
+
 ## 目录
 
 - `src/`：公共日志模型、REST API、JPA 与 MongoDB 持久化实现。
@@ -38,7 +51,7 @@
 
 ## 构建与部署
 
-前提：Docker、Java 17、Maven、Python 3、JMeter 5.6.3。实际运行的版本、镜像摘要和查询计划见 `evidence/`。
+前提：Docker、Java 17、Maven、Python 3.12（本机分析）、JMeter 5.6.3。本机分析与控制脚本使用 `python3 -m pip install -r requirements.txt` 安装依赖；服务器的数据生成与接口验收脚本使用 Python 标准库。实际运行的版本、镜像摘要和查询计划见 `evidence/`。
 
 1. 将项目放到各机 `/opt/lab4`。Compiler 执行 `mvn -s scripts/maven-settings.xml -B package`，把 `target/log-benchmark-1.0.0.jar` 复制到 Node2 的 `/opt/lab4/app.jar`。
 2. Node1 执行 `python3 scripts/generate-data.py /opt/lab4/fixtures`，生成相同的10万条种子日志。生成器的随机种子为20261111，时间覆盖2026年11月1日UTC全天。
@@ -66,7 +79,19 @@ Compiler 执行 `python3 scripts/smoke.py` 验证初始化查询、分页、字�
  gzip -dc results/runs/mysql-read-t1-r1/measurement.jtl.gz | head
 # JMeter HTML报告生成示例，建议在本机生成，避免与服务器压测争用资源
  gzip -dc results/runs/mysql-read-t1-r1/measurement.jtl.gz > /tmp/run.jtl
- jmeter -g /tmp/run.jtl -q scripts/jmeter.properties -o /tmp/run-html
+ jmeter -g /tmp/run.jtl -q scripts/jmeter.properties -Jjmeter.reportgenerator.statistic_window=2000000 -o /tmp/run-html
 ```
 
 所有数值以本次真实测量为准。仓库不保存服务器口令和数据库运行凭据。
+
+## 从结果重新生成图表
+
+```bash
+python3 scripts/audit.py --complete
+python3 scripts/analyze.py
+python3 scripts/generate-html.py --jmeter /path/to/apache-jmeter-5.6.3/bin/jmeter
+python3 scripts/prepare-screenshots.py
+python3 scripts/build-report.py
+```
+
+`analyze.py` 从测量JTL和监控序列生成论文图表。`generate-html.py` 将原始毫秒时间戳转换为上海时区日期的临时展示副本，输出至忽略目录 `work/html/`；原始JTL保持不变。JMeter百分位统计窗口设为200万条，大于单次正式测量的采样数。报告中的自绘百分位使用完整正式窗口数据计算。

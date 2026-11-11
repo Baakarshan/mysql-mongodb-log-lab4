@@ -1,0 +1,37 @@
+{
+  "start_ms": 1794365251994,
+  "measurement_start_ms": 1794365291994,
+  "measurement_end_ms": 1794365411994,
+  "duration_s": 120,
+  "warmup_samples": 47197,
+  "samples": 149850,
+  "all_success": 197169,
+  "errors": 0,
+  "error_rate": 0.0,
+  "throughput_rps": 1248.75,
+  "mean_ms": 7.9123323323323325,
+  "p50_ms": 8.0,
+  "p95_ms": 13.0,
+  "p99_ms": 16.0,
+  "max_ms": 33,
+  "labels": {
+    "read": 197169
+  },
+  "setup_samples": 1,
+  "files": {
+    "warmup.jtl.gz": "185a9f0a0dc1ab7db5dc33b9d1e71c781ce4c5dc4fd0d62c52f7a103289f8dca",
+    "measurement.jtl.gz": "95b61db97b8bd957d3ffb464e298e963cb06fc27aec57e0d535638b15c029254",
+    "cooldown.jtl.gz": "86e99474120a735b5ded6201dac7dff73b0b892acb48538055babbe1a59bc4e9"
+  },
+  "backend": "mongo",
+  "operation": "read",
+  "threads": 10,
+  "repeat": 2,
+  "name": "mongo-read-t10-r2",
+  "records_before": 100000,
+  "records_after": 100000,
+  "record_count_verified": true,
+  "cooldown_samples": 122,
+  "all_http_samples": 197169,
+  "audited": true
+}

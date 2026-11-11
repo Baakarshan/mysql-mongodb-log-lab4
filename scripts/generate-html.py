@@ -19,5 +19,5 @@ for op,levels in selected.items():
    if target.exists():shutil.rmtree(target)
    env=dict(os.environ,HEAP='-Xms128m -Xmx768m',JVM_ARGS='-Duser.timezone=Asia/Shanghai')
    with (work/(name+'-generator.log')).open('w') as f:
-    subprocess.run([a.jmeter,'-g',str(dst),'-q',str(R/'scripts/jmeter.properties'),'-Jjmeter.save.saveservice.timestamp_format=yyyy-MM-dd HH:mm:ss.SSS','-Jjmeter.reportgenerator.overall_granularity=5000','-o',str(target),'-j',str(work/(name+'-jmeter.log'))],env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
+    subprocess.run([a.jmeter,'-g',str(dst),'-q',str(R/'scripts/jmeter.properties'),'-Jjmeter.save.saveservice.timestamp_format=yyyy-MM-dd HH:mm:ss.SSS','-Jjmeter.reportgenerator.overall_granularity=5000','-Jjmeter.reportgenerator.statistic_window=2000000','-o',str(target),'-j',str(work/(name+'-jmeter.log'))],env=env,stdout=f,stderr=subprocess.STDOUT,check=True)
    print('Generated',name,flush=True)

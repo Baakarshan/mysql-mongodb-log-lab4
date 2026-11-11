@@ -1,0 +1,105 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>MYSQL 日志接口验收记录</title><style>body{font:16px Georgia,"Songti SC",serif;margin:30px auto;max-width:1220px;color:#17202c}h1{font-size:25px}h2{font-size:19px;margin-top:26px}pre{font:13px/1.5 Menlo,monospace;background:#f3f5f7;border:1px solid #d5dae0;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere}p{color:#505967}</style><h1>MYSQL 日志接口验收记录</h1><p>实际HTTP调用输出。完整响应与14项检查见 mysql-smoke.json。</p><h2>POST /api/logs　HTTP 201</h2><pre>{
+  &quot;id&quot;: &quot;01M743Z9JG1KP5R6TNEG1VC11E&quot;,
+  &quot;traceId&quot;: &quot;smoke&quot;,
+  &quot;level&quot;: &quot;INFO&quot;,
+  &quot;source&quot;: &quot;smoke&quot;,
+  &quot;message&quot;: &quot;课程实验日志&quot;,
+  &quot;clientIp&quot;: &quot;::1&quot;,
+  &quot;createdAt&quot;: &quot;2026-11-03T00:00:00.123Z&quot;
+}</pre><h2>GET /api/logs　HTTP 200</h2><pre>{
+  &quot;page&quot;: 0,
+  &quot;size&quot;: 20,
+  &quot;totalElements&quot;: 2497,
+  &quot;totalPages&quot;: 125,
+  &quot;content&quot;: [
+    {
+      &quot;id&quot;: &quot;01M6A6FT000000000000000WFD&quot;,
+      &quot;traceId&quot;: &quot;trace-00029165&quot;,
+      &quot;level&quot;: &quot;INFO&quot;,
+      &quot;source&quot;: &quot;course-service-5&quot;,
+      &quot;message&quot;: &quot;Log event 00029165: course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. &quot;,
+      &quot;clientIp&quot;: &quot;10.0.165.210&quot;,
+      &quot;createdAt&quot;: &quot;2026-11-01T06:59:58.560Z&quot;
+    },
+    {
+      &quot;id&quot;: &quot;01M6A6FT000000000000000WFC&quot;,
+      &quot;traceId&quot;: &quot;trace-00029164&quot;,
+      &quot;level&quot;: &quot;INFO&quot;,
+      &quot;source&quot;: &quot;course-service-4&quot;,
+      &quot;message&quot;: &quot;Log event 00029164: course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. course benchmark payload. &quot;,
+      &quot;clientIp&quot;: &quot;10.0.164.209&quot;,
+      &quot;createdAt&quot;: &quot;2026-11-01T06:59:57.696Z&quot;
+    }
+  ]
+}</pre><h2>字段校验与时间边界</h2><pre>[
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-01T06:00:00Z&amp;to=2026-11-01T07:00:00Z&amp;page=0&amp;size=20&quot;,
+    &quot;status&quot;: 200
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-01T06:00:00Z&amp;to=2026-11-01T07:00:00Z&amp;page=1&amp;size=20&quot;,
+    &quot;status&quot;: 200
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INVALID&amp;from=2026-11-01T06:00:00Z&amp;to=2026-11-01T07:00:00Z&amp;page=0&amp;size=20&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-01T06:00:00Z&amp;to=2026-11-01T07:00:00Z&amp;page=-1&amp;size=20&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-01T06:00:00Z&amp;to=2026-11-01T07:00:00Z&amp;page=0&amp;size=101&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2020-01-01T06:00:00Z&amp;to=2020-01-01T07:00:00Z&amp;page=0&amp;size=20&quot;,
+    &quot;status&quot;: 200
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 201
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;path&quot;: &quot;/api/logs&quot;,
+    &quot;status&quot;: 400
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-03T00:00:00.123Z&amp;to=2026-11-03T00:00:00.124Z&quot;,
+    &quot;status&quot;: 200
+  },
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/api/logs?level=INFO&amp;from=2026-11-03T00:00:00.122Z&amp;to=2026-11-03T00:00:00.123Z&quot;,
+    &quot;status&quot;: 200
+  }
+]</pre>

@@ -57,13 +57,13 @@ def monitoring(start,end):
 def switch_mongo():
  event(stage='switching_to_mongo')
  remote('app','docker rm -f lab4-app');remote('db','docker stop lab4-mysql')
- remote('db','source /opt/lab4/db.env; docker run -d --name lab4-mongo --restart unless-stopped --memory=1g -p 172.31.12.231:27017:27017 -e MONGO_INITDB_ROOT_USERNAME="$DB_USER" -e MONGO_INITDB_ROOT_PASSWORD="$DB_PASSWORD" -v /opt/lab4/mongo:/data/db -v /opt/lab4/fixtures:/fixtures:ro docker.m.daocloud.io/library/mongo:7.0.16 --wiredTigerCacheSizeGB 0.25 --bind_ip_all')
+ remote('db','bash /opt/lab4/scripts/deploy.sh mongo')
  for i in range(40):
   s=remote('db','source /opt/lab4/db.env; docker exec lab4-mongo mongosh --quiet -u "$DB_USER" -p "$DB_PASSWORD" --authenticationDatabase admin --eval "db.adminCommand({ping:1})"',False)
   if 'ok: 1' in s:break
   time.sleep(2)
  remote('db','bash /opt/lab4/scripts/reset-db.sh mongo')
- remote('app',"sed -i 's/SPRING_PROFILES_ACTIVE=mysql/SPRING_PROFILES_ACTIVE=mongo/' /opt/lab4/app.env; docker run -d --name lab4-app --restart unless-stopped --memory=560m -p 172.31.12.145:18080:8080 --env-file /opt/lab4/app.env -v /opt/lab4/app.jar:/app.jar:ro docker.m.daocloud.io/library/eclipse-temurin:17-jre-jammy java -Xms64m -Xmx256m -Xss256k -XX:MaxMetaspaceSize=128m -jar /app.jar")
+ remote('app',"sed -i 's/SPRING_PROFILES_ACTIVE=mysql/SPRING_PROFILES_ACTIVE=mongo/' /opt/lab4/app.env; bash /opt/lab4/scripts/deploy.sh app")
  app_ready()
 def collect_evidence(backend):
  out={}

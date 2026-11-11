@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>MYSQL 索引与查询计划</title><style>body{font:16px Georgia,"Songti SC",serif;margin:30px auto;max-width:1220px;color:#17202c}h1{font-size:25px}h2{font-size:19px;margin-top:26px}pre{font:13px/1.5 Menlo,monospace;background:#f3f5f7;border:1px solid #d5dae0;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere}p{color:#505967}</style><h1>MYSQL 索引与查询计划</h1><pre>VERSION()
+8.4.13
+Table	Non_unique	Key_name	Seq_in_index	Column_name	Collation	Cardinality	Sub_part	Packed	Null	Index_type	Comment	Index_comment	Visible	Expression
+logs	0	PRIMARY	1	id	A	97470	NULL	NULL		BTREE			YES	NULL
+logs	1	idx_level_time_id	1	level	A	4	NULL	NULL		BTREE			YES	NULL
+logs	1	idx_level_time_id	2	created_at	D	97470	NULL	NULL		BTREE			YES	NULL
+logs	1	idx_level_time_id	3	id	D	97470	NULL	NULL		BTREE			YES	NULL
+@@innodb_buffer_pool_size	@@innodb_flush_log_at_trx_commit	@@log_bin
+268435456	1	0
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	logs	NULL	range	idx_level_time_id	idx_level_time_id	50	NULL	2497	100.00	Using index condition
+</pre>

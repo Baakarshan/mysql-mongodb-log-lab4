@@ -1,0 +1,37 @@
+{
+  "start_ms": 1794360630276,
+  "measurement_start_ms": 1794360670276,
+  "measurement_end_ms": 1794360790276,
+  "duration_s": 120,
+  "warmup_samples": 22757,
+  "samples": 73038,
+  "all_success": 95836,
+  "errors": 0,
+  "error_rate": 0.0,
+  "throughput_rps": 608.65,
+  "mean_ms": 1.563720255209617,
+  "p50_ms": 2.0,
+  "p95_ms": 2.0,
+  "p99_ms": 3.0,
+  "max_ms": 72,
+  "labels": {
+    "write": 95836
+  },
+  "setup_samples": 1,
+  "files": {
+    "warmup.jtl.gz": "978c671d490edf247bfad03e40b3762fefd93fe9421141e85631003092acc978",
+    "measurement.jtl.gz": "2b70e530ff44b278b6f636611e76493db496c22705d3040ebc85bdf029876d0b",
+    "cooldown.jtl.gz": "101cf4788f91fe46994d182bd5a8c56d7dc2ebe9c9fcfdc91aa5a349eefd2d17"
+  },
+  "backend": "mysql",
+  "operation": "write",
+  "threads": 1,
+  "repeat": 1,
+  "name": "mysql-write-t1-r1",
+  "records_before": 100000,
+  "records_after": 195836,
+  "record_count_verified": true,
+  "cooldown_samples": 41,
+  "all_http_samples": 95836,
+  "audited": true
+}

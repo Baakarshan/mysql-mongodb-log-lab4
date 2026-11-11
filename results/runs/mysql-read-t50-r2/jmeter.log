@@ -1,0 +1,234 @@
+2026-11-11 09:06:55,205 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-11-11 09:06:55,229 INFO o.a.j.JMeter: Loading user properties from: /opt/lab3/tools/apache-jmeter-5.6.3/bin/user.properties
+2026-11-11 09:06:55,229 INFO o.a.j.JMeter: Loading system properties from: /opt/lab3/tools/apache-jmeter-5.6.3/bin/system.properties
+2026-11-11 09:06:55,229 INFO o.a.j.JMeter: Loading additional properties from: /opt/lab4/scripts/jmeter.properties
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: host=172.31.12.145
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: port=18080
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: operation=read
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: threads=50
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: ramp=10
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: duration=160
+2026-11-11 09:06:55,230 INFO o.a.j.JMeter: Setting JMeter property: clockFile=/opt/lab4/results/mysql-read-t50-r2/start-ms.txt
+2026-11-11 09:06:55,235 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-11-11 09:06:55,235 INFO o.a.j.JMeter: Version 5.6.3
+2026-11-11 09:06:55,235 INFO o.a.j.JMeter: java.version=17.0.7
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: os.name=Linux
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: os.arch=amd64
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: os.version=4.15.0-213-generic
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: java.awt.headless=true
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: Max memory     =268435456
+2026-11-11 09:06:55,236 INFO o.a.j.JMeter: Available Processors =2
+2026-11-11 09:06:55,242 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-11-11 09:06:55,242 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-11-11 09:06:55,243 INFO o.a.j.JMeter: JMeterHome=/opt/lab3/tools/apache-jmeter-5.6.3
+2026-11-11 09:06:55,243 INFO o.a.j.JMeter: user.dir  =/root
+2026-11-11 09:06:55,243 INFO o.a.j.JMeter: PWD       =/root
+2026-11-11 09:06:55,243 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: course-compiler FullName: localhost.vm
+2026-11-11 09:06:55,253 INFO o.a.j.s.FileServer: Default base='/root'
+2026-11-11 09:06:55,254 INFO o.a.j.s.FileServer: Set new base='/opt/lab4/jmeter'
+2026-11-11 09:06:55,382 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-11-11 09:06:55,425 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-11-11 09:06:55,428 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-11-11 09:06:55,434 INFO o.a.j.s.SaveService: Loading file: /opt/lab4/jmeter/logs.jmx
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-11-11 09:06:55,501 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-11-11 09:06:55,513 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-11-11 09:06:55,534 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-11-11 09:06:55,534 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-11 09:06:55,534 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-11 09:06:55,538 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-11-11 09:06:55,538 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-11-11 09:06:55,792 INFO o.a.j.JMeter: Running test (1794359215792)
+2026-11-11 09:06:55,794 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
+2026-11-11 09:06:55,794 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : Record sampling clock 
+2026-11-11 09:06:55,794 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Record sampling clock.
+2026-11-11 09:06:55,794 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-11 09:06:55,794 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2026-11-11 09:06:55,797 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-11-11 09:06:55,797 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
+2026-11-11 09:06:55,798 INFO o.a.j.t.JMeterThread: Thread started: Record sampling clock 1-1
+2026-11-11 09:06:55,800 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-11-11 09:06:55,800 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-11-11 09:06:55,800 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-11-11 09:06:55,800 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-11-11 09:06:56,413 INFO o.a.j.t.JMeterThread: Thread is done: Record sampling clock 1-1
+2026-11-11 09:06:56,414 INFO o.a.j.t.JMeterThread: Thread finished: Record sampling clock 1-1
+2026-11-11 09:06:56,414 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
+2026-11-11 09:06:56,447 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Log workload
+2026-11-11 09:06:56,447 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Log workload.
+2026-11-11 09:06:56,447 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-11 09:06:56,447 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=10 delayedStart=false
+2026-11-11 09:06:56,452 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-1
+2026-11-11 09:06:56,495 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = course-compiler
+2026-11-11 09:06:56,501 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-11-11 09:06:56,656 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-2
+2026-11-11 09:06:56,756 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-11-11 09:06:56,756 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-11-11 09:06:56,849 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-3
+2026-11-11 09:06:57,050 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-4
+2026-11-11 09:06:57,254 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-5
+2026-11-11 09:06:57,457 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-6
+2026-11-11 09:06:57,654 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-7
+2026-11-11 09:06:57,854 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-8
+2026-11-11 09:06:58,053 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-9
+2026-11-11 09:06:58,256 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-10
+2026-11-11 09:06:58,454 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-11
+2026-11-11 09:06:58,656 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-12
+2026-11-11 09:06:58,855 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-13
+2026-11-11 09:06:59,057 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-14
+2026-11-11 09:06:59,255 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-15
+2026-11-11 09:06:59,456 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-16
+2026-11-11 09:06:59,656 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-17
+2026-11-11 09:06:59,855 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-18
+2026-11-11 09:07:00,002 INFO o.a.j.r.Summariser: summary +   3746 in 00:00:04 =  890.0/s Avg:     8 Min:     2 Max:   611 Err:     0 (0.00%) Active: 18 Started: 18 Finished: 0
+2026-11-11 09:07:00,056 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-19
+2026-11-11 09:07:00,255 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-20
+2026-11-11 09:07:00,456 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-21
+2026-11-11 09:07:00,652 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-22
+2026-11-11 09:07:00,860 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-23
+2026-11-11 09:07:01,050 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-24
+2026-11-11 09:07:01,250 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-25
+2026-11-11 09:07:01,455 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-26
+2026-11-11 09:07:01,656 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-27
+2026-11-11 09:07:01,857 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-28
+2026-11-11 09:07:02,058 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-29
+2026-11-11 09:07:02,262 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-30
+2026-11-11 09:07:02,454 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-31
+2026-11-11 09:07:02,654 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-32
+2026-11-11 09:07:02,854 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-33
+2026-11-11 09:07:03,067 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-34
+2026-11-11 09:07:03,258 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-35
+2026-11-11 09:07:03,463 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-36
+2026-11-11 09:07:03,648 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-37
+2026-11-11 09:07:03,847 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-38
+2026-11-11 09:07:04,055 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-39
+2026-11-11 09:07:04,249 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-40
+2026-11-11 09:07:04,460 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-41
+2026-11-11 09:07:04,654 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-42
+2026-11-11 09:07:04,853 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-43
+2026-11-11 09:07:05,060 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-44
+2026-11-11 09:07:05,253 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-45
+2026-11-11 09:07:05,459 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-46
+2026-11-11 09:07:05,658 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-47
+2026-11-11 09:07:05,848 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-48
+2026-11-11 09:07:06,049 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-49
+2026-11-11 09:07:06,251 INFO o.a.j.t.JMeterThread: Thread started: Log workload 1-50
+2026-11-11 09:07:30,002 INFO o.a.j.r.Summariser: summary +  39058 in 00:00:30 = 1301.9/s Avg:    35 Min:     2 Max:   260 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-11-11 09:07:30,002 INFO o.a.j.r.Summariser: summary =  42804 in 00:00:34 = 1251.2/s Avg:    33 Min:     2 Max:   611 Err:     0 (0.00%)
+2026-11-11 09:08:00,001 INFO o.a.j.r.Summariser: summary +  39135 in 00:00:30 = 1304.5/s Avg:    38 Min:     3 Max:   276 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-11-11 09:08:00,001 INFO o.a.j.r.Summariser: summary =  81939 in 00:01:04 = 1276.1/s Avg:    35 Min:     2 Max:   611 Err:     0 (0.00%)
+2026-11-11 09:08:30,000 INFO o.a.j.r.Summariser: summary +  39307 in 00:00:30 = 1310.2/s Avg:    38 Min:     4 Max:   247 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-11-11 09:08:30,000 INFO o.a.j.r.Summariser: summary = 121246 in 00:01:34 = 1287.0/s Avg:    36 Min:     2 Max:   611 Err:     0 (0.00%)
+2026-11-11 09:09:00,000 INFO o.a.j.r.Summariser: summary +  39194 in 00:00:30 = 1306.5/s Avg:    38 Min:     3 Max:   275 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-11-11 09:09:00,000 INFO o.a.j.r.Summariser: summary = 160440 in 00:02:04 = 1291.7/s Avg:    36 Min:     2 Max:   611 Err:     0 (0.00%)
+2026-11-11 09:09:30,001 INFO o.a.j.r.Summariser: summary +  39288 in 00:00:30 = 1309.6/s Avg:    38 Min:     3 Max:   237 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-11-11 09:09:30,001 INFO o.a.j.r.Summariser: summary = 199728 in 00:02:34 = 1295.2/s Avg:    37 Min:     2 Max:   611 Err:     0 (0.00%)
+2026-11-11 09:09:36,448 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-1
+2026-11-11 09:09:36,449 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-1
+2026-11-11 09:09:36,461 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-5
+2026-11-11 09:09:36,461 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-5
+2026-11-11 09:09:36,462 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-2
+2026-11-11 09:09:36,462 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-2
+2026-11-11 09:09:36,469 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-4
+2026-11-11 09:09:36,469 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-4
+2026-11-11 09:09:36,476 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-3
+2026-11-11 09:09:36,476 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-3
+2026-11-11 09:09:36,482 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-7
+2026-11-11 09:09:36,482 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-7
+2026-11-11 09:09:36,482 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-8
+2026-11-11 09:09:36,483 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-8
+2026-11-11 09:09:36,485 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-9
+2026-11-11 09:09:36,485 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-9
+2026-11-11 09:09:36,496 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-6
+2026-11-11 09:09:36,496 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-6
+2026-11-11 09:09:36,497 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-10
+2026-11-11 09:09:36,497 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-10
+2026-11-11 09:09:36,503 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-11
+2026-11-11 09:09:36,503 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-11
+2026-11-11 09:09:36,513 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-12
+2026-11-11 09:09:36,513 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-12
+2026-11-11 09:09:36,513 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-13
+2026-11-11 09:09:36,513 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-13
+2026-11-11 09:09:36,533 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-14
+2026-11-11 09:09:36,533 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-14
+2026-11-11 09:09:36,534 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-15
+2026-11-11 09:09:36,534 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-15
+2026-11-11 09:09:36,537 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-17
+2026-11-11 09:09:36,537 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-17
+2026-11-11 09:09:36,553 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-16
+2026-11-11 09:09:36,553 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-16
+2026-11-11 09:09:36,567 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-18
+2026-11-11 09:09:36,567 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-18
+2026-11-11 09:09:36,568 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-19
+2026-11-11 09:09:36,568 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-19
+2026-11-11 09:09:36,573 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-20
+2026-11-11 09:09:36,573 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-20
+2026-11-11 09:09:36,587 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-22
+2026-11-11 09:09:36,587 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-22
+2026-11-11 09:09:36,591 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-21
+2026-11-11 09:09:36,591 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-21
+2026-11-11 09:09:36,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-23
+2026-11-11 09:09:36,597 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-23
+2026-11-11 09:09:36,607 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-26
+2026-11-11 09:09:36,607 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-26
+2026-11-11 09:09:36,608 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-25
+2026-11-11 09:09:36,608 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-25
+2026-11-11 09:09:36,612 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-27
+2026-11-11 09:09:36,612 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-27
+2026-11-11 09:09:36,613 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-24
+2026-11-11 09:09:36,613 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-24
+2026-11-11 09:09:36,620 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-28
+2026-11-11 09:09:36,621 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-28
+2026-11-11 09:09:36,628 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-29
+2026-11-11 09:09:36,628 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-29
+2026-11-11 09:09:36,655 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-31
+2026-11-11 09:09:36,655 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-31
+2026-11-11 09:09:36,656 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-32
+2026-11-11 09:09:36,656 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-32
+2026-11-11 09:09:36,662 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-30
+2026-11-11 09:09:36,663 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-30
+2026-11-11 09:09:36,666 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-33
+2026-11-11 09:09:36,666 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-33
+2026-11-11 09:09:36,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-34
+2026-11-11 09:09:36,678 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-34
+2026-11-11 09:09:36,697 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-35
+2026-11-11 09:09:36,697 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-36
+2026-11-11 09:09:36,697 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-35
+2026-11-11 09:09:36,697 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-36
+2026-11-11 09:09:36,706 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-37
+2026-11-11 09:09:36,706 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-37
+2026-11-11 09:09:36,706 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-39
+2026-11-11 09:09:36,706 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-39
+2026-11-11 09:09:36,709 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-40
+2026-11-11 09:09:36,709 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-40
+2026-11-11 09:09:36,713 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-38
+2026-11-11 09:09:36,713 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-38
+2026-11-11 09:09:36,715 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-41
+2026-11-11 09:09:36,715 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-41
+2026-11-11 09:09:36,716 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-42
+2026-11-11 09:09:36,716 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-42
+2026-11-11 09:09:36,723 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-43
+2026-11-11 09:09:36,723 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-43
+2026-11-11 09:09:36,729 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-44
+2026-11-11 09:09:36,729 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-44
+2026-11-11 09:09:36,740 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-45
+2026-11-11 09:09:36,740 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-45
+2026-11-11 09:09:36,744 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-46
+2026-11-11 09:09:36,745 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-46
+2026-11-11 09:09:36,750 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-47
+2026-11-11 09:09:36,750 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-47
+2026-11-11 09:09:36,754 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-49
+2026-11-11 09:09:36,754 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-49
+2026-11-11 09:09:36,755 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-48
+2026-11-11 09:09:36,755 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-48
+2026-11-11 09:09:36,756 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Log workload 1-50
+2026-11-11 09:09:36,756 INFO o.a.j.t.JMeterThread: Thread finished: Log workload 1-50
+2026-11-11 09:09:36,756 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-11-11 09:09:36,759 INFO o.a.j.r.Summariser: summary +   8818 in 00:00:07 = 1304.8/s Avg:    37 Min:     2 Max:   182 Err:     0 (0.00%) Active: 0 Started: 50 Finished: 50
+2026-11-11 09:09:36,759 INFO o.a.j.r.Summariser: summary = 208546 in 00:02:41 = 1295.6/s Avg:    37 Min:     2 Max:   611 Err:     0 (0.00%)

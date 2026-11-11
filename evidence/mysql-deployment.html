@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>MYSQL 四机部署记录</title><style>body{font:16px Georgia,"Songti SC",serif;margin:30px auto;max-width:1220px;color:#17202c}h1{font-size:25px}h2{font-size:19px;margin-top:26px}pre{font:13px/1.5 Menlo,monospace;background:#f3f5f7;border:1px solid #d5dae0;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere}p{color:#505967}</style><h1>MYSQL 四机部署记录</h1><p>四台服务器实际命令输出，源文件：mysql-deployment.json</p><h2>compiler</h2><pre>course-compiler
+Wed Nov 11 01:36:17 UTC 2026
+              total        used        free      shared  buff/cache   available
+Mem:            792         230         251           7         310         435
+Swap:             0           0           0
+lab4-node-exporter swr.cn-north-4.myhuaweicloud.com/oomall-javaee/prom/node-exporter:latest Up About an hour</pre><h2>db</h2><pre>course-node1
+Wed Nov 11 01:36:17 UTC 2026
+              total        used        free      shared  buff/cache   available
+Mem:           1800         753          98           8         948         876
+Swap:             0           0           0
+lab4-mysql mysql:8.4 Up About an hour
+lab4-node-exporter swr.cn-north-4.myhuaweicloud.com/oomall-javaee/prom/node-exporter:latest Up About an hour</pre><h2>app</h2><pre>course-node2
+Wed Nov 11 01:36:18 UTC 2026
+              total        used        free      shared  buff/cache   available
+Mem:            792         594          83           7         114          80
+Swap:             0           0           0
+lab4-app docker.m.daocloud.io/library/eclipse-temurin:17-jre-jammy Up 59 minutes
+lab4-node-exporter swr.cn-north-4.myhuaweicloud.com/oomall-javaee/prom/node-exporter:latest Up About an hour
+docker.m.daocloud.io/library/eclipse-temurin:17-jre-jammy sha256:2a9eb226abb654c9d1f91b53cf638d20cb3abb726d1b18a67909c29515545469</pre><h2>monitor</h2><pre>course-manager
+Wed Nov 11 01:36:20 UTC 2026
+              total        used        free      shared  buff/cache   available
+Mem:           1800         323         410           8        1065        1302
+Swap:             0           0           0
+lab4-prometheus swr.cn-north-4.myhuaweicloud.com/oomall-javaee/prom/prometheus:latest Up About an hour
+lab4-node-exporter swr.cn-north-4.myhuaweicloud.com/oomall-javaee/prom/node-exporter:latest Up About an hour</pre>

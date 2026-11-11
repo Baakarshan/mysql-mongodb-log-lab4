@@ -1,0 +1,202 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>MONGO 索引与查询计划</title><style>body{font:16px Georgia,"Songti SC",serif;margin:30px auto;max-width:1220px;color:#17202c}h1{font-size:25px}h2{font-size:19px;margin-top:26px}pre{font:13px/1.5 Menlo,monospace;background:#f3f5f7;border:1px solid #d5dae0;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere}p{color:#505967}</style><h1>MONGO 索引与查询计划</h1><pre>7.0.16
+[
+  {
+    v: 2,
+    key: {
+      _id: 1
+    },
+    name: &#x27;_id_&#x27;
+  },
+  {
+    v: 2,
+    key: {
+      level: 1,
+      createdAt: -1,
+      _id: -1
+    },
+    name: &#x27;idx_level_time_id&#x27;
+  }
+]
+{
+  explainVersion: &#x27;1&#x27;,
+  queryPlanner: {
+    namespace: &#x27;lab4.logs&#x27;,
+    indexFilterSet: false,
+    parsedQuery: {
+      &#x27;$and&#x27;: [
+        {
+          level: {
+            &#x27;$eq&#x27;: &#x27;INFO&#x27;
+          }
+        },
+        {
+          createdAt: {
+            &#x27;$lt&#x27;: ISODate(&#x27;2026-11-01T07:00:00.000Z&#x27;)
+          }
+        },
+        {
+          createdAt: {
+            &#x27;$gte&#x27;: ISODate(&#x27;2026-11-01T06:00:00.000Z&#x27;)
+          }
+        }
+      ]
+    },
+    queryHash: &#x27;083D7BD2&#x27;,
+    planCacheKey: &#x27;078E99AE&#x27;,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    winningPlan: {
+      stage: &#x27;LIMIT&#x27;,
+      limitAmount: 20,
+      inputStage: {
+        stage: &#x27;FETCH&#x27;,
+        inputStage: {
+          stage: &#x27;IXSCAN&#x27;,
+          keyPattern: {
+            level: 1,
+            createdAt: -1,
+            _id: -1
+          },
+          indexName: &#x27;idx_level_time_id&#x27;,
+          isMultiKey: false,
+          multiKeyPaths: {
+            level: [],
+            createdAt: [],
+            _id: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: &#x27;forward&#x27;,
+          indexBounds: {
+            level: [
+              &#x27;[&quot;INFO&quot;, &quot;INFO&quot;]&#x27;
+            ],
+            createdAt: [
+              &#x27;(new Date(1793516400000), new Date(1793512800000)]&#x27;
+            ],
+            _id: [
+              &#x27;[MaxKey, MinKey]&#x27;
+            ]
+          }
+        }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 20,
+    executionTimeMillis: 0,
+    totalKeysExamined: 20,
+    totalDocsExamined: 20,
+    executionStages: {
+      stage: &#x27;LIMIT&#x27;,
+      nReturned: 20,
+      executionTimeMillisEstimate: 0,
+      works: 21,
+      advanced: 20,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      limitAmount: 20,
+      inputStage: {
+        stage: &#x27;FETCH&#x27;,
+        nReturned: 20,
+        executionTimeMillisEstimate: 0,
+        works: 20,
+        advanced: 20,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 0,
+        docsExamined: 20,
+        alreadyHasObj: 0,
+        inputStage: {
+          stage: &#x27;IXSCAN&#x27;,
+          nReturned: 20,
+          executionTimeMillisEstimate: 0,
+          works: 20,
+          advanced: 20,
+          needTime: 0,
+          needYield: 0,
+          saveState: 0,
+          restoreState: 0,
+          isEOF: 0,
+          keyPattern: {
+            level: 1,
+            createdAt: -1,
+            _id: -1
+          },
+          indexName: &#x27;idx_level_time_id&#x27;,
+          isMultiKey: false,
+          multiKeyPaths: {
+            level: [],
+            createdAt: [],
+            _id: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: &#x27;forward&#x27;,
+          indexBounds: {
+            level: [
+              &#x27;[&quot;INFO&quot;, &quot;INFO&quot;]&#x27;
+            ],
+            createdAt: [
+              &#x27;(new Date(1793516400000), new Date(1793512800000)]&#x27;
+            ],
+            _id: [
+              &#x27;[MaxKey, MinKey]&#x27;
+            ]
+          },
+          keysExamined: 20,
+          seeks: 1,
+          dupsTested: 0,
+          dupsDropped: 0
+        }
+      }
+    }
+  },
+  command: {
+    find: &#x27;logs&#x27;,
+    filter: {
+      level: &#x27;INFO&#x27;,
+      createdAt: {
+        &#x27;$gte&#x27;: ISODate(&#x27;2026-11-01T06:00:00.000Z&#x27;),
+        &#x27;$lt&#x27;: ISODate(&#x27;2026-11-01T07:00:00.000Z&#x27;)
+      }
+    },
+    sort: {
+      createdAt: -1,
+      _id: -1
+    },
+    limit: 20,
+    &#x27;$db&#x27;: &#x27;lab4&#x27;
+  },
+  serverInfo: {
+    host: &#x27;c95124d6b906&#x27;,
+    port: 27017,
+    version: &#x27;7.0.16&#x27;,
+    gitVersion: &#x27;18b949444cfdaa88e30b0e10243bc18268251c1f&#x27;
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: &#x27;trySbeRestricted&#x27;
+  },
+  ok: 1
+}
+</pre>

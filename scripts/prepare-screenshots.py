@@ -7,12 +7,18 @@ for b in ['mysql','mongo']:
  p=S/f'{b}-api.jpg'
  if p.exists():
   im=Image.open(p);im.crop((0,0,im.width,min(650,im.height))).save(S/f'{b}-api-report.jpg',quality=95)
+for b in ['mysql','mongo']:
+ for kind,height in [('records',620),('index',800)]:
+  if b=='mysql' and kind=='records':height=365
+  p=S/f'{b}-{kind}.jpg'
+  if p.exists():
+   im=Image.open(p);im.crop((0,0,im.width,min(height,im.height))).save(S/f'{b}-{kind}-report.jpg',quality=95)
 # Screenshot capture records contain the observed DOM rectangle of each graph.
 manifest=S/'jmeter-manifest.json'
 if manifest.exists():
  records=json.loads(manifest.read_text());cropped={}
  for row in records:
-  im=Image.open(S/row['file']);rect=row['rect'];x,y,w,h=[rect[k] for k in ['x','y','width','height']];box=(int(x),int(y),min(im.width,int(x+w)),min(im.height,int(y+h)))
+  im=Image.open(S/row['file']);rect=row.get('screenshotRect',row['rect']);x,y,w,h=[rect[k] for k in ['x','y','width','height']];box=(int(x),int(y),min(im.width,int(x+w)),min(im.height,int(y+h)))
   assert box[2]>box[0] and box[3]>box[1],row
   panel=im.crop(box);name=row['file'].replace('.jpg','-panel.jpg');panel.save(S/name,quality=96);cropped[row['name'],row['kind']]=panel
  font=ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Bold.ttf',25)

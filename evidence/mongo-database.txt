@@ -1,0 +1,201 @@
+7.0.16
+[
+  {
+    v: 2,
+    key: {
+      _id: 1
+    },
+    name: '_id_'
+  },
+  {
+    v: 2,
+    key: {
+      level: 1,
+      createdAt: -1,
+      _id: -1
+    },
+    name: 'idx_level_time_id'
+  }
+]
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'lab4.logs',
+    indexFilterSet: false,
+    parsedQuery: {
+      '$and': [
+        {
+          level: {
+            '$eq': 'INFO'
+          }
+        },
+        {
+          createdAt: {
+            '$lt': ISODate('2026-11-01T07:00:00.000Z')
+          }
+        },
+        {
+          createdAt: {
+            '$gte': ISODate('2026-11-01T06:00:00.000Z')
+          }
+        }
+      ]
+    },
+    queryHash: '083D7BD2',
+    planCacheKey: '078E99AE',
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    winningPlan: {
+      stage: 'LIMIT',
+      limitAmount: 20,
+      inputStage: {
+        stage: 'FETCH',
+        inputStage: {
+          stage: 'IXSCAN',
+          keyPattern: {
+            level: 1,
+            createdAt: -1,
+            _id: -1
+          },
+          indexName: 'idx_level_time_id',
+          isMultiKey: false,
+          multiKeyPaths: {
+            level: [],
+            createdAt: [],
+            _id: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: 'forward',
+          indexBounds: {
+            level: [
+              '["INFO", "INFO"]'
+            ],
+            createdAt: [
+              '(new Date(1793516400000), new Date(1793512800000)]'
+            ],
+            _id: [
+              '[MaxKey, MinKey]'
+            ]
+          }
+        }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 20,
+    executionTimeMillis: 0,
+    totalKeysExamined: 20,
+    totalDocsExamined: 20,
+    executionStages: {
+      stage: 'LIMIT',
+      nReturned: 20,
+      executionTimeMillisEstimate: 0,
+      works: 21,
+      advanced: 20,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      limitAmount: 20,
+      inputStage: {
+        stage: 'FETCH',
+        nReturned: 20,
+        executionTimeMillisEstimate: 0,
+        works: 20,
+        advanced: 20,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 0,
+        docsExamined: 20,
+        alreadyHasObj: 0,
+        inputStage: {
+          stage: 'IXSCAN',
+          nReturned: 20,
+          executionTimeMillisEstimate: 0,
+          works: 20,
+          advanced: 20,
+          needTime: 0,
+          needYield: 0,
+          saveState: 0,
+          restoreState: 0,
+          isEOF: 0,
+          keyPattern: {
+            level: 1,
+            createdAt: -1,
+            _id: -1
+          },
+          indexName: 'idx_level_time_id',
+          isMultiKey: false,
+          multiKeyPaths: {
+            level: [],
+            createdAt: [],
+            _id: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: 'forward',
+          indexBounds: {
+            level: [
+              '["INFO", "INFO"]'
+            ],
+            createdAt: [
+              '(new Date(1793516400000), new Date(1793512800000)]'
+            ],
+            _id: [
+              '[MaxKey, MinKey]'
+            ]
+          },
+          keysExamined: 20,
+          seeks: 1,
+          dupsTested: 0,
+          dupsDropped: 0
+        }
+      }
+    }
+  },
+  command: {
+    find: 'logs',
+    filter: {
+      level: 'INFO',
+      createdAt: {
+        '$gte': ISODate('2026-11-01T06:00:00.000Z'),
+        '$lt': ISODate('2026-11-01T07:00:00.000Z')
+      }
+    },
+    sort: {
+      createdAt: -1,
+      _id: -1
+    },
+    limit: 20,
+    '$db': 'lab4'
+  },
+  serverInfo: {
+    host: 'c95124d6b906',
+    port: 27017,
+    version: '7.0.16',
+    gitVersion: '18b949444cfdaa88e30b0e10243bc18268251c1f'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted'
+  },
+  ok: 1
+}

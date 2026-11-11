@@ -21,6 +21,23 @@ if ag:
  with (ROOT/'results/aggregate.csv').open('w',newline='') as f:w=csv.DictWriter(f,ag[0].keys());w.writeheader();w.writerows(ag)
  with (ROOT/'results/all-runs.csv').open('w',newline='') as f:
   fields=['name','backend','operation','threads','repeat','samples','errors']+metrics+['records_before','records_after'];w=csv.DictWriter(f,fields,extrasaction='ignore');w.writeheader();w.writerows(sorted(raw,key=lambda x:x['name']))
+# Export aligned resource summaries for every repetition and host.
+resource_rows=[]
+for s in sorted(raw,key=lambda x:x['name']):
+ monitoring=json.loads((ROOT/'results/runs'/s['name']/'monitoring.json').read_text())
+ start=s['measurement_start_ms']/1000;end=s['measurement_end_ms']/1000
+ hosts={role:{k:s[k] for k in ['name','backend','operation','threads','repeat']}|{'role':role} for role in ['compiler','application','database','monitor']}
+ for key in ['host_cpu_percent','host_memory_available_mib','disk_read_bytes_per_second','disk_write_bytes_per_second']:
+  for series in monitoring[key]['data']['result']:
+   role=series['metric'].get('role');values=[float(y) for x,y in series['values'] if start<=float(x)<end]
+   if role in hosts and values:
+    hosts[role][key+'_mean']=statistics.mean(values)
+    hosts[role][key+'_min']=min(values);hosts[role][key+'_max']=max(values)
+ resource_rows.extend(hosts.values())
+if resource_rows:
+ fields=list(dict.fromkeys(k for row in resource_rows for k in row))
+ with (ROOT/'results/resources.csv').open('w',newline='') as f:
+  writer=csv.DictWriter(f,fields);writer.writeheader();writer.writerows(resource_rows)
 selected={}
 for op in ['read','write']:
  fig,axs=plt.subplots(1,2,figsize=(8.3,3.1),constrained_layout=True)
@@ -50,7 +67,7 @@ for op in ['read','write']:
    if not sp.exists():continue
    s=json.loads(sp.read_text());rows=list(csv.DictReader(gzip.open(path/'measurement.jtl.gz','rt')));lat=np.array([int(r['elapsed']) for r in rows]);ts=np.array([(int(r['timeStamp'])-s['measurement_start_ms'])/1000 for r in rows]);bins=np.arange(0,120,5);means=[np.mean(lat[(ts>=x)&(ts<x+5)]) if np.any((ts>=x)&(ts<x+5)) else np.nan for x in bins]
    axs[0].plot(bins+2.5,means,label=b,color=COL[b]);ps=np.array([1,10,25,50,75,90,95,99,99.5,99.9,100]);axs[1].plot(ps,np.percentile(lat,ps),color=COL[b],label=b)
-  axs[0].set(xlabel='Measurement time (s)',ylabel='Mean response time (ms)',title=f'{op.capitalize()}, {t} threads');axs[1].set(xlabel='Percentile (%)',ylabel='Response time (ms)',title='Response time percentiles');axs[1].set_yscale('log')
+  axs[0].set(xlabel='Measurement time (s)',ylabel='Mean response time (ms)',title=f'{op.capitalize()}, {t} threads');axs[1].set(xlabel='Percentile (%)',ylabel='Response time (ms)',title='Response time percentiles');axs[1].set_yscale('symlog',linthresh=1);axs[1].set_ylim(bottom=0)
   for ax in axs:ax.grid(alpha=.2);ax.legend(fontsize=8)
   fig.savefig(OUT/f'{op}-t{t}-curves.png',dpi=220);plt.close(fig)
  # Resource usage at maximum tested load.

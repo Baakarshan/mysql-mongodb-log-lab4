@@ -115,17 +115,17 @@ para('两条实现分别通过14项HTTP检查，覆盖固定数据查询、分�
 para('接口图为补拍的Edge开发者工具Network原图，依次展示POST状态码、请求正文、保存结果与GET分页预览。本机请求客户端通过HTTP转发和SSH隧道连接Node2；接口验收的本地网络耗时与正式JMeter压测分别记录。两库各新增1条演示日志，固定查询仍匹配2497条。')
 for b in ['mysql','mongo']:
  if b=='mongo':page();head('MongoDB接口验收',3)
- image(R/'screenshots'/f'{b}-api-network-report.jpg',f'{db_name(b)}的Edge Network读写接口验收原图裁切组合',145)
+ image(R/'screenshots'/f'{b}-api-network-report.jpg',f'{db_name(b)}读写接口验收',145)
 page();head('3.5　数据库记录与索引',2)
-para('下图为Ghostty真实终端截图，展示实际日志及当前记录数。正式末次写入测试结束后，MySQL为765118条，MongoDB为766808条；Edge接口补拍各新增1条演示日志，因此截图总数分别为765119和766809条。MySQL宽表按列分为上下两块，行序保持一致。')
+para('下图展示实际日志及当前记录数。正式末次写入测试结束后，MySQL为765118条，MongoDB为766808条；Edge接口补拍各新增1条演示日志，因此截图总数分别为765119和766809条。MySQL宽表按列分为上下两块，行序保持一致。')
 for b in ['mysql','mongo']:
  p=R/'screenshots'/f'{b}-records-ghostty-report.png'
- if p.exists():image(p,f'{db_name(b)}实际存储记录与补拍后总数（Ghostty原图裁切）',145)
+ if p.exists():image(p,f'{db_name(b)}存储记录与记录总数',145)
 page();head('联合索引与执行计划',3)
 para('MySQL联合索引列为level、created_at、id，执行计划使用range访问和Using index condition，估计扫描2497行。MongoDB联合索引列为level、createdAt、_id，计划为LIMIT→FETCH→IXSCAN；执行统计显示返回20条、检查20个索引键和20个文档。图7左侧为索引与扫描阶段，右侧接续索引属性、边界和执行统计。')
 for b in ['mysql','mongo']:
  p=R/'screenshots'/f'{b}-index-ghostty-report.png'
- if p.exists():image(p,f'{db_name(b)}联合索引和查询计划（Ghostty原图裁切组合）',145)
+ if p.exists():image(p,f'{db_name(b)}联合索引和查询计划',145)
 page();head('4　负载测试结果与分析')
 para('本章先比较1和10线程下的基础负载表现。每档3次测量，表中列出中位数；各次吞吐量、平均值、P50/P95/P99和错误率见results/all-runs.csv。两类操作分别使用相同请求与数据库初始数据。')
 

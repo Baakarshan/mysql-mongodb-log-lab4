@@ -13,6 +13,6 @@
 | `*-read-t200-r1-prometheus-cpu.jpg` | 对应查询运行正式120秒窗口的主机CPU曲线 |
 | `*-read-t200-r1-prometheus-memory.jpg` | 同一正式窗口的主机可用内存曲线，单位MiB |
 
-`jmeter-manifest.json` 记录原图与运行编号、图表种类的对应关系。`rect` 是页面DOM区域；`screenshotRect` 是经原图核对的实际像素裁切区域。`*-panel.jpg` 和 `*-comparison.jpg` 由保存的原图裁切、组合，正文使用组合图，原图保留全部页面上下文。`*-api-report.jpg` 是对应接口长截图的正文裁切版。
+`jmeter-manifest.json` 记录原图与运行编号、图表种类的对应关系。`rect` 是页面DOM区域；`screenshotRect` 是经原图核对的实际像素裁切区域。`*-panel.jpg` 和 `*-comparison.jpg` 由保存的原图裁切、组合，正文按档位使用`*-pair.jpg`并排展示同一次运行的趋势与百分位图，原图保留全部页面上下文。`prometheus-cpu-comparison.jpg`并排展示两库查询200线程的Prometheus页面。`*-api-report.jpg` 是对应接口长截图的正文裁切版。
 
 实验记录页面由 `scripts/evidence-pages.py` 直接读取保存的命令与HTTP响应记录生成。页面内容可与同名JSON、TXT逐项核对。JMeter页面显示上海时区时间，Prometheus页面显示UTC时间；运行编号的 `summary.json` 使用UTC epoch毫秒时间戳。

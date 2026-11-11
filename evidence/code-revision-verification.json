@@ -1,0 +1,22 @@
+{
+  "verified": true,
+  "jdk": "Temurin 21.0.11",
+  "target_java_release": 17,
+  "google_java_format": "1.24.0",
+  "spotless": "2.43.0",
+  "maven_verify": "passed",
+  "comparison": "javap -c -p -s; identical method instructions and signatures; private field declaration order excluded",
+  "baseline_commit": "d0d580aaf6a238eedbdd4aa70548c1ff8f1c222b",
+  "classes": [
+    "edu.lab4.LogStore",
+    "edu.lab4.LogPage",
+    "edu.lab4.LogRequest",
+    "edu.lab4.LogController",
+    "edu.lab4.Application",
+    "edu.lab4.LogEntry",
+    "edu.lab4.mysql.LogJpaRepository",
+    "edu.lab4.mysql.MySqlLogStore",
+    "edu.lab4.mongo.MongoLogStore"
+  ],
+  "benchmark_data_changed": false
+}

@@ -49,6 +49,12 @@
 
 返回 `content、page、size、totalElements、totalPages`。时间范围为 `[from,to)`，按 `createdAt DESC,id DESC` 排序；MongoDB 中 `id` 映射为 `_id`。页码从0开始，size为1至100。时间统一为UTC毫秒精度，message最长4096字符。非法输入返回400。
 
+## 代码规范与中文注释
+
+Java采用Google Java Style，固定google-java-format 1.24.0，由Spotless在Maven validate阶段检查。`mvn spotless:apply`整理格式，`mvn verify`检查并构建。业务字段、ULID、时间边界、分页、事务与写入确认均有中文注释。[代码说明](docs/代码规范与实验实现.md)记录阅读顺序与验证方法。
+
+报告先展示基础负载测试，再展示逐级压力测试；两章使用相同阶梯并发测量，保留原始时间顺序。正文已按档位纳入24张JMeter趋势与百分位截图。[排版说明](report/排版说明.md)列出对照样例的字体与字号。
+
 ## 构建与部署
 
 前提：Docker、Java 17、Maven、Python 3.12（本机分析）、JMeter 5.6.3。本机分析与控制脚本使用 `python3 -m pip install -r requirements.txt` 安装依赖；服务器的数据生成与接口验收脚本使用 Python 标准库。实际运行的版本、镜像摘要和查询计划见 `evidence/`。

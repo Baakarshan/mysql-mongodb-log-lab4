@@ -9,7 +9,7 @@ for b in ['mysql','mongo']:
   im=Image.open(p);im.crop((0,0,im.width,min(650,im.height))).save(S/f'{b}-api-report.jpg',quality=95)
 for b in ['mysql','mongo']:
  for kind,height in [('records',620),('index',800)]:
-  if b=='mysql' and kind=='records':height=365
+  if b=='mysql':height=365
   p=S/f'{b}-{kind}.jpg'
   if p.exists():
    im=Image.open(p);im.crop((0,0,im.width,min(height,im.height))).save(S/f'{b}-{kind}-report.jpg',quality=95)
@@ -21,6 +21,8 @@ if manifest.exists():
   im=Image.open(S/row['file']);rect=row.get('screenshotRect',row['rect']);x,y,w,h=[rect[k] for k in ['x','y','width','height']];box=(int(x),int(y),min(im.width,int(x+w)),min(im.height,int(y+h)))
   assert box[2]>box[0] and box[3]>box[1],row
   panel=im.crop(box);name=row['file'].replace('.jpg','-panel.jpg');panel.save(S/name,quality=96);cropped[row['name'],row['kind']]=panel
+ for name in sorted({row['name'] for row in records}):
+  left=cropped[name,'time'];right=cropped[name,'percentile'];pair=Image.new('RGB',(left.width+right.width+20,max(left.height,right.height)),'white');pair.paste(left,(0,0));pair.paste(right,(left.width+20,0));pair.save(S/f'jmeter-{name}-pair.jpg',quality=96)
  font=ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Bold.ttf',25)
  for op in ['read','write']:
   items={(b,k):cropped.get((f'{b}-{op}-t200-r1',k)) for b in ['mysql','mongo'] for k in ['time','percentile']}
@@ -31,3 +33,9 @@ if manifest.exists():
    for i,k in enumerate(['time','percentile']):out.paste(items[b,k],(j*(width+24),42+i*(height+20)))
   out.save(S/f'{op}-jmeter-comparison.jpg',quality=96)
 print('Prepared report screenshot crops')
+
+# Preserve both Prometheus pages in a compact, side-by-side report figure.
+left=Image.open(S/'mysql-read-t200-r1-prometheus-cpu.jpg')
+right=Image.open(S/'mongo-read-t200-r1-prometheus-cpu.jpg')
+pair=Image.new('RGB',(left.width+right.width+20,max(left.height,right.height)),'white')
+pair.paste(left,(0,0));pair.paste(right,(left.width+20,0));pair.save(S/'prometheus-cpu-comparison.jpg',quality=96)

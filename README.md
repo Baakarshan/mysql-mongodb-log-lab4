@@ -8,7 +8,7 @@
 - `database/`：MySQL 表结构和 MongoDB 联合索引。
 - `scripts/`：确定性数据生成、部署、重置、接口验收、压测、统计和报告脚本。
 - `jmeter/logs.jmx`：共用读写测试计划，通过参数切换操作和目标。
-- `results/runs/`：各次测量的原始 JTL 无损压缩、校验值、统计与监控序列。
+- `results/runs/`：各次测量的完整原始 JTL 无损压缩、窗口分组、校验值、统计与监控序列。
 - `evidence/`：环境、版本、查询计划、接口检查和预试验记录。
 - `screenshots/`：实际页面截图。
 - `report/`：PDF 与可编辑 Word 报告。
@@ -56,6 +56,8 @@ Compiler 执行 `python3 scripts/smoke.py` 验证初始化查询、分页、字�
 `bash scripts/run-one.sh read 10 /opt/lab4/results/example` 会记录10秒升压、30秒预热及120秒正式测量。`python3 scripts/summarize-run.py /opt/lab4/results/example` 将原始行分为 `warmup.jtl.gz` 和 `measurement.jtl.gz`，正式结果排除升压与预热。JMeter设置中的 `JMETER_HOME` 可覆盖安装位置；本次沿用服务器已有的 `/opt/lab3/tools/apache-jmeter-5.6.3`。
 
 完整流程使用 `scripts/experiment.py`，运行前通过环境变量 `LAB_SSH_PASSWORD` 提供SSH口令；可通过 `COMPILER_HOST、DATABASE_HOST、APPLICATION_HOST、MONITOR_HOST、SSH_USER` 指定主机。脚本先测MySQL，再切换MongoDB；每次运行前重置10万条日志。并发档位为1、10、25、50、100、200，每档读写各重复3次，总计72次正式测量。
+
+每次运行的 `all.jtl.gz` 是原始完整JTL的无损压缩，`original.json` 保存解压后原文件与压缩文件的SHA-256。升压预热、正式120秒和收尾请求另存为分组JTL。
 
 每次运行的 `summary.json` 记录请求数、吞吐量、错误率、平均值、P50/P95/P99、原始文件SHA-256和数据库记录数核对。吞吐量按正式120秒计算；百分位采用排序后线性插值。`monitoring.json` 保存 Prometheus query_range 原始响应，图表使用相同正式测量窗口。
 

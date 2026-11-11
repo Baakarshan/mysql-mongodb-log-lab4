@@ -1,5 +1,5 @@
 """Two sequential database rounds. Credentials come from the environment."""
-import os,sys,json,time,pathlib,csv,gzip,hashlib,shlex,datetime
+import os,sys,json,time,pathlib,csv,gzip,hashlib,shlex,datetime,subprocess
 import paramiko
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 HOSTS={'compiler':os.getenv('COMPILER_HOST','1.92.106.198'),'db':os.getenv('DATABASE_HOST','119.3.221.88'),'app':os.getenv('APPLICATION_HOST','120.46.176.79'),'monitor':os.getenv('MONITOR_HOST','113.44.144.119')}
@@ -107,7 +107,11 @@ def main():
   for p in (ROOT/'scripts').glob('*'):
    if p.is_file():upload(h,p,'/opt/lab4/scripts/'+p.name)
   upload(h,ROOT/'jmeter/logs.jmx','/opt/lab4/jmeter/logs.jmx')
- run_backend('mysql');switch_mongo();run_backend('mongo');event(stage='complete',completed_runs=len(list((ROOT/'results/runs').glob('*/summary.json'))))
+ run_backend('mysql');switch_mongo();run_backend('mongo')
+ event(stage='collecting_originals')
+ subprocess.run([sys.executable,str(ROOT/'scripts/collect-originals.py')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'scripts/audit.py'),'--complete'],check=True)
+ event(stage='complete',completed_runs=len(list((ROOT/'results/runs').glob('*/summary.json'))))
 if __name__=='__main__':
  try:main()
  except Exception as e:event(stage='failed',error=str(e));raise

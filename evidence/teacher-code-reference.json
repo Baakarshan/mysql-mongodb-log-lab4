@@ -1,0 +1,15 @@
+{
+  "repository": "https://gitee.com/mingqcn/spring-fundamentals",
+  "commit": "854d0e09e250bc5462267f63ecacdcff32161104",
+  "example": "6.SpringData_Mongo/order",
+  "verified_files": [
+    "src/main/java/cn/edu/xmu/javaee/order/mapper/OrderMapper.java",
+    "src/main/java/cn/edu/xmu/javaee/order/dao/OrderDao.java",
+    "src/main/java/cn/edu/xmu/javaee/order/config/MongoConfig.java",
+    "src/main/java/cn/edu/xmu/javaee/order/service/OrderService.java",
+    "src/main/java/cn/edu/xmu/javaee/order/controller/CustomerController.java",
+    "jmeter/ReadOrder.jmx",
+    "jmeter/WriteOrder.jmx"
+  ],
+  "adaptation": "MongoRepository insert and annotated condition paging; unified log API retained"
+}

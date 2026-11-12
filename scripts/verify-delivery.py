@@ -4,6 +4,12 @@ import csv,gzip,hashlib,json
 R=Path(__file__).resolve().parents[1]
 audit=json.loads((R/'results/audit.json').read_text())
 assert audit['complete'] and audit['runs']==72 and audit['all_record_counts_verified']
+revision=json.loads((R/'evidence/repository-revision.json').read_text())
+assert revision['deployed_jar_verified'] and revision['required_runs']==36
+for name,digest in revision['source_sha256'].items():
+ assert hashlib.sha256((R/name).read_bytes()).hexdigest()==digest,name
+rerun=json.loads((R/'evidence/repository-rerun-verification.json').read_text())
+assert rerun['verified'] and rerun['runs']==36 and rerun['implementation']=='MongoRepository'
 count=errors=0
 for sp in sorted((R/'results/runs').glob('*/summary.json')):
  p=sp.parent;s=json.loads(sp.read_text());original=json.loads((p/'original.json').read_text())
@@ -28,6 +34,8 @@ for ext in ['pdf','docx']:
  p=R/'report'/f'实验四实验报告.{ext}';assert p.is_file() and p.stat().st_size>100000
 shots=json.loads((R/'screenshots/jmeter-manifest.json').read_text())
 assert len(shots)==24 and all((R/'screenshots'/x['file']).is_file() for x in shots)
+for shot in shots:
+ if 'sha256' in shot:assert hashlib.sha256((R/'screenshots'/shot['file']).read_bytes()).hexdigest()==shot['sha256']
 summary_shots=json.loads((R/'screenshots/jmeter-summary-manifest.json').read_text())
 assert len(summary_shots)==12
 for shot in summary_shots:

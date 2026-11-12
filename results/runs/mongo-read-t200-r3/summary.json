@@ -1,27 +1,27 @@
 {
-  "start_ms": 1794372252473,
-  "measurement_start_ms": 1794372292473,
-  "measurement_end_ms": 1794372412473,
+  "start_ms": 1794484138228,
+  "measurement_start_ms": 1794484178228,
+  "measurement_end_ms": 1794484298228,
   "duration_s": 120,
-  "warmup_samples": 46892,
-  "samples": 142192,
-  "all_success": 190105,
+  "warmup_samples": 44733,
+  "samples": 134369,
+  "all_success": 180642,
   "errors": 0,
   "error_rate": 0.0,
-  "throughput_rps": 1184.9333333333334,
-  "mean_ms": 168.67194356925847,
-  "p50_ms": 167.0,
-  "p95_ms": 256.0,
-  "p99_ms": 327.0,
-  "max_ms": 577,
+  "throughput_rps": 1119.7416666666666,
+  "mean_ms": 178.50541419523847,
+  "p50_ms": 175.0,
+  "p95_ms": 277.0,
+  "p99_ms": 351.0,
+  "max_ms": 663,
   "labels": {
-    "read": 190105
+    "read": 180642
   },
   "setup_samples": 1,
   "files": {
-    "warmup.jtl.gz": "7ed5ee6182122ac657cd5bb0f675aea584deab100356541868044142dca30a79",
-    "measurement.jtl.gz": "4162d490aebac36bc5a7d702b462e6f1246971465a33b5fa2df422b54c31304c",
-    "cooldown.jtl.gz": "ab7b0e122889a54b00325c382e3e3ea287c7eccc049b2d143a43a64b152a3a4b"
+    "warmup.jtl.gz": "dd3075c7be40aaf962be6c22caf4f92c4258e865833a271c78a00eb1d2c68aa9",
+    "measurement.jtl.gz": "b19effb2842a0a374f4e9ce1943c373c652d777bed0b59ce26526984efe3172b",
+    "cooldown.jtl.gz": "fdc006b2e37b9407adc3007431bb91dbb33f9a61d267b049b551ff5747263779"
   },
   "backend": "mongo",
   "operation": "read",
@@ -31,7 +31,7 @@
   "records_before": 100000,
   "records_after": 100000,
   "record_count_verified": true,
-  "cooldown_samples": 1021,
-  "all_http_samples": 190105,
+  "cooldown_samples": 1540,
+  "all_http_samples": 180642,
   "audited": true
 }

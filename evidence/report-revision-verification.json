@@ -4,22 +4,15 @@
   "pages": 20,
   "figures": 28,
   "tables": 7,
-  "render_directory": "work/render-16",
-  "reviewed_changed_pages": [
-    4,
-    5,
-    6,
-    7
-  ],
-  "unchanged_comparison": "Pixel-identical to render-15 pages",
-  "contact_sheets_reviewed_pages": "1-20",
-  "database_capture_commands_verified": true,
-  "database_state_restored": "MongoDB and application running; health UP; MySQL stopped",
-  "pending": null,
-  "unchanged_pages": [
+  "render_directory": "work/render-19",
+  "reviewed_pages": [
     1,
     2,
     3,
+    4,
+    5,
+    6,
+    7,
     8,
     9,
     10,
@@ -34,7 +27,40 @@
     19,
     20
   ],
+  "changed_pages_reviewed_at_full_resolution": [
+    6,
+    13
+  ],
+  "pixel_identical_to_previously_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "database_capture_commands_verified": true,
   "ghostty_original_screenshots": 5,
   "ghostty_panels_verified": true,
-  "caption_review": "Figure captions state content only"
+  "mongo_records_captured_at": "2026-11-12T13:13:26Z",
+  "mongo_records": 776260,
+  "monitoring_graph_render_verified": true,
+  "caption_review": "Figure captions state content only",
+  "pending": null,
+  "files": {
+    "pdf": "de1c838e7c592ded330f3e3a1009e0f048f478aadc8e680a6286405af1215350",
+    "docx": "19582e57bee61bef3408ac634d6d69b78359b50afb5de089bb6dedbd33d7edc5"
+  }
 }

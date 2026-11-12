@@ -1,14 +1,16 @@
 """Generate JMeter dashboards locally from the selected original measurements."""
 import argparse,pathlib,os,csv,gzip,datetime,json,subprocess,shutil
 from zoneinfo import ZoneInfo
+from audit import audit
 R=pathlib.Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--jmeter',default=str(pathlib.Path(os.getenv('JMETER_HOME','/tmp/lab4-tools/apache-jmeter-5.6.3'))/'bin/jmeter'));a=p.parse_args()
-selected=json.loads((R/'results/selected-levels.json').read_text());work=R/'work';(work/'jtl').mkdir(parents=True,exist_ok=True);(work/'html').mkdir(exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--jmeter',default=str(pathlib.Path(os.getenv('JMETER_HOME','/tmp/lab4-tools/apache-jmeter-5.6.3'))/'bin/jmeter'));p.add_argument('--backend',choices=['mysql','mongo']);p.add_argument('--run-root',type=pathlib.Path,default=R/'results/runs');p.add_argument('--output-root',type=pathlib.Path,default=R/'work');p.add_argument('--threads',type=int,nargs='+');a=p.parse_args()
+selected=json.loads((R/'results/selected-levels.json').read_text());work=a.output_root;(work/'jtl').mkdir(parents=True,exist_ok=True);(work/'html').mkdir(exist_ok=True)
 for op,levels in selected.items():
- for t in levels:
-  for b in ['mysql','mongo']:
-   name=f'{b}-{op}-t{t}-r1';src=R/'results/runs'/name/'measurement.jtl.gz'
+ for t in a.threads or levels:
+  for b in [a.backend] if a.backend else ['mysql','mongo']:
+   name=f'{b}-{op}-t{t}-r1';src=a.run_root/name/'measurement.jtl.gz'
    if not src.exists():continue
+   audit(src.parent)
    dst=work/'jtl'/(name+'.jtl')
    # Only the display copy uses readable dates; epoch-ms originals remain intact.
    with gzip.open(src,'rt') as f,dst.open('w',newline='') as out:

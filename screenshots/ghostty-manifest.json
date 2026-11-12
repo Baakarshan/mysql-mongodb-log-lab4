@@ -1,5 +1,5 @@
 {
-  "source": "Author-provided Ghostty screenshots, 2026-11-11 UTC",
+  "source": "Author-provided Ghostty screenshots, 2026-11-11 and 2026-11-12 UTC",
   "originals": [
     {
       "file": "mysql-records-ghostty-native.png",
@@ -11,11 +11,12 @@
     },
     {
       "file": "mongo-records-ghostty-native.png",
-      "sha256": "ef62b680e5851fd26a19a71601b81ab3dce870259f19111d2872ea6c6c31e262",
+      "sha256": "489506df1aa1b8a031286dba0c4ad3556195b7e5f3591f68df768be1a6ae7dc0",
       "size": [
-        2352,
-        1306
-      ]
+        1724,
+        1076
+      ],
+      "captured_at": "2026-11-12T13:13:26Z"
     },
     {
       "file": "mongo-index-upper-ghostty-native.png",
@@ -80,7 +81,7 @@
     },
     {
       "file": "mongo-records-ghostty-report.png",
-      "sha256": "4b4fc12d06ecc30ca2c731558598ca768f1998b061cce3b986baf76680217465",
+      "sha256": "a0f532453d2c2b9667b044a79af765eccb15539f127fdaa0539ed7c57fc8422c",
       "layout": "vertical",
       "gap": 24,
       "parts": [
@@ -88,9 +89,9 @@
           "source": "mongo-records-ghostty-native.png",
           "rect": [
             0,
-            95,
-            2352,
-            1240
+            0,
+            1724,
+            1076
           ]
         }
       ]
@@ -159,7 +160,7 @@
   ],
   "record_counts": {
     "mysql": 765119,
-    "mongo": 766809
+    "mongo": 776260
   },
   "demo_records_per_backend": 1
 }

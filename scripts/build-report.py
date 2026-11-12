@@ -11,6 +11,8 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT,WD_CELL_VERTICAL_ALIGNMENT
 R=Path(__file__).resolve().parents[1];OUT=R/'report';OUT.mkdir(exist_ok=True)
 audit=json.loads((R/'results/audit.json').read_text());assert audit['complete']
+ghostty=json.loads((R/'screenshots/ghostty-manifest.json').read_text())
+final_counts={b:json.loads((R/'results/runs'/f'{b}-write-t200-r3/summary.json').read_text())['records_after'] for b in ['mysql','mongo']}
 ag=json.loads((R/'results/aggregate.json').read_text());selected=json.loads((R/'results/selected-levels.json').read_text());lookup={(d['backend'],d['operation'],d['threads']):d for d in ag}
 def d(b,o,t):return lookup[b,o,t]
 def num(x):return f'{x:,.1f}'
@@ -101,9 +103,10 @@ table(['项目','实际配置'],[['应用','Spring Boot 3.3.13，Java 17.0.21，
 head('2.2　日志模型与统一接口',2)
 para('日志字段包括id、traceId、level、source、message、clientIp和createdAt。id采用26位ULID，createdAt统一保存UTC毫秒时间，message最长4096字符。MySQL以CHAR(26)保存主键、DATETIME(6)保存时间；MongoDB将id映射为字符串_id，以BSON Date保存时间。')
 para('POST /api/logs执行单条写入并返回HTTP 201及保存的对象。GET /api/logs接收level、from、to、page、size，按左闭右开时间范围查询，返回content、page、size、totalElements和totalPages。两套实现均按createdAt和id降序排列，并建立级别、时间、主键联合索引。')
-para('JPA实现使用EntityManager.persist写入、JpaRepository条件分页查询；MongoDB实现使用Spring Data MongoTemplate执行insert、count和find。两条读取链路均返回当前页与匹配总数。MongoTemplate默认写入_class类型元数据，HTTP业务字段保持统一。MySQL每次事务提交刷盘并关闭二进制日志，MongoDB采用单机WiredTiger及w=1、journal=true写入确认。')
+para('JPA实现使用EntityManager.persist写入、JpaRepository条件分页查询；MongoDB实现使用Spring Data MongoRepository的insert及条件分页查询。两条读取链路均返回当前页与匹配总数。Spring Data默认写入_class类型元数据，HTTP业务字段保持统一。MySQL每次事务提交刷盘并关闭二进制日志，MongoDB采用单机WiredTiger及w=1、journal=true写入确认。')
+para('实现核对采用老师仓库spring-fundamentals的6.SpringData_Mongo/order示例，版本854d0e0。该示例通过MongoRepository插入订单和按主键读取；本实验使用同一仓储接口实现日志写入与条件分页。2026年11月12日更新MongoDB访问实现后重新完成36次正式测量；MySQL与公共方法指令、依赖及配置核对一致，沿用原36次测量。')
 head('3　实验设计');head('3.1　基准数据与请求',2)
-para('生成器以20261111为随机种子创建10万条日志，时间均匀覆盖2026年11月1日UTC全天，包含五种级别和八个服务来源。两库导入同一批业务字段，导入后核对记录数。固定查询为INFO级别、UTC 06:00至07:00、第一页20条，匹配总数为2497条。写入请求使用250字符正文和固定业务时间，服务端生成ULID。')
+para('生成器以20261111为随机种子创建10万条日志，时间均匀覆盖2026年11月1日UTC全天，包含五种级别和八个服务来源。两库导入同一批业务字段，导入后核对记录数。固定查询为INFO级别、UTC 06:00至07:00、第一页20条，匹配总数为2497条。该负载在预热后持续重复相同查询，测量包含总数计算的热点条件分页接口。写入请求使用250字符正文和固定业务时间，服务端生成ULID。')
 head('3.2　先负载后压力的分析方法',2)
 para('负载测试先考察1和10线程下的查询与写入表现；逐级压力测试随后比较1、10、25、50、100、200线程，结合吞吐平台、P95/P99增长、错误率与资源占用识别性能转折。JMeter提供外部HTTP指标，Prometheus提供主机和应用内部指标，两类指标共同用于上述测试。两章复用同一批阶梯并发测量，保留原运行时间顺序；正文按先负载、后压力组织分析。')
 para('查询与写入分别采用1、10、25、50、100、200线程，每档重复3次，两种数据库共72次正式测量。每次运行前恢复10万条基准数据，随后记录10秒升压、30秒预热和120秒正式测量。正式窗口按请求开始时间截取；窗口结束附近的收尾请求单独保留，原始HTTP采样行可完整复核。预热写入计入本次数据库增长，下一次运行前恢复基准。写入测试将全程成功请求数与数据库记录增长量核对，查询测试核对记录总数保持不变。')
@@ -117,7 +120,7 @@ for b in ['mysql','mongo']:
  if b=='mongo':page();head('MongoDB接口验收',3)
  image(R/'screenshots'/f'{b}-api-network-report.jpg',f'{db_name(b)}读写接口验收',145)
 page();head('3.5　数据库记录与索引',2)
-para('下图展示实际日志及当前记录数。正式末次写入测试结束后，MySQL为765118条，MongoDB为766808条；Edge接口补拍各新增1条演示日志，因此截图总数分别为765119和766809条。MySQL宽表按列分为上下两块，行序保持一致。')
+para(f'MySQL记录图拍摄于2026年11月11日，记录数为{ghostty["record_counts"]["mysql"]}条。MongoDB记录图拍摄于11月12日MongoRepository重跑后，末次写入后为{final_counts["mongo"]}条，接口演示新增1条，截图总数为{ghostty["record_counts"]["mongo"]}条。MySQL宽表按列分为上下两块，行序保持一致。')
 for b in ['mysql','mongo']:
  p=R/'screenshots'/f'{b}-records-ghostty-report.png'
  if p.exists():image(p,f'{db_name(b)}存储记录与记录总数',145)
@@ -193,7 +196,7 @@ para(f'本实验完成了同一日志模型和接口下的JPA/MySQL与Spring Dat
 para('查询返回20条数据并计算2497条匹配记录的总数，写入采用单条持久化并等待确认；两类操作承担不同的数据库工作。并发增加后的性能变化应结合吞吐量、P95/P99和主机资源判断。本文保留重复测量范围、原始错误和资源序列，使读写差异及性能转折均可追溯到具体运行。')
 table(['核验项目','结果'],[['正式测量','72次，24个实现与操作并发组合，各重复3次'],['正式请求数',f'{audit["measurement_samples"]:,}'],['正式错误数',f'{audit["measurement_errors"]:,}'],['记录数核对','全部运行均完成核对'],['原始数据','升压预热、正式窗口、收尾JTL无损压缩及SHA-256'],['程序与材料','https://github.com/Baakarshan/mysql-mongodb-log-lab4']], '实验完成与数据核验',[36,119])
 head('参考文献',2)
-for text in ['[1] Spring. Spring Data JPA Reference Documentation. https://docs.spring.io/spring-data/jpa/reference/.','[2] Spring. Spring Data MongoDB Reference Documentation. https://docs.spring.io/spring-data/mongodb/reference/.','[3] Apache Software Foundation. Apache JMeter User Manual: Generating Dashboard Report. https://jmeter.apache.org/usermanual/generating-dashboard.html.','[4] MongoDB. Write Concern. https://www.mongodb.com/docs/v7.0/reference/write-concern/.','[5] Oracle. MySQL 8.4 Reference Manual: InnoDB Startup Options and System Variables. https://dev.mysql.com/doc/refman/8.4/en/innodb-parameters.html.']:
+for text in ['[1] Spring. Spring Data JPA Reference Documentation. https://docs.spring.io/spring-data/jpa/reference/.','[2] Spring. Spring Data MongoDB Reference Documentation. https://docs.spring.io/spring-data/mongodb/reference/.','[3] Apache Software Foundation. Apache JMeter User Manual: Generating Dashboard Report. https://jmeter.apache.org/usermanual/generating-dashboard.html.','[4] MongoDB. Write Concern. https://www.mongodb.com/docs/v7.0/reference/write-concern/.','[5] Oracle. MySQL 8.4 Reference Manual: InnoDB Startup Options and System Variables. https://dev.mysql.com/doc/refman/8.4/en/innodb-parameters.html.','[6] mingqcn. spring-fundamentals: 6.SpringData_Mongo/order. https://gitee.com/mingqcn/spring-fundamentals. 核对版本854d0e09，2026-11-12.']:
  p=para(text,indent=False);p.paragraph_format.line_spacing=1.1
  for run in p.runs:run.font.size=Pt(8.5)
 # Explicit font families and clean title borders avoid inherited theme residue.

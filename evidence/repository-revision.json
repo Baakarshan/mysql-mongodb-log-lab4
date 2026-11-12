@@ -1,0 +1,41 @@
+{
+  "changed_backend": "mongo",
+  "required_runs": 36,
+  "preserved_backend": "mysql",
+  "preserved_runs": 36,
+  "unchanged_method_instructions_and_signatures": [
+    "edu.lab4.LogStore",
+    "edu.lab4.LogEntry",
+    "edu.lab4.LogRequest",
+    "edu.lab4.mysql.LogJpaRepository",
+    "edu.lab4.mysql.MySqlLogStore",
+    "edu.lab4.Application",
+    "edu.lab4.LogPage",
+    "edu.lab4.LogController"
+  ],
+  "comparison": "javap -c -p -s; private field declaration order excluded; dependencies and MySQL configuration byte-identical",
+  "new_jar_sha256": "ed8d75729bef563ec4cd9db881dd99445b52dc0f5802607ef2e76f701f2ebc81",
+  "baseline_commit": "12616e4",
+  "checked_at": "2026-11-12T10:53:42.241839+00:00",
+  "query": "Repository @Query with combined $gte/$lt bounds",
+  "implementation_commit": "85f25d7",
+  "source_sha256": {
+    "pom.xml": "9c9d07de29a240a1df2cc18bed211ba199052133e55a4cd64674da12b0836f9a",
+    "src/main/java/edu/lab4/Application.java": "9e777e5b69e436c45d107af7710953aa3392567dffa1a87c966fc587d2ff388e",
+    "src/main/java/edu/lab4/LogController.java": "f0370446eb5acb19a4017a1d362042318ddabefe3c77ac1093fff12ee2e4eacd",
+    "src/main/java/edu/lab4/LogEntry.java": "60c0e8b50912f4df672b4356fae8f81d70d0f93d4c5eb1f5a0f3ced5fc0de625",
+    "src/main/java/edu/lab4/LogPage.java": "7d9dd971f51dd983082bb76369e9568e274b38d2dd314eee88d557decd658791",
+    "src/main/java/edu/lab4/LogRequest.java": "293a607e75ba463e20eb8bc945bdde8bf01e5260023387f3f4db91c0046318ad",
+    "src/main/java/edu/lab4/LogStore.java": "6954c1cab19b67a4d81fc44fa6e2166740fe5ab3cc4b94f284b41437140493ba",
+    "src/main/java/edu/lab4/mongo/LogMongoRepository.java": "7e695eb5c7411971855abab2007c4d8394291aa2f1360ed6ce36f80c66b1038e",
+    "src/main/java/edu/lab4/mongo/MongoLogStore.java": "c1feb8d54ad942e76cb6c829b09597f11ed629f725ddbb29b97705296c7f7be5",
+    "src/main/java/edu/lab4/mongo/MongoRepositoryConfiguration.java": "246ff66045579057aec9fc2b0cc3a5c27acaae9bd41a6eba9d3060c0342e9c5a",
+    "src/main/java/edu/lab4/mysql/LogJpaRepository.java": "0048503f74d795dcc49165aac4c2a74f6c5e750e0905061e9fcbe7ca42d5f5dd",
+    "src/main/java/edu/lab4/mysql/MySqlLogStore.java": "ba281678eb2046b90d7799c1422faf812beaf26279c2bc98346f257814c719d6",
+    "src/main/resources/application-mongo.yml": "f7476463d654e61b5a793cec5a15dc07e83b4778b772334f15ce8754958852b4",
+    "src/main/resources/application-mysql.yml": "c40e197861118e885919b53c9a6e4dbfd1d51f0afb7dd943f8c635c935c66a55",
+    "src/main/resources/application.yml": "d4eaaca8a97424ae92e0c8317e2d5b448e20f678cefce93c03624ac43c563ce4"
+  },
+  "deployed_jar_verified": true,
+  "source_verified_at": "2026-11-12T11:40:12.918262+00:00"
+}

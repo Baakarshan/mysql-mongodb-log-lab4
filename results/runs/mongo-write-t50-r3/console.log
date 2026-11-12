@@ -4,18 +4,20 @@ WARN StatusConsoleListener The use of package scanning to locate plugins is depr
 WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
 Creating summariser <summary>
 Created the tree successfully using /opt/lab4/jmeter/logs.jmx
-Starting standalone test @ 2026 Nov 11 13:21:11 CST (1794374471362)
+Starting standalone test @ 2026 Nov 12 20:25:29 CST (1794486329694)
 Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
-summary +  72976 in 00:00:18 = 3965.9/s Avg:     8 Min:     1 Max:   543 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
-summary + 130575 in 00:00:30 = 4352.5/s Avg:    11 Min:     2 Max:    56 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
-summary = 203551 in 00:00:48 = 4205.5/s Avg:    10 Min:     1 Max:   543 Err:     0 (0.00%)
-summary + 132090 in 00:00:30 = 4402.9/s Avg:    11 Min:     1 Max:    48 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
-summary = 335641 in 00:01:18 = 4281.0/s Avg:    10 Min:     1 Max:   543 Err:     0 (0.00%)
-summary + 137312 in 00:00:30 = 4577.2/s Avg:    10 Min:     1 Max:    44 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
-summary = 472953 in 00:01:48 = 4363.0/s Avg:    10 Min:     1 Max:   543 Err:     0 (0.00%)
-summary + 133835 in 00:00:30 = 4461.2/s Avg:    11 Min:     1 Max:    44 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
-summary = 606788 in 00:02:18 = 4384.3/s Avg:    10 Min:     1 Max:   543 Err:     0 (0.00%)
-summary + 101156 in 00:00:22 = 4510.7/s Avg:    10 Min:     1 Max:    48 Err:     0 (0.00%) Active: 0 Started: 50 Finished: 50
-summary = 707944 in 00:02:41 = 4401.9/s Avg:    10 Min:     1 Max:   543 Err:     0 (0.00%)
-Tidying up ...    @ 2026 Nov 11 13:23:52 CST (1794374632426)
+summary +      1 in 00:00:01 =    1.7/s Avg:   568 Min:   568 Max:   568 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary + 121794 in 00:00:29 = 4133.0/s Avg:     9 Min:     1 Max:    48 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary = 121795 in 00:00:30 = 4052.4/s Avg:     9 Min:     1 Max:   568 Err:     0 (0.00%)
+summary + 131826 in 00:00:30 = 4394.2/s Avg:    11 Min:     1 Max:    51 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary = 253621 in 00:01:00 = 4223.1/s Avg:    10 Min:     1 Max:   568 Err:     0 (0.00%)
+summary + 133349 in 00:00:30 = 4445.0/s Avg:    11 Min:     1 Max:    47 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary = 386970 in 00:01:30 = 4297.0/s Avg:    10 Min:     1 Max:   568 Err:     0 (0.00%)
+summary + 129910 in 00:00:30 = 4330.3/s Avg:    11 Min:     2 Max:    47 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary = 516880 in 00:02:00 = 4305.4/s Avg:    10 Min:     1 Max:   568 Err:     0 (0.00%)
+summary + 135132 in 00:00:30 = 4504.4/s Avg:    10 Min:     1 Max:    41 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary = 652012 in 00:02:30 = 4345.2/s Avg:    10 Min:     1 Max:   568 Err:     0 (0.00%)
+summary +  48840 in 00:00:11 = 4498.5/s Avg:    10 Min:     1 Max:    43 Err:     0 (0.00%) Active: 0 Started: 50 Finished: 50
+summary = 700852 in 00:02:41 = 4355.5/s Avg:    10 Min:     1 Max:   568 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 12 20:28:10 CST (1794486490858)
 ... end of run

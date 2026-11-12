@@ -3,16 +3,6 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import json
 R=Path(__file__).resolve().parents[1];S=R/'screenshots'
-for b in ['mysql','mongo']:
- p=S/f'{b}-api.jpg'
- if p.exists():
-  im=Image.open(p);im.crop((0,0,im.width,min(650,im.height))).save(S/f'{b}-api-report.jpg',quality=95)
-for b in ['mysql','mongo']:
- for kind,height in [('records',620),('index',800)]:
-  if b=='mysql':height=365
-  p=S/f'{b}-{kind}.jpg'
-  if p.exists():
-   im=Image.open(p);im.crop((0,0,im.width,min(height,im.height))).save(S/f'{b}-{kind}-report.jpg',quality=95)
 # Screenshot capture records contain the observed DOM rectangle of each graph.
 manifest=S/'jmeter-manifest.json'
 if manifest.exists():
@@ -37,5 +27,8 @@ print('Prepared report screenshot crops')
 # Preserve both Prometheus pages in a compact, side-by-side report figure.
 left=Image.open(S/'mysql-read-t200-r1-prometheus-cpu.jpg')
 right=Image.open(S/'mongo-read-t200-r1-prometheus-cpu.jpg')
-pair=Image.new('RGB',(left.width+right.width+20,max(left.height,right.height)),'white')
-pair.paste(left,(0,0));pair.paste(right,(left.width+20,0));pair.save(S/'prometheus-cpu-comparison.jpg',quality=96)
+width=max(left.width,right.width)
+left=left.resize((width,round(left.height*width/left.width)),Image.Resampling.LANCZOS)
+right=right.resize((width,round(right.height*width/right.width)),Image.Resampling.LANCZOS)
+pair=Image.new('RGB',(width*2+20,max(left.height,right.height)),'white')
+pair.paste(left,(0,0));pair.paste(right,(width+20,0));pair.save(S/'prometheus-cpu-comparison.jpg',quality=96)

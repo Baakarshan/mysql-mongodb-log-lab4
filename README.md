@@ -1,6 +1,6 @@
 # 实验四 MySQL 与 MongoDB 日志读写性能对比
 
-作者：温子健。课程实验，使用四台 Ubuntu 18.04 云主机，分两轮测试同一日志业务的 JPA/MySQL 与 Spring Data MongoDB/MongoDB 实现。
+作者：温子健。署名：郑本壹。课程实验，使用四台 Ubuntu 18.04 云主机，分两轮测试同一日志业务的 JPA/MySQL 与 Spring Data MongoDB/MongoDB 实现。
 
 已完成72次正式测量，共 **20,576,002次请求，0次错误**。两套实现各通过14项接口检查，全部运行的数据库记录数核对通过。
 

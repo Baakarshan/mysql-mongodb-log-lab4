@@ -1,0 +1,29 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/jmeter/adaptive-logs.jmx
+Starting standalone test @ 2026 Nov 17 13:58:46 CST (1794895126969)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.8/s Avg:   535 Min:   535 Max:   535 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +   5848 in 00:00:05 = 1112.2/s Avg:   251 Min:     3 Max:   877 Err:     0 (0.00%) Active: 1112 Started: 1112 Finished: 0
+summary =   5849 in 00:00:06 = 1007.4/s Avg:   251 Min:     3 Max:   877 Err:     0 (0.00%)
+summary +   5350 in 00:00:06 =  831.5/s Avg:  1558 Min:    81 Max:  4003 Err:     0 (0.00%) Active: 2916 Started: 2916 Finished: 0
+summary =  11199 in 00:00:12 =  915.0/s Avg:   875 Min:     3 Max:  4003 Err:     0 (0.00%)
+summary +   5859 in 00:00:06 = 1051.5/s Avg:  3573 Min:   107 Max:  5110 Err:  5648 (96.40%) Active: 2916 Started: 2916 Finished: 0
+summary =  17058 in 00:00:18 =  957.7/s Avg:  1802 Min:     3 Max:  5110 Err:  5648 (33.11%)
+summary +   6676 in 00:00:06 = 1112.7/s Avg:  2641 Min:  1999 Max:  6073 Err:  6676 (100.00%) Active: 2916 Started: 2916 Finished: 0
+summary =  23734 in 00:00:24 =  996.7/s Avg:  2038 Min:     3 Max:  6073 Err: 12324 (51.93%)
+summary +   7161 in 00:00:06 = 1194.7/s Avg:  2192 Min:  2000 Max:  6059 Err:  7161 (100.00%) Active: 2916 Started: 2916 Finished: 0
+summary =  30895 in 00:00:30 = 1036.5/s Avg:  2074 Min:     3 Max:  6073 Err: 19485 (63.07%)
+summary +   7682 in 00:00:06 = 1280.3/s Avg:  2341 Min:  1999 Max:  6096 Err:  7682 (100.00%) Active: 2916 Started: 2916 Finished: 0
+summary =  38577 in 00:00:36 = 1077.4/s Avg:  2127 Min:     3 Max:  6096 Err: 27167 (70.42%)
+summary +   7357 in 00:00:06 = 1226.0/s Avg:  2226 Min:  1999 Max:  6058 Err:  7357 (100.00%) Active: 2094 Started: 2916 Finished: 822
+summary =  45934 in 00:00:42 = 1098.7/s Avg:  2143 Min:     3 Max:  6096 Err: 34524 (75.16%)
+summary +   2410 in 00:00:06 =  378.8/s Avg:  3408 Min:  1999 Max:  6055 Err:  2410 (100.00%) Active: 14 Started: 2916 Finished: 2902
+summary =  48344 in 00:00:48 = 1003.6/s Avg:  2206 Min:     3 Max:  6096 Err: 36934 (76.40%)
+summary +     13 in 00:00:01 =   25.3/s Avg:  6021 Min:  6006 Max:  6034 Err:    13 (100.00%) Active: 0 Started: 2916 Finished: 2916
+summary =  48357 in 00:00:49 =  993.3/s Avg:  2207 Min:     3 Max:  6096 Err: 36947 (76.40%)
+Tidying up ...    @ 2026 Nov 17 13:59:35 CST (1794895175877)
+... end of run

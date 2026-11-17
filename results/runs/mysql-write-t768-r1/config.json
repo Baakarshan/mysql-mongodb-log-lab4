@@ -1,0 +1,12 @@
+{
+  "threads": 768,
+  "target_rps": 7680,
+  "loops": 600,
+  "generator_role": "monitor",
+  "generator_heap_mib": 512,
+  "ramp_s": 5,
+  "warmup_s": 5,
+  "measurement_s": 25,
+  "timeout_ms": 5000,
+  "jmx_sha256": "515d5eda50e0d704ab1898d2d9e432957be6ec80eec966510cf7d2741376f1de"
+}

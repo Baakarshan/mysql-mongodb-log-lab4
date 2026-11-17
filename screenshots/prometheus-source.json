@@ -1,0 +1,7 @@
+{
+  "run": "mongo-read-t2916-r3",
+  "endUtc": "2026-11-17 05:59:37",
+  "range": "2m",
+  "cpu": "100 * (1 - avg by (role) (rate(node_cpu_seconds_total{mode=\"idle\"}[10s])))",
+  "memory": "node_memory_MemAvailable_bytes / 1024 / 1024"
+}

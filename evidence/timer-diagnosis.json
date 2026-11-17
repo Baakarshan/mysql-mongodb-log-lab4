@@ -1,0 +1,21 @@
+{
+  "finding": "Shared timer rounds a global interarrival interval to milliseconds; per-thread pacing retains the requested high aggregate rate.",
+  "preflight": [
+    {
+      "threads": 16,
+      "target_rps": 160,
+      "shared_timer_rps": 166.64,
+      "per_thread_timer_rps": 160.0,
+      "shared_p95": 4.0,
+      "per_thread_p95": 5.0
+    },
+    {
+      "threads": 8,
+      "target_rps": 80,
+      "shared_timer_rps": 76.92,
+      "per_thread_timer_rps": 80.0,
+      "shared_p95": 6.0,
+      "per_thread_p95": 6.0
+    }
+  ]
+}

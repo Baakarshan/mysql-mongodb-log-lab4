@@ -1,8 +1,16 @@
 {
-  "runs": 72,
-  "measurement_samples": 20576002,
-  "measurement_errors": 0,
-  "all_http_samples": 27199338,
-  "all_record_counts_verified": true,
-  "complete": true
+  "verified": true,
+  "runs": 75,
+  "measurement_samples": 2149609,
+  "measurement_errors": 154870,
+  "backends": [
+    "mongo",
+    "mysql"
+  ],
+  "write_count_differences": [
+    {
+      "run": "mysql-write-t768-r1",
+      "difference": 339
+    }
+  ]
 }

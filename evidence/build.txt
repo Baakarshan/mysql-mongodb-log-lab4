@@ -6,7 +6,7 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- spotless:2.43.0:check (check-google-java-style) @ log-benchmark ---
-[INFO] Spotless.Java is keeping 11 files clean - 0 needs changes to be clean, 2 were already clean, 9 were skipped because caching determined they were already clean
+[INFO] Spotless.Java is keeping 12 files clean - 0 needs changes to be clean, 12 were already clean, 0 were skipped because caching determined they were already clean
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ log-benchmark ---
 [INFO] Copying 3 resources from src/main/resources to target/classes
@@ -14,7 +14,7 @@
 [INFO] 
 [INFO] --- compiler:3.13.0:compile (default-compile) @ log-benchmark ---
 [INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 11 source files with javac [debug parameters release 17] to target/classes
+[INFO] Compiling 12 source files with javac [debug parameters release 17] to target/classes
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ log-benchmark ---
 [INFO] skip non existing resourceDirectory /opt/lab4/repository-build/src/test/resources
@@ -34,6 +34,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.386 s
-[INFO] Finished at: 2026-11-12T18:57:57+08:00
+[INFO] Total time:  5.668 s
+[INFO] Finished at: 2026-11-17T12:52:51+08:00
 [INFO] ------------------------------------------------------------------------

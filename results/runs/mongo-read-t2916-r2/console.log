@@ -1,0 +1,43 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/jmeter/adaptive-logs.jmx
+Starting standalone test @ 2026 Nov 17 13:51:52 CST (1794894712756)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.8/s Avg:   555 Min:   555 Max:   555 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +   5768 in 00:00:05 = 1068.0/s Avg:   299 Min:     3 Max:  1009 Err:     0 (0.00%) Active: 1287 Started: 1287 Finished: 0
+summary =   5769 in 00:00:06 =  966.7/s Avg:   299 Min:     3 Max:  1009 Err:     0 (0.00%)
+summary +   6854 in 00:00:06 = 1140.6/s Avg:  1422 Min:   162 Max:  2146 Err:     0 (0.00%) Active: 2283 Started: 2283 Finished: 0
+summary =  12623 in 00:00:12 = 1053.8/s Avg:   909 Min:     3 Max:  2146 Err:     0 (0.00%)
+summary +   6886 in 00:00:06 = 1147.7/s Avg:  1922 Min:  1374 Max:  2565 Err:     0 (0.00%) Active: 2561 Started: 2561 Finished: 0
+summary =  19509 in 00:00:18 = 1073.6/s Avg:  1266 Min:     3 Max:  2565 Err:     0 (0.00%)
+summary +    667 in 00:00:06 =  113.7/s Avg:  2127 Min:     6 Max:  3531 Err:     0 (0.00%) Active: 2606 Started: 2606 Finished: 0
+summary =  20176 in 00:00:24 =  839.3/s Avg:  1295 Min:     3 Max:  3531 Err:     0 (0.00%)
+summary +    418 in 00:00:06 =   68.1/s Avg:  2442 Min:     2 Max:  6318 Err:     0 (0.00%) Active: 2658 Started: 2658 Finished: 0
+summary =  20594 in 00:00:30 =  682.5/s Avg:  1318 Min:     2 Max:  6318 Err:     0 (0.00%)
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to java_pid29034.hprof ...
+Heap dump file created [354221213 bytes in 1.262 secs]
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Log workload 1-2662"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Log workload 1-2651"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Log workload 1-2648"
+summary +     20 in 00:00:13 =    1.5/s Avg:  2760 Min:  1239 Max:  3080 Err:     0 (0.00%) Active: 2662 Started: 2663 Finished: 1
+summary =  20614 in 00:00:44 =  472.1/s Avg:  1319 Min:     2 Max:  6318 Err:     0 (0.00%)
+Uncaught Exception java.lang.OutOfMemoryError: Java heap space in thread Thread[Log workload 1-1316,5,main]. See log file for details.
+summary +   4235 in 00:00:05 =  798.8/s Avg:  1070 Min:     2 Max: 12262 Err:     0 (0.00%) Active: 514 Started: 2916 Finished: 2402
+summary =  24849 in 00:00:49 =  507.5/s Avg:  1277 Min:     2 Max: 12262 Err:     0 (0.00%)
+summary +   6887 in 00:00:06 = 1147.6/s Avg:   350 Min:   103 Max:   829 Err:     0 (0.00%) Active: 327 Started: 2916 Finished: 2589
+summary =  31736 in 00:00:55 =  577.3/s Avg:  1076 Min:     2 Max: 12262 Err:     0 (0.00%)
+summary +   6789 in 00:00:06 = 1131.1/s Avg:   271 Min:    68 Max:   906 Err:     0 (0.00%) Active: 284 Started: 2916 Finished: 2632
+summary =  38525 in 00:01:01 =  631.9/s Avg:   934 Min:     2 Max: 12262 Err:     0 (0.00%)
+summary +   6924 in 00:00:06 = 1154.6/s Avg:   227 Min:    46 Max:   710 Err:     0 (0.00%) Active: 255 Started: 2916 Finished: 2661
+summary =  45449 in 00:01:07 =  678.7/s Avg:   826 Min:     2 Max: 12262 Err:     0 (0.00%)
+summary +   7014 in 00:00:06 = 1168.8/s Avg:   215 Min:    43 Max:   599 Err:     0 (0.00%) Active: 254 Started: 2916 Finished: 2662
+summary =  52463 in 00:01:13 =  719.0/s Avg:   744 Min:     2 Max: 12262 Err:     0 (0.00%)
+summary +   7052 in 00:00:06 = 1175.5/s Avg:   213 Min:    43 Max:   602 Err:     0 (0.00%) Active: 254 Started: 2916 Finished: 2662
+summary =  59515 in 00:01:19 =  753.7/s Avg:   681 Min:     2 Max: 12262 Err:     0 (0.00%)

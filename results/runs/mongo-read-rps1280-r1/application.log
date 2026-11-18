@@ -1,0 +1,37 @@
+fatal error: out of memory allocating heap arena map
+
+runtime stack:
+runtime.throw({0x55d323701615?, 0x0?})
+	/usr/lib/go-1.18/src/runtime/panic.go:992 +0x71 fp=0x7ffd25ae1448 sp=0x7ffd25ae1418 pc=0x55d3224562f1
+runtime.(*mheap).sysAlloc(0x55d324d0a8c0, 0x0?)
+	/usr/lib/go-1.18/src/runtime/malloc.go:743 +0x307 fp=0x7ffd25ae14e0 sp=0x7ffd25ae1448 pc=0x55d32242da87
+runtime.(*mheap).grow(0x55d324d0a8c0, 0x0?)
+	/usr/lib/go-1.18/src/runtime/mheap.go:1358 +0x73 fp=0x7ffd25ae1540 sp=0x7ffd25ae14e0 pc=0x55d322448a13
+runtime.(*mheap).allocSpan(0x55d324d0a8c0, 0x1, 0x0, 0x32)
+	/usr/lib/go-1.18/src/runtime/mheap.go:1170 +0x171 fp=0x7ffd25ae15b8 sp=0x7ffd25ae1540 pc=0x55d3224484b1
+runtime.(*mheap).alloc.func1()
+	/usr/lib/go-1.18/src/runtime/mheap.go:912 +0x65 fp=0x7ffd25ae1600 sp=0x7ffd25ae15b8 pc=0x55d322447fa5
+runtime.(*mheap).alloc(0x7f99b95ac000?, 0x7ffd25ae1698?, 0xd0?)
+	/usr/lib/go-1.18/src/runtime/mheap.go:906 +0x65 fp=0x7ffd25ae1648 sp=0x7ffd25ae1600 pc=0x55d322447ee5
+runtime.(*mcentral).grow(0x7f99b43bb000?)
+	/usr/lib/go-1.18/src/runtime/mcentral.go:244 +0x5b fp=0x7ffd25ae1690 sp=0x7ffd25ae1648 pc=0x55d322438cdb
+runtime.(*mcentral).cacheSpan(0x55d324d1d080)
+	/usr/lib/go-1.18/src/runtime/mcentral.go:164 +0x30f fp=0x7ffd25ae16e8 sp=0x7ffd25ae1690 pc=0x55d322438b0f
+runtime.(*mcache).refill(0x7f99b95ac108, 0x32)
+	/usr/lib/go-1.18/src/runtime/mcache.go:162 +0xaf fp=0x7ffd25ae1720 sp=0x7ffd25ae16e8 pc=0x55d32243818f
+runtime.(*mcache).nextFree(0x7f99b95ac108, 0x32)
+	/usr/lib/go-1.18/src/runtime/malloc.go:886 +0x85 fp=0x7ffd25ae1768 sp=0x7ffd25ae1720 pc=0x55d32242dfe5
+runtime.mallocgc(0x1e0, 0x55d323c6c740, 0x1)
+	/usr/lib/go-1.18/src/runtime/malloc.go:1085 +0x4e5 fp=0x7ffd25ae17e0 sp=0x7ffd25ae1768 pc=0x55d32242e665
+runtime.newobject(0x7ffd25ae2fd6?)
+	/usr/lib/go-1.18/src/runtime/malloc.go:1259 +0x27 fp=0x7ffd25ae1808 sp=0x7ffd25ae17e0 pc=0x55d32242eba7
+internal/cpu.doinit()
+	/usr/lib/go-1.18/src/internal/cpu/cpu_x86.go:62 +0x25 fp=0x7ffd25ae1840 sp=0x7ffd25ae1808 pc=0x55d322421905
+({0x0, 0x0})
+	/usr/lib/go-1.18/src/internal/cpu/cpu.go:123 +0x25 fp=0x7ffd25ae1860 sp=0x7ffd25ae1840 pc=0x55d322421345
+runtime.cpuinit()
+	/usr/lib/go-1.18/src/runtime/proc.go:630 +0x111 fp=0x7ffd25ae18a0 sp=0x7ffd25ae1860 pc=0x55d322459a71
+runtime.schedinit()
+	/usr/lib/go-1.18/src/runtime/proc.go:692 +0xb0 fp=0x7ffd25ae1900 sp=0x7ffd25ae18a0 pc=0x55d322459b70
+runtime.rt0_go()
+	/usr/lib/go-1.18/src/runtime/asm_amd64.s:322 +0x120 fp=0x7ffd25ae1908 sp=0x7ffd25ae1900 pc=0x55d322484280

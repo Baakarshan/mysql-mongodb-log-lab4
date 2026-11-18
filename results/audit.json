@@ -1,16 +1,43 @@
 {
   "verified": true,
-  "runs": 75,
-  "measurement_samples": 2149609,
-  "measurement_errors": 154870,
-  "backends": [
-    "mongo",
-    "mysql"
-  ],
+  "load_model": "open-fixed-interval",
+  "generator": "Manager",
+  "runs": 42,
+  "measurement_samples": 1382925,
+  "measurement_errors": 1014413,
+  "dropped_formal_arrivals": 24785,
   "write_count_differences": [
     {
-      "run": "mysql-write-t768-r1",
-      "difference": 339
+      "run": "mongo-write-rps2560-r2",
+      "difference": 1154
+    },
+    {
+      "run": "mongo-write-rps2560-r3",
+      "difference": 537
+    },
+    {
+      "run": "mongo-write-rps5120-r1",
+      "difference": 426
+    },
+    {
+      "run": "mongo-write-rps5120-r2",
+      "difference": 262
+    },
+    {
+      "run": "mysql-write-rps2560-r2",
+      "difference": 307
+    },
+    {
+      "run": "mysql-write-rps2560-r3",
+      "difference": 608
+    },
+    {
+      "run": "mysql-write-rps5120-r1",
+      "difference": 1212
+    },
+    {
+      "run": "mysql-write-rps5120-r2",
+      "difference": 4841
     }
   ]
 }

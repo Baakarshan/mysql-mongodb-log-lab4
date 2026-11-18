@@ -1,0 +1,13 @@
+{
+  "run": "mongo-write-rps2560-r1",
+  "display_version": 3,
+  "measurement_gzip_sha256": "a570d8d7057679c827405c62f173c78af8f3537b2f09d47f7b182ed82a3ff851",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": "Open arrivals ",
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "open-fixed-interval"
+}

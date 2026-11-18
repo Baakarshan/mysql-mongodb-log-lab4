@@ -1,0 +1,64 @@
+2026-11-18T02:03:26.803Z  INFO 1 --- [log-benchmark] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T02:03:26.806Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-18T02:03:26.815Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.13)
+
+2026-11-18T02:03:28.578Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T02:03:28.581Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T02:03:29.845Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T02:03:29.846Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T02:03:29.890Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
+2026-11-18T02:03:30.807Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T02:03:30.819Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T02:03:30.820Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T02:03:30.849Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T02:03:30.851Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2174 ms
+2026-11-18T02:03:31.188Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T02:03:31.253Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T02:03:31.332Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T02:03:31.623Z  INFO 1 --- [log-benchmark] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T02:03:31.651Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T02:03:31.826Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31533eb1
+2026-11-18T02:03:31.828Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T02:03:31.927Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T02:03:32.075Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T02:03:32.092Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T02:03:32.720Z  INFO 1 --- [log-benchmark] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T02:03:32.777Z  INFO 1 --- [log-benchmark] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T02:03:33.807Z  INFO 1 --- [log-benchmark] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T02:03:33.918Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-18T02:03:33.941Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Started Application in 5.947 seconds (process running for 6.596)
+2026-11-18T02:03:34.671Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T02:03:34.671Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T02:03:34.672Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.13)
+
+2026-11-18T02:04:18.736Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T02:04:18.738Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T02:04:20.140Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T02:04:20.140Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T02:04:20.205Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-11-18T02:04:21.239Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T02:04:21.256Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T02:04:21.257Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T02:04:21.298Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T02:04:21.299Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2472 ms
+2026-11-18T02:04:21.625Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T02:04:21.718Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T02:04:21.804Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled

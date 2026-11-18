@@ -1,0 +1,13 @@
+{
+  "run": "mongo-read-rps640-r1",
+  "display_version": 3,
+  "measurement_gzip_sha256": "85093fae642f0c5917ae880dcc04319b1f58537c49ee4d4dce89340be51442a2",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": "Open arrivals ",
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "open-fixed-interval"
+}

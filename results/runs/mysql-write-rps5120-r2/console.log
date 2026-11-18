@@ -1,0 +1,317 @@
+{
+  "dispatch_lag_microseconds": {
+    "count": 175399,
+    "max": 106192,
+    "p50": 634,
+    "p95": 19906,
+    "p99": 37867
+  },
+  "end_ms": 1794968137444,
+  "max_inflight_limit": 12000,
+  "max_inflight_observed": 12000,
+  "model": "open-fixed-interval",
+  "per_second": [
+    {
+      "scheduled": 5120,
+      "started": 5120,
+      "on_wire": 1462,
+      "completed": 152,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5118,
+      "on_wire": 994,
+      "completed": 449,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5117,
+      "on_wire": 1351,
+      "completed": 3000,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 4484,
+      "on_wire": 626,
+      "completed": 4321,
+      "dropped": 640
+    },
+    {
+      "scheduled": 5120,
+      "started": 4602,
+      "on_wire": 1058,
+      "completed": 4535,
+      "dropped": 518
+    },
+    {
+      "scheduled": 5120,
+      "started": 4247,
+      "on_wire": 972,
+      "completed": 4474,
+      "dropped": 775
+    },
+    {
+      "scheduled": 5120,
+      "started": 5183,
+      "on_wire": 822,
+      "completed": 4990,
+      "dropped": 36
+    },
+    {
+      "scheduled": 5120,
+      "started": 4017,
+      "on_wire": 653,
+      "completed": 4436,
+      "dropped": 996
+    },
+    {
+      "scheduled": 5120,
+      "started": 5225,
+      "on_wire": 422,
+      "completed": 5446,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5081,
+      "on_wire": 673,
+      "completed": 4426,
+      "dropped": 40
+    },
+    {
+      "scheduled": 5120,
+      "started": 5121,
+      "on_wire": 453,
+      "completed": 5230,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 4767,
+      "on_wire": 865,
+      "completed": 4975,
+      "dropped": 221
+    },
+    {
+      "scheduled": 5120,
+      "started": 5007,
+      "on_wire": 372,
+      "completed": 4912,
+      "dropped": 129
+    },
+    {
+      "scheduled": 5120,
+      "started": 4774,
+      "on_wire": 151,
+      "completed": 4746,
+      "dropped": 446
+    },
+    {
+      "scheduled": 5120,
+      "started": 5135,
+      "on_wire": 222,
+      "completed": 5630,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5006,
+      "on_wire": 212,
+      "completed": 4930,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5235,
+      "on_wire": 344,
+      "completed": 5472,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5116,
+      "on_wire": 0,
+      "completed": 4964,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5123,
+      "on_wire": 0,
+      "completed": 5592,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5119,
+      "on_wire": 0,
+      "completed": 5515,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5105,
+      "on_wire": 522,
+      "completed": 5217,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5133,
+      "on_wire": 0,
+      "completed": 4935,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5121,
+      "on_wire": 0,
+      "completed": 4816,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5123,
+      "on_wire": 180,
+      "completed": 5150,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5118,
+      "on_wire": 0,
+      "completed": 5224,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5121,
+      "on_wire": 0,
+      "completed": 5356,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5120,
+      "on_wire": 0,
+      "completed": 5124,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5091,
+      "on_wire": 65,
+      "completed": 5232,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5073,
+      "on_wire": 3,
+      "completed": 5109,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5178,
+      "on_wire": 0,
+      "completed": 5106,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5003,
+      "on_wire": 0,
+      "completed": 5006,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5245,
+      "on_wire": 95,
+      "completed": 5179,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5053,
+      "on_wire": 0,
+      "completed": 5068,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5073,
+      "on_wire": 0,
+      "completed": 5097,
+      "dropped": 0
+    },
+    {
+      "scheduled": 5120,
+      "started": 5175,
+      "on_wire": 126,
+      "completed": 5189,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 70,
+      "on_wire": 313,
+      "completed": 4994,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 4867,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 96,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 125,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 314,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 0,
+      "dropped": 0
+    },
+    {
+      "scheduled": 0,
+      "started": 0,
+      "on_wire": 0,
+      "completed": 0,
+      "dropped": 0
+    }
+  ],
+  "process": {
+    "cpu_percent_one_core": 69.44023537017202,
+    "cpu_seconds": 27.125421,
+    "max_rss_kib_linux": 386420
+  },
+  "rate": 5120,
+  "seconds": 35,
+  "start_ms": 1794968098381
+}

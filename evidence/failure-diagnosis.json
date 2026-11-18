@@ -1,0 +1,1064 @@
+[
+  {
+    "run": "mysql-read-rps80-r1",
+    "measurement_start_ms": 1794967108559,
+    "measurement_end_ms": 1794967133559,
+    "collection_end_ms": 1794967146863.2678,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1276.7265625
+  },
+  {
+    "run": "mysql-read-rps160-r1",
+    "measurement_start_ms": 1794967159022,
+    "measurement_end_ms": 1794967184022,
+    "collection_end_ms": 1794967197185.478,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1274.33984375
+  },
+  {
+    "run": "mysql-read-rps320-r1",
+    "measurement_start_ms": 1794967209225,
+    "measurement_end_ms": 1794967234225,
+    "collection_end_ms": 1794967247511.7742,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1278.37109375
+  },
+  {
+    "run": "mysql-read-rps640-r1",
+    "measurement_start_ms": 1794967259566,
+    "measurement_end_ms": 1794967284566,
+    "collection_end_ms": 1794967298050.801,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1271.859375
+  },
+  {
+    "run": "mysql-read-rps1280-r1",
+    "measurement_start_ms": 1794967310127,
+    "measurement_end_ms": 1794967335127,
+    "collection_end_ms": 1794967349660.7512,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1182.96484375
+  },
+  {
+    "run": "mysql-read-rps1920-r1",
+    "measurement_start_ms": 1794967361698,
+    "measurement_end_ms": 1794967386698,
+    "collection_end_ms": 1794967406566.3098,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794967372000.0,
+        "line": "2026-11-18T10:02:52+0800 course-node2 kernel: Out of memory: Kill process 30956 (java) score 472 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794967372000.0,
+        "line": "2026-11-18T10:02:52+0800 course-node2 kernel: Killed process 30956 (java) total-vm:1859456kB, anon-rss:382452kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:02:36+00:00",
+        "utc_bjt": "11-18 10:02:36",
+        "action": "容器退出",
+        "exit_code": "1",
+        "signal": "",
+        "run": "mysql-read-rps1920-r1",
+        "backend": "mysql",
+        "phase": "warmup"
+      },
+      {
+        "utc": "2026-11-18T02:02:53+00:00",
+        "utc_bjt": "11-18 10:02:53",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mysql-read-rps1920-r1",
+        "backend": "mysql",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:03:07+00:00",
+        "utc_bjt": "11-18 10:03:07",
+        "action": "容器退出",
+        "exit_code": "1",
+        "signal": "",
+        "run": "mysql-read-rps1920-r1",
+        "backend": "mysql",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:03:26+00:00",
+        "utc_bjt": "11-18 10:03:26",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": true,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 958.41015625
+  },
+  {
+    "run": "mysql-read-rps1280-r2",
+    "measurement_start_ms": 1794967427715,
+    "measurement_end_ms": 1794967452715,
+    "collection_end_ms": 1794967470059.283,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794967456000.0,
+        "line": "2026-11-18T10:04:16+0800 course-node2 kernel: Out of memory: Kill process 31958 (java) score 492 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794967456000.0,
+        "line": "2026-11-18T10:04:16+0800 course-node2 kernel: Killed process 31958 (java) total-vm:1864112kB, anon-rss:398716kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:04:16+00:00",
+        "utc_bjt": "11-18 10:04:16",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mysql-read-rps1280-r2",
+        "backend": "mysql",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:04:30+00:00",
+        "utc_bjt": "11-18 10:04:30",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1018.51171875
+  },
+  {
+    "run": "mysql-read-rps1920-r2",
+    "measurement_start_ms": 1794967491452,
+    "measurement_end_ms": 1794967516452,
+    "collection_end_ms": 1794967535305.439,
+    "kernel_memory_events": [],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:05:20+00:00",
+        "utc_bjt": "11-18 10:05:20",
+        "action": "容器退出",
+        "exit_code": "1",
+        "signal": "",
+        "run": "mysql-read-rps1920-r2",
+        "backend": "mysql",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:05:35+00:00",
+        "utc_bjt": "11-18 10:05:35",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": true,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 956.24609375
+  },
+  {
+    "run": "mysql-read-rps1280-r3",
+    "measurement_start_ms": 1794967556640,
+    "measurement_end_ms": 1794967581640,
+    "collection_end_ms": 1794967605026.471,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794967596000.0,
+        "line": "2026-11-18T10:06:36+0800 course-node2 kernel: Out of memory: Kill process 1269 (java) score 493 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794967596000.0,
+        "line": "2026-11-18T10:06:36+0800 course-node2 kernel: Killed process 1269 (java) total-vm:1863944kB, anon-rss:399404kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:05:56+00:00",
+        "utc_bjt": "11-18 10:05:56",
+        "action": "容器退出",
+        "exit_code": "1",
+        "signal": "",
+        "run": "mysql-read-rps1280-r3",
+        "backend": "mysql",
+        "phase": "warmup"
+      },
+      {
+        "utc": "2026-11-18T02:06:36+00:00",
+        "utc_bjt": "11-18 10:06:36",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:06:45+00:00",
+        "utc_bjt": "11-18 10:06:45",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": true,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1011.41015625
+  },
+  {
+    "run": "mysql-read-rps80-r2",
+    "measurement_start_ms": 1794967626633,
+    "measurement_end_ms": 1794967651633,
+    "collection_end_ms": 1794967663773.251,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1270.3671875
+  },
+  {
+    "run": "mysql-write-rps80-r1",
+    "measurement_start_ms": 1794967675853,
+    "measurement_end_ms": 1794967700853,
+    "collection_end_ms": 1794967714002.033,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1271.37109375
+  },
+  {
+    "run": "mysql-write-rps160-r1",
+    "measurement_start_ms": 1794967725942,
+    "measurement_end_ms": 1794967750942,
+    "collection_end_ms": 1794967764180.718,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1275.63671875
+  },
+  {
+    "run": "mysql-write-rps320-r1",
+    "measurement_start_ms": 1794967776408,
+    "measurement_end_ms": 1794967801408,
+    "collection_end_ms": 1794967814663.709,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1275.3671875
+  },
+  {
+    "run": "mysql-write-rps640-r1",
+    "measurement_start_ms": 1794967826664,
+    "measurement_end_ms": 1794967851664,
+    "collection_end_ms": 1794967865062.1282,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1275.6640625
+  },
+  {
+    "run": "mysql-write-rps1280-r1",
+    "measurement_start_ms": 1794967877075,
+    "measurement_end_ms": 1794967902075,
+    "collection_end_ms": 1794967915840.27,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1279.30078125
+  },
+  {
+    "run": "mysql-write-rps2560-r1",
+    "measurement_start_ms": 1794967927848,
+    "measurement_end_ms": 1794967952848,
+    "collection_end_ms": 1794967966520.19,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1260.375
+  },
+  {
+    "run": "mysql-write-rps5120-r1",
+    "measurement_start_ms": 1794967978581,
+    "measurement_end_ms": 1794968003581,
+    "collection_end_ms": 1794968026458.592,
+    "kernel_memory_events": [],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:13:33+00:00",
+        "utc_bjt": "11-18 10:13:33",
+        "action": "容器退出",
+        "exit_code": "1",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": true,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 871.3125
+  },
+  {
+    "run": "mysql-write-rps2560-r2",
+    "measurement_start_ms": 1794968045846,
+    "measurement_end_ms": 1794968070846,
+    "collection_end_ms": 1794968088934.722,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794968052000.0,
+        "line": "2026-11-18T10:14:12+0800 course-node2 kernel: Out of memory: Kill process 3443 (java) score 483 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794968052000.0,
+        "line": "2026-11-18T10:14:12+0800 course-node2 kernel: Killed process 3443 (java) total-vm:1849012kB, anon-rss:391220kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794968066000.0,
+        "line": "2026-11-18T10:14:26+0800 course-node2 kernel: Out of memory: Kill process 3832 (java) score 476 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794968066000.0,
+        "line": "2026-11-18T10:14:26+0800 course-node2 kernel: Killed process 3832 (java) total-vm:1847552kB, anon-rss:385352kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:14:12+00:00",
+        "utc_bjt": "11-18 10:14:12",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mysql-write-rps2560-r2",
+        "backend": "mysql",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:14:26+00:00",
+        "utc_bjt": "11-18 10:14:26",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mysql-write-rps2560-r2",
+        "backend": "mysql",
+        "phase": "measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 914.33984375
+  },
+  {
+    "run": "mysql-write-rps5120-r2",
+    "measurement_start_ms": 1794968108381,
+    "measurement_end_ms": 1794968133381,
+    "collection_end_ms": 1794968178963.271,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": true,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 865.6015625
+  },
+  {
+    "run": "mysql-write-rps2560-r3",
+    "measurement_start_ms": 1794968463848,
+    "measurement_end_ms": 1794968488848,
+    "collection_end_ms": 1794968528244.604,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794968519000.0,
+        "line": "2026-11-18T10:21:59+0800 course-node2 kernel: Out of memory: Kill process 5212 (java) score 483 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794968519000.0,
+        "line": "2026-11-18T10:21:59+0800 course-node2 kernel: Killed process 5212 (java) total-vm:1849592kB, anon-rss:391136kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:21:59+00:00",
+        "utc_bjt": "11-18 10:21:59",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 925.125
+  },
+  {
+    "run": "mysql-write-rps80-r2",
+    "measurement_start_ms": 1794968551270,
+    "measurement_end_ms": 1794968576270,
+    "collection_end_ms": 1794968588489.575,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1270.15625
+  },
+  {
+    "run": "mongo-read-rps80-r1",
+    "measurement_start_ms": 1794968624137,
+    "measurement_end_ms": 1794968649137,
+    "collection_end_ms": 1794968661697.1072,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1277.2734375
+  },
+  {
+    "run": "mongo-read-rps160-r1",
+    "measurement_start_ms": 1794968676460,
+    "measurement_end_ms": 1794968701460,
+    "collection_end_ms": 1794968714920.274,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1276.50390625
+  },
+  {
+    "run": "mongo-read-rps320-r1",
+    "measurement_start_ms": 1794968729722,
+    "measurement_end_ms": 1794968754722,
+    "collection_end_ms": 1794968768270.394,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1278.5
+  },
+  {
+    "run": "mongo-read-rps640-r1",
+    "measurement_start_ms": 1794968783061,
+    "measurement_end_ms": 1794968808061,
+    "collection_end_ms": 1794968821927.67,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1277.43359375
+  },
+  {
+    "run": "mongo-read-rps1280-r1",
+    "measurement_start_ms": 1794968836728,
+    "measurement_end_ms": 1794968861728,
+    "collection_end_ms": 1794968895466.0051,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794968891000.0,
+        "line": "2026-11-18T10:28:11+0800 course-node2 kernel: Out of memory: Kill process 6488 (java) score 494 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794968891000.0,
+        "line": "2026-11-18T10:28:11+0800 course-node2 kernel: Killed process 6488 (java) total-vm:1863568kB, anon-rss:399768kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:28:11+00:00",
+        "utc_bjt": "11-18 10:28:11",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": true,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1006.046875
+  },
+  {
+    "run": "mongo-read-rps640-r2",
+    "measurement_start_ms": 1794968919613,
+    "measurement_end_ms": 1794968944613,
+    "collection_end_ms": 1794969010137.6072,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1100.265625
+  },
+  {
+    "run": "mongo-read-rps1280-r2",
+    "measurement_start_ms": 1794969036522,
+    "measurement_end_ms": 1794969061522,
+    "collection_end_ms": 1794969080157.382,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969070000.0,
+        "line": "2026-11-18T10:31:10+0800 course-node2 kernel: Out of memory: Kill process 8157 (java) score 471 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794969070000.0,
+        "line": "2026-11-18T10:31:10+0800 course-node2 kernel: Killed process 8157 (java) total-vm:1848656kB, anon-rss:381420kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:31:10+00:00",
+        "utc_bjt": "11-18 10:31:10",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:31:20+00:00",
+        "utc_bjt": "11-18 10:31:20",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1016.43359375
+  },
+  {
+    "run": "mongo-read-rps1280-r3",
+    "measurement_start_ms": 1794969102447,
+    "measurement_end_ms": 1794969127447,
+    "collection_end_ms": 1794969149503.758,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969112000.0,
+        "line": "2026-11-18T10:31:52+0800 course-node2 kernel: Out of memory: Kill process 8831 (java) score 477 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969112000.0,
+        "line": "2026-11-18T10:31:52+0800 course-node2 kernel: Killed process 8831 (java) total-vm:1851176kB, anon-rss:386480kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969140000.0,
+        "line": "2026-11-18T10:32:20+0800 course-node2 kernel: Out of memory: Kill process 9266 (java) score 478 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794969140000.0,
+        "line": "2026-11-18T10:32:20+0800 course-node2 kernel: Killed process 9266 (java) total-vm:1863380kB, anon-rss:387520kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:31:52+00:00",
+        "utc_bjt": "11-18 10:31:52",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-read-rps1280-r3",
+        "backend": "mongo",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:32:20+00:00",
+        "utc_bjt": "11-18 10:32:20",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:32:29+00:00",
+        "utc_bjt": "11-18 10:32:29",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1018.1328125
+  },
+  {
+    "run": "mongo-read-rps640-r3",
+    "measurement_start_ms": 1794969171977,
+    "measurement_end_ms": 1794969196977,
+    "collection_end_ms": 1794969216474.673,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969185000.0,
+        "line": "2026-11-18T10:33:05+0800 course-node2 kernel: Out of memory: Kill process 9977 (java) score 485 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969185000.0,
+        "line": "2026-11-18T10:33:05+0800 course-node2 kernel: Killed process 9977 (java) total-vm:1863280kB, anon-rss:392740kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:33:05+00:00",
+        "utc_bjt": "11-18 10:33:05",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-read-rps640-r3",
+        "backend": "mongo",
+        "phase": "measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1103.55859375
+  },
+  {
+    "run": "mongo-read-rps80-r2",
+    "measurement_start_ms": 1794969239152,
+    "measurement_end_ms": 1794969264152,
+    "collection_end_ms": 1794969277531.961,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1274.84765625
+  },
+  {
+    "run": "mongo-write-rps80-r1",
+    "measurement_start_ms": 1794969292396,
+    "measurement_end_ms": 1794969317396,
+    "collection_end_ms": 1794969330932.092,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1276.515625
+  },
+  {
+    "run": "mongo-write-rps160-r1",
+    "measurement_start_ms": 1794969345768,
+    "measurement_end_ms": 1794969370768,
+    "collection_end_ms": 1794969384225.6,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1278.9296875
+  },
+  {
+    "run": "mongo-write-rps320-r1",
+    "measurement_start_ms": 1794969399309,
+    "measurement_end_ms": 1794969424309,
+    "collection_end_ms": 1794969437844.5388,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1277.3046875
+  },
+  {
+    "run": "mongo-write-rps640-r1",
+    "measurement_start_ms": 1794969452697,
+    "measurement_end_ms": 1794969477697,
+    "collection_end_ms": 1794969491414.253,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1279.15234375
+  },
+  {
+    "run": "mongo-write-rps1280-r1",
+    "measurement_start_ms": 1794969506337,
+    "measurement_end_ms": 1794969531337,
+    "collection_end_ms": 1794969545459.52,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1262.56640625
+  },
+  {
+    "run": "mongo-write-rps2560-r1",
+    "measurement_start_ms": 1794969560438,
+    "measurement_end_ms": 1794969585438,
+    "collection_end_ms": 1794969603960.257,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1250.8984375
+  },
+  {
+    "run": "mongo-write-rps5120-r1",
+    "measurement_start_ms": 1794969619059,
+    "measurement_end_ms": 1794969644059,
+    "collection_end_ms": 1794969679348.187,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969613000.0,
+        "line": "2026-11-18T10:40:13+0800 course-node2 kernel: Out of memory: Kill process 10841 (java) score 477 or sacrifice child",
+        "phase": "warmup"
+      },
+      {
+        "time_ms": 1794969613000.0,
+        "line": "2026-11-18T10:40:13+0800 course-node2 kernel: Killed process 10841 (java) total-vm:1863256kB, anon-rss:386612kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "warmup"
+      },
+      {
+        "time_ms": 1794969670000.0,
+        "line": "2026-11-18T10:41:10+0800 course-node2 kernel: Out of memory: Kill process 11939 (java) score 482 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794969670000.0,
+        "line": "2026-11-18T10:41:10+0800 course-node2 kernel: Killed process 11939 (java) total-vm:1852388kB, anon-rss:390388kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:40:13+00:00",
+        "utc_bjt": "11-18 10:40:13",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-write-rps5120-r1",
+        "backend": "mongo",
+        "phase": "warmup"
+      },
+      {
+        "utc": "2026-11-18T02:41:10+00:00",
+        "utc_bjt": "11-18 10:41:10",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:41:19+00:00",
+        "utc_bjt": "11-18 10:41:19",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": true,
+    "minimum_generator_available_mib": 837.29296875
+  },
+  {
+    "run": "mongo-write-rps2560-r2",
+    "measurement_start_ms": 1794969701857,
+    "measurement_end_ms": 1794969726857,
+    "collection_end_ms": 1794969757522.343,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969703000.0,
+        "line": "2026-11-18T10:41:43+0800 course-node2 kernel: Out of memory: Kill process 12619 (java) score 475 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969703000.0,
+        "line": "2026-11-18T10:41:43+0800 course-node2 kernel: Killed process 12619 (java) total-vm:1849172kB, anon-rss:385072kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969749000.0,
+        "line": "2026-11-18T10:42:29+0800 course-node2 kernel: Out of memory: Kill process 12973 (java) score 479 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794969749000.0,
+        "line": "2026-11-18T10:42:29+0800 course-node2 kernel: Killed process 12973 (java) total-vm:1863468kB, anon-rss:387884kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:41:44+00:00",
+        "utc_bjt": "11-18 10:41:44",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-write-rps2560-r2",
+        "backend": "mongo",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:42:29+00:00",
+        "utc_bjt": "11-18 10:42:29",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:42:37+00:00",
+        "utc_bjt": "11-18 10:42:37",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 861.90625
+  },
+  {
+    "run": "mongo-write-rps5120-r2",
+    "measurement_start_ms": 1794969779725,
+    "measurement_end_ms": 1794969804725,
+    "collection_end_ms": 1794969827492.825,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969776000.0,
+        "line": "2026-11-18T10:42:56+0800 course-node2 kernel: Out of memory: Kill process 13678 (java) score 473 or sacrifice child",
+        "phase": "warmup"
+      },
+      {
+        "time_ms": 1794969776000.0,
+        "line": "2026-11-18T10:42:56+0800 course-node2 kernel: Killed process 13678 (java) total-vm:1844460kB, anon-rss:383024kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "warmup"
+      },
+      {
+        "time_ms": 1794969787000.0,
+        "line": "2026-11-18T10:43:07+0800 course-node2 kernel: Out of memory: Kill process 14006 (java) score 464 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969787000.0,
+        "line": "2026-11-18T10:43:07+0800 course-node2 kernel: Killed process 14006 (java) total-vm:1847888kB, anon-rss:375756kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969799000.0,
+        "line": "2026-11-18T10:43:19+0800 course-node2 kernel: Out of memory: Kill process 14337 (java) score 465 or sacrifice child",
+        "phase": "measurement"
+      },
+      {
+        "time_ms": 1794969799000.0,
+        "line": "2026-11-18T10:43:19+0800 course-node2 kernel: Killed process 14337 (java) total-vm:1859284kB, anon-rss:376552kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:42:56+00:00",
+        "utc_bjt": "11-18 10:42:56",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-write-rps5120-r2",
+        "backend": "mongo",
+        "phase": "warmup"
+      },
+      {
+        "utc": "2026-11-18T02:43:07+00:00",
+        "utc_bjt": "11-18 10:43:07",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-write-rps5120-r2",
+        "backend": "mongo",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:43:19+00:00",
+        "utc_bjt": "11-18 10:43:19",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": "mongo-write-rps5120-r2",
+        "backend": "mongo",
+        "phase": "measurement"
+      },
+      {
+        "utc": "2026-11-18T02:43:47+00:00",
+        "utc_bjt": "11-18 10:43:47",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": true,
+    "minimum_generator_available_mib": 832.91796875
+  },
+  {
+    "run": "mongo-write-rps2560-r3",
+    "measurement_start_ms": 1794969849580,
+    "measurement_end_ms": 1794969874580,
+    "collection_end_ms": 1794969910147.1912,
+    "kernel_memory_events": [
+      {
+        "time_ms": 1794969901000.0,
+        "line": "2026-11-18T10:45:01+0800 course-node2 kernel: Out of memory: Kill process 14978 (java) score 468 or sacrifice child",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "time_ms": 1794969901000.0,
+        "line": "2026-11-18T10:45:01+0800 course-node2 kernel: Killed process 14978 (java) total-vm:1844828kB, anon-rss:378796kB, file-rss:0kB, shmem-rss:0kB",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "container_exits": [
+      {
+        "utc": "2026-11-18T02:45:01+00:00",
+        "utc_bjt": "11-18 10:45:01",
+        "action": "容器退出",
+        "exit_code": "137",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      },
+      {
+        "utc": "2026-11-18T02:45:10+00:00",
+        "utc_bjt": "11-18 10:45:10",
+        "action": "容器退出",
+        "exit_code": "143",
+        "signal": "",
+        "run": null,
+        "backend": "恢复或切换",
+        "phase": "collection_after_measurement"
+      }
+    ],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 885.1953125
+  },
+  {
+    "run": "mongo-write-rps80-r2",
+    "measurement_start_ms": 1794969932415,
+    "measurement_end_ms": 1794969957415,
+    "collection_end_ms": 1794969970824.054,
+    "kernel_memory_events": [],
+    "container_exits": [],
+    "docker_log_command_failed": false,
+    "jvm_native_allocation_failure_in_collected_log": false,
+    "generator_limit": false,
+    "minimum_generator_available_mib": 1256.265625
+  }
+]

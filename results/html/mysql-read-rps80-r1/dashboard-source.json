@@ -1,0 +1,13 @@
+{
+  "run": "mysql-read-rps80-r1",
+  "display_version": 3,
+  "measurement_gzip_sha256": "695e32c098bdbca189d419f38bf91618613364e383ca984f8f3252a27cf3429a",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": "Open arrivals ",
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "open-fixed-interval"
+}

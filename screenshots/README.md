@@ -1,5 +1,5 @@
 # 实验截图
 
-JMeter原生页面由本轮正式窗口JTL生成，在Edge中打开并截图。`*-dashboard.png`保留APDEX、请求成功/失败饼图与Statistics；`*-OverTime.png`和`*-ResponseTimes.png`保留响应趋势与百分位曲线。
+JMeter原生页面由本轮正式窗口JTL生成，在Edge中打开并截图。*-dashboard.jpg保留APDEX、请求饼图和Statistics；*-OverTime.jpg、*-ResponseTimes.jpg和*-Throughput.jpg分别保留响应趋势、百分位和HPS。
 
-`*-native-pair.png`与`*-dashboard-report.png`供正文排版使用，裁切坐标见native-manifest.json。完整页面同时保存。Prometheus与接口截图来自实际运行页面。
+正文使用的裁切图见native-manifest.json，完整截图同时保存。接口截图来自同一应用JAR的Edge Network请求，采集时间见interface-recapture.json。Prometheus页面对应本轮测量时间窗。正文不放终端截图。

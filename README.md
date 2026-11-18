@@ -2,68 +2,78 @@
 
 作者：温子健 / CHIKIN WEN。
 
-使用同一日志模型和HTTP接口，比较Spring Data JPA/MySQL与Spring Data MongoDB/MongoDB。四台服务器分两轮复用；每档恢复相同的10万条初始日志，再按观测逐级提高并发。当前结果为本轮重新测量，已替换此前固定档位数据。
+同一日志模型和HTTP接口，比较Spring Data JPA/MySQL与Spring Data MongoDB/MongoDB。四台服务器分两轮复用，Manager全程发压。请求按固定时间间隔启动，与前一请求的完成时间独立。
 
 [PDF报告](report/实验四实验报告.pdf) · [Word报告](report/实验四实验报告.docx) · [逐次结果](results/all-runs.csv) · [分组中位数](results/aggregate.csv) · [核验结果](results/audit.json) · [跟做稿](docs/实验四复现跟做稿.md)
 
-完成75次探索及复测，正式窗口共2,149,609次请求、154,870次错误。两套实现各通过14项接口验收。gzip原始JTL、窗口划分、SHA-256与Prometheus原始响应均按运行名保存。
+本轮完成42次探索和复测，正式窗口记录1,382,925次请求、1,014,413次错误。此前测量已从当前交付目录移除。每次运行保留原始JTL、逐秒到达计数、监控、实际配置和SHA-256；两套实现分别通过14项接口验收。
 
 ## 环境
 
 | 主机 | 配置 | 任务 |
 |---|---|---|
-| Compiler | 2核，792 MiB | Java 17、Maven 3.9.16编译；JMeter 5.6.3初始探索 |
-| Node1 | 2核，1800 MiB | MySQL 8.4.13与MongoDB 7.0.16分轮运行 |
+| Compiler | 2核，792 MiB | Java 17、Maven 3.9.16构建 |
+| Node1 | 2核，约1800 MiB | MySQL 8.4.13与MongoDB 7.0.16分轮运行 |
 | Node2 | 2核，792 MiB | Spring Boot 3.3.13，堆256 MiB，连接池20 |
-| Manager | 2核，1800 MiB | Prometheus 3.7.3，5秒采样；高并发补测发压 |
+| Manager | 2核，约1800 MiB | Go固定到达率发压，Prometheus 3.7.3，每5秒采样 |
 
-Compiler在高线程运行中达到内存或CPU限制，随后使用Manager补测。Manager的256 MiB发压堆在高线程处耗尽后扩至512 MiB；两库按相同设置补测。按发压主机及堆上限分别汇总；两库在相同发压主机和共同档位比较。RBAC服务在测量期间暂停，完成后恢复原副本数，记录见evidence。
+Go 1.26.3编译发压器，GOMAXPROCS=2、软内存目标384 MiB、最多12000个在途请求。数据库缓存约256 MiB，数据库容器上限1 GiB，应用容器上限560 MiB。MySQL提交刷盘且关闭binlog；MongoDB单机，w=1、journal=true。实际版本与配置见evidence。RBAC服务在测量期间暂停，结束后恢复原副本数。
 
-## 方法与结果读取
+## 测量方法
 
-JMeter采用每线程最多600次有限循环，吞吐量定时器控制节奏，目标为线程数×10次/秒。每档5秒升压、5秒预热、25秒正式窗口。未饱和时约加倍递增；吞吐落后目标或延迟上升时缩小增幅。吞吐下降超过20%时复测前一档及当前档；明显退化、错误和恢复分别记录。发压端资源耗尽单独分类。
+读写分别从80次/秒开始，按观察提高请求率。低延迟且无错时约加倍；延迟上升后约1.5倍。成功吞吐下降超过20%时复测相邻两档；错误率达到10%、P95达到3500毫秒或健康检查失败时确认失效。严重退化后重启应用，再恢复10万条初始数据与预热。
 
-负载部分观察稳定到达率、响应时间及内部资源；压力部分继续加并发，观察吞吐平台、排队和失败。固定循环次数本身不能保证HPS稳定；实际逐秒HPS、5秒分箱及变异系数保存在summary.json。原始波动保留。
+每档固定速率发起35秒，前10秒预热、后25秒正式测量；随后等待在途请求结束。HTTP总超时5秒、连接超时2秒。正式窗口按实际启动时间划分。单档25秒用于快速定位转折，复测结果逐次保留。
 
-运行目录名如mysql-read-t384-r2，表示实现、操作、线程数、重复编号。summary.json记录发压主机、目标/实际速率、P50/P95/P99、错误、记录数及资源分类。config.json记录JMX哈希及运行参数；all.jtl.gz保留完整原始行，measurement.jtl.gz为固定25秒窗口。
+逐秒区分计划到达、实际启动、写入socket、完成和漏发。实际启动比例低于98%、漏发超过1%、进程异常、可用内存低于32 MiB或客户端端口/文件描述符耗尽时标记发压端限制。调度落后100毫秒或在途达到12000时记为漏发。完成速率随服务处理能力波动；图表保留原始波动。应用退出、客户端超时和恢复记录见evidence。
 
-JMeter原生HTML位于results/html。可在仓库根目录执行 `python3 -m http.server 18765 --bind 127.0.0.1`，再用Edge打开 http://127.0.0.1:18765/results/html/ 。Dashboard含APDEX、请求饼图与Statistics；Charts含趋势和百分位。JMeter吞吐率按样本起止跨度计算，CSV按固定25秒计算，数值可有小幅差异。
+运行名如mysql-read-rps1280-r1，依次表示实现、操作、计划每秒速率与重复编号。summary.json包含启动/发送/成功速率、分位数、错误、资源和记录数核对。all.jtl.gz保留全部请求，warmup.jtl.gz和measurement.jtl.gz分别保留预热与正式窗口。客户端超时后数据库已提交的写入差额逐次列出。
 
-## API与代码
+## 原生HTML与截图
 
-POST /api/logs单条写入，返回201及保存对象。GET /api/logs按level、from、to、page、size查询，时间范围[from,to)，页码从0开始，按createdAt、id降序，返回content、page、size、totalElements、totalPages。
-
-字段为id、traceId、level、source、message、clientIp、createdAt；服务端生成26位ULID，UTC时间精确到毫秒，正文最长4096字符。两库建立级别、时间、主键联合索引。固定INFO、UTC 06:00至07:00查询匹配2497条，每页20条，并计算匹配总数。
-
-Java遵循Google Java Style，Spotless锁定google-java-format 1.24.0。`mvn verify`检查并构建，`mvn spotless:apply`整理格式。MySQL与MongoDB分别限定仓储扫描包，公共业务接口一致。老师Repository示例的对应关系见[课堂实现对照](docs/课堂讲解与实验实现.md)。
-
-## 运行
-
-安装Java 17、Maven、Docker、JMeter 5.6.3以及requirements.txt依赖。各服务器项目目录为/opt/lab4，配置通过环境变量与.env.example填写。生成、部署、重置和监控脚本分别为generate-data.py、deploy.sh、reset-db.sh、deploy-monitoring.sh；完整输入顺序见跟做稿。
-
-应用堆256 MiB，数据库缓存预算约256 MiB、容器上限1 GiB。MySQL每次提交刷盘并关闭binlog；MongoDB单机WiredTiger，w=1、journal=true。实际版本、索引和设置见evidence。
-
-本机通过LAB_SSH_PASSWORD提供SSH口令，可用COMPILER_HOST、DATABASE_HOST、APPLICATION_HOST、MONITOR_HOST、SSH_USER覆盖地址：
+JMeter 5.6.3读取Go发压器记录的实际HTTP样本，生成results/html下的原生报告。JMeter承担统计和展示，请求调度由tools/open-load完成。展示副本转换为北京时间、补充线程组前缀、按原因合并含临时端口的传输错误消息；样本数、耗时、状态和原始gzip保持可核对。dashboard-source.json记录转换和源文件哈希。
 
 ```bash
-python scripts/adaptive-experiment.py mysql --prepare --output work/rerun --start 8
-python scripts/adaptive-experiment.py mongo --prepare --output work/rerun --start 8
-# 发压机资源不足时，在已安装相同工具的Manager补测
-python scripts/adaptive-experiment.py mongo --output work/rerun --generator monitor --generator-heap 512 --operation read --start 384 --max-threads 7200
-python scripts/diagnose-adaptive.py work/rerun
-python scripts/verify-adaptive.py work/rerun
-python scripts/analyze-adaptive.py work/rerun
-python scripts/generate-adaptive-html.py work/rerun --jmeter /实际路径/apache-jmeter-5.6.3/bin/jmeter
+python3 -m http.server 18765 --bind 127.0.0.1
 ```
 
-每档前重置实验数据；同一时刻运行一个发压任务。原始文件校验和、正式行数、失败数、HPS计数与数据库增长由verify-adaptive.py复核。
+Edge打开 http://127.0.0.1:18765/results/html/ 。先看Dashboard的源文件、时间、APDEX、饼图与Statistics，再看Over Time、Throughput和Response Times。JMeter吞吐率使用样本起止跨度，CSV使用固定25秒分母。截图来自真实Edge、JMeter和Prometheus页面，正文图题直接说明指标。
+
+## 接口与代码
+
+POST /api/logs写入单条日志，返回201及保存对象。GET /api/logs按level、from、to、page、size查询，[from,to)时间范围，页码从0开始，按createdAt、id降序，统一返回content、page、size、totalElements、totalPages。
+
+字段为id、traceId、level、source、message、clientIp、createdAt；服务端生成26位ULID，UTC时间精确到毫秒，正文最多4096字符。两库建立级别、时间和主键联合索引。固定INFO、UTC 06:00至07:00查询匹配2497条，每页20条并计算总数。
+
+Java遵循Google Java Style，Spotless锁定google-java-format 1.24.0，中文注释说明字段和查询语义。mvn verify检查并构建，mvn spotless:apply整理格式。[课堂实现对照](docs/课堂讲解与实验实现.md)记录老师Repository示例与本项目的对应关系。
+
+## 复现
+
+Java 17、Maven、Docker用于应用和数据库；本机安装Python依赖、Go及JMeter 5.6.3。服务器项目目录为/opt/lab4，配置使用环境变量，模板见.env.example。具体机器分工与输入顺序见跟做稿。
+
+```bash
+mkdir -p work
+(cd tools/open-load && GOOS=linux GOARCH=amd64 go build -trimpath -o ../../work/open-load .)
+# 向Manager上传work/open-load及scripts/run-open.sh、scripts/smoke.py
+# 设置LAB_SSH_PASSWORD，暂停共用资源的RBAC服务并保存原副本数
+python scripts/open-experiment.py mysql --prepare --output work/rerun
+python scripts/open-experiment.py mongo --prepare --output work/rerun
+python scripts/reclassify-open.py work/rerun
+python scripts/verify-open.py work/rerun
+python scripts/analyze-open.py work/rerun
+python scripts/generate-adaptive-html.py work/rerun --jmeter /实际路径/apache-jmeter-5.6.3/bin/jmeter
+# 恢复RBAC原副本数并逐项确认
+```
+
+通过COMPILER_HOST、DATABASE_HOST、APPLICATION_HOST、MONITOR_HOST和SSH_USER覆盖服务器地址。每档会重置实验库；同一时刻只运行一个发压任务。
 
 ## 目录
 
-- src、database：两套持久化实现、统一接口、表结构和索引。
-- jmeter/adaptive-logs.jmx：两库共用的有限循环与节奏控制计划。
-- scripts：部署、逐级探索、异常分类、核验、HTML和报告构建。
-- results：本轮JTL、监控、汇总与原生HTML。
-- evidence：构建、部署、接口、实际配置、诊断和恢复记录。
-- screenshots：实际Edge、JMeter、Prometheus页面。
-- report：PDF、Word、Markdown及分析图；正文不放终端截图。
+- src、database：两套实现、统一接口、表结构和索引。
+- tools/open-load：开放式发压器源码，无第三方Go依赖。
+- scripts：部署、逐级探索、异常分类、核验、原生HTML和报告构建。
+- jmeter：HTTP请求参考计划；本轮开放式调度使用Go程序。
+- results：本轮原始JTL、监控、汇总和原生HTML。
+- evidence：部署、接口、配置、故障诊断和恢复证据。
+- screenshots：真实页面截图及正文裁切来源。
+- report：PDF、Word、Markdown和分析图。

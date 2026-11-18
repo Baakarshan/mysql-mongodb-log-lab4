@@ -1,0 +1,30 @@
+2026-11-18T04:30:20.573524976Z 
+2026-11-18T04:30:20.574071746Z   .   ____          _            __ _ _
+2026-11-18T04:30:20.574079106Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T04:30:20.574082156Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T04:30:20.574090756Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T04:30:20.574092676Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T04:30:20.574094376Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T04:30:20.574095986Z 
+2026-11-18T04:30:20.576008483Z  :: Spring Boot ::               (v3.3.13)
+2026-11-18T04:30:20.576072652Z 
+2026-11-18T04:30:20.735586473Z 2026-11-18T04:30:20.723Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T04:30:20.736501882Z 2026-11-18T04:30:20.736Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T04:30:22.007216132Z 2026-11-18T04:30:22.006Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T04:30:22.007453982Z 2026-11-18T04:30:22.007Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T04:30:22.072013023Z 2026-11-18T04:30:22.071Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2026-11-18T04:30:23.012488207Z 2026-11-18T04:30:23.012Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T04:30:23.026477608Z 2026-11-18T04:30:23.026Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T04:30:23.026794687Z 2026-11-18T04:30:23.026Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T04:30:23.060870390Z 2026-11-18T04:30:23.060Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T04:30:23.062145738Z 2026-11-18T04:30:23.061Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2233 ms
+2026-11-18T04:30:23.389889188Z 2026-11-18T04:30:23.388Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T04:30:23.482753310Z 2026-11-18T04:30:23.482Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T04:30:23.568927960Z 2026-11-18T04:30:23.568Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T04:30:23.935866536Z 2026-11-18T04:30:23.935Z  INFO 1 --- [log-benchmark] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T04:30:23.971104477Z 2026-11-18T04:30:23.970Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T04:30:24.178550031Z 2026-11-18T04:30:24.178Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40ac0a56
+2026-11-18T04:30:24.181036188Z 2026-11-18T04:30:24.180Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T04:30:24.331280331Z 2026-11-18T04:30:24.330Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T04:30:24.498163711Z 2026-11-18T04:30:24.497Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T04:30:24.516454466Z 2026-11-18T04:30:24.516Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.

@@ -1,22 +1,26 @@
 {
   "mysql-read": [
-    "mysql-read-rps80-r1",
-    "mysql-read-rps1280-r1",
-    "mysql-read-rps1920-r1"
+    "mysql-read-n2800-r1",
+    "mysql-read-n25200-r1",
+    "mysql-read-n37800-r1",
+    "mysql-read-n37800-r4"
   ],
   "mongo-read": [
-    "mongo-read-rps80-r1",
-    "mongo-read-rps640-r1",
-    "mongo-read-rps1280-r1"
+    "mongo-read-n2800-r1",
+    "mongo-read-n25200-r1",
+    "mongo-read-n37800-r1",
+    "mongo-read-n37800-r4"
   ],
   "mysql-write": [
-    "mysql-write-rps80-r1",
-    "mysql-write-rps2560-r1",
-    "mysql-write-rps5120-r1"
+    "mysql-write-n2800-r1",
+    "mysql-write-n37800-r1",
+    "mysql-write-n56700-r1",
+    "mysql-write-n37800-r2"
   ],
   "mongo-write": [
-    "mongo-write-rps80-r1",
-    "mongo-write-rps2560-r1",
-    "mongo-write-rps5120-r1"
+    "mongo-write-n2800-r1",
+    "mongo-write-n56700-r1",
+    "mongo-write-n85050-r1",
+    "mongo-write-n37800-r2"
   ]
 }

@@ -56,4 +56,4 @@ def monitoring(start,end):
  return json.loads(remote('monitor','python3 -c '+shlex.quote(code)))
 
 if __name__ == "__main__":
- raise SystemExit("Run scripts/adaptive-experiment.py; this module provides SSH and monitoring helpers.")
+ raise SystemExit("Run scripts/thread-campaign.py; this module provides SSH and monitoring helpers.")

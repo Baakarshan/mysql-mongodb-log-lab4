@@ -1,6 +1,10 @@
 {
-  "go_version": "go version go1.26.3 darwin/arm64",
-  "binary_sha256": "7933bdc97f54d81f62515ea231edfc430c6b67881f4b07dca1e98476dd5b5668",
-  "manager": "Linux course-manager 4.15.0-213-generic #224-Ubuntu SMP Mon Jun 19 13:30:12 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux\n              total        used        free      shared  buff/cache   available\nMem:           1800         937         113           9         749         696\nSwap:             0           0           0\n65535\n",
-  "validation": "慢响应400ms，实际启动40次/秒，120次请求全部完成；最大在途 17"
+  "tool": "Apache JMeter 5.6.3",
+  "java_version": "openjdk version \"17.0.7\" 2023-04-18\nOpenJDK Runtime Environment (build 17.0.7+7-Ubuntu-0ubuntu118.04)\nOpenJDK 64-Bit Server VM (build 17.0.7+7-Ubuntu-0ubuntu118.04, mixed mode, sharing)\n",
+  "loops": 1,
+  "ramp_s": 35,
+  "delayed_start": true,
+  "thread_groups": 5,
+  "heap_mib": 384,
+  "stack_kib": 256
 }

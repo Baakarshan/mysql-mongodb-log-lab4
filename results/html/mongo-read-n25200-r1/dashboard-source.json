@@ -1,0 +1,13 @@
+{
+  "run": "mongo-read-n25200-r1",
+  "display_version": 4,
+  "measurement_gzip_sha256": "e7587ebad950e4978ca18bf5c808de9d3b23de637503fe7cf3095362ef68d295",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": null,
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "jmeter-single-shot-uniform-ramp"
+}

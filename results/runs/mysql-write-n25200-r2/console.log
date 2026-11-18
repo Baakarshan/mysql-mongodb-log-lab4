@@ -1,0 +1,23 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/jmeter/single-shot-logs.jmx
+Starting standalone test @ 2026 Nov 18 13:07:41 CST (1794978461978)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.7/s Avg:   590 Min:   590 Max:   590 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +   2438 in 00:00:05 =  470.3/s Avg:     4 Min:     1 Max:    67 Err:     0 (0.00%) Active: 4 Started: 2442 Finished: 2438
+summary =   2439 in 00:00:06 =  421.8/s Avg:     4 Min:     1 Max:   590 Err:     0 (0.00%)
+summary +   3882 in 00:00:06 =  647.3/s Avg:     2 Min:     1 Max:    13 Err:     0 (0.00%) Active: 2 Started: 6321 Finished: 6319
+summary =   6321 in 00:00:12 =  536.5/s Avg:     3 Min:     1 Max:   590 Err:     0 (0.00%)
+summary +   4423 in 00:00:06 =  737.3/s Avg:     2 Min:     1 Max:    30 Err:     0 (0.00%) Active: 3 Started: 10745 Finished: 10742
+summary =  10744 in 00:00:18 =  604.3/s Avg:     3 Min:     1 Max:   590 Err:     0 (0.00%)
+summary +   4470 in 00:00:06 =  745.0/s Avg:     2 Min:     1 Max:    12 Err:     0 (0.00%) Active: 4 Started: 15217 Finished: 15213
+summary =  15214 in 00:00:24 =  639.8/s Avg:     2 Min:     1 Max:   590 Err:     0 (0.00%)
+summary +   4663 in 00:00:06 =  777.4/s Avg:     2 Min:     1 Max:    24 Err:     0 (0.00%) Active: 2 Started: 19877 Finished: 19875
+summary =  19877 in 00:00:30 =  667.5/s Avg:     2 Min:     1 Max:   590 Err:     0 (0.00%)
+summary +   5324 in 00:00:06 =  907.6/s Avg:     2 Min:     1 Max:    16 Err:     0 (0.00%) Active: 0 Started: 25200 Finished: 25200
+summary =  25201 in 00:00:36 =  707.0/s Avg:     2 Min:     1 Max:   590 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 18 13:08:17 CST (1794978497867)
+... end of run

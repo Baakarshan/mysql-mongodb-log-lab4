@@ -1,0 +1,12 @@
+{
+  "eager_threads": {
+    "finding": "提前创建等待线程导致pthread_create EAGAIN",
+    "change": "ThreadGroup.delayedStart=true"
+  },
+  "single_group": {
+    "finding": "高线程档启动后段补发，瞬时积压后无法创建线程",
+    "change": "5个标准线程组均分总线程数，同步35秒启动；重做正式序列"
+  },
+  "formal_results_exclude_preflight": true,
+  "formal_jmx": "jmeter/single-shot-logs.jmx"
+}

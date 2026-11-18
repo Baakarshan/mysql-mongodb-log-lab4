@@ -1,0 +1,128 @@
+-- Logs begin at Thu 2023-07-13 15:38:02 CST, end at Wed 2026-11-18 12:30:24 CST. --
+2026-11-18T12:30:13+0800 course-node2 kernel: TCP: request_sock_TCP: Possible SYN flooding on port 8080. Sending cookies.  Check SNMP counters.
+2026-11-18T12:30:17+0800 course-node2 kernel: http-nio-8080-e invoked oom-killer: gfp_mask=0x14200ca(GFP_HIGHUSER_MOVABLE), nodemask=(null), order=0, oom_score_adj=0
+2026-11-18T12:30:17+0800 course-node2 kernel: http-nio-8080-e cpuset=04836c795cab1e1d44bb8fbc0e1377da0345b68ac303d6023369df95e088f848 mems_allowed=0
+2026-11-18T12:30:17+0800 course-node2 kernel: CPU: 0 PID: 25052 Comm: http-nio-8080-e Not tainted 4.15.0-213-generic #224-Ubuntu
+2026-11-18T12:30:17+0800 course-node2 kernel: Hardware name: OpenStack Foundation OpenStack Nova, BIOS rel-1.12.1-0-ga5cab58-20240811_152225-szxrtosci10000 04/01/2014
+2026-11-18T12:30:17+0800 course-node2 kernel: Call Trace:
+2026-11-18T12:30:17+0800 course-node2 kernel:  dump_stack+0x6d/0x8b
+2026-11-18T12:30:17+0800 course-node2 kernel:  dump_header+0x71/0x282
+2026-11-18T12:30:17+0800 course-node2 kernel:  ? ___ratelimit+0x9c/0x100
+2026-11-18T12:30:17+0800 course-node2 kernel:  oom_kill_process+0x21f/0x420
+2026-11-18T12:30:17+0800 course-node2 kernel:  out_of_memory+0x116/0x4e0
+2026-11-18T12:30:17+0800 course-node2 kernel:  __alloc_pages_slowpath+0xa3d/0xe70
+2026-11-18T12:30:17+0800 course-node2 kernel:  ? alloc_pages_current+0x6a/0xe0
+2026-11-18T12:30:17+0800 course-node2 kernel:  __alloc_pages_nodemask+0x29a/0x2c0
+2026-11-18T12:30:17+0800 course-node2 kernel:  alloc_pages_current+0x6a/0xe0
+2026-11-18T12:30:17+0800 course-node2 kernel:  __page_cache_alloc+0x81/0xa0
+2026-11-18T12:30:17+0800 course-node2 kernel:  filemap_fault+0x42f/0x750
+2026-11-18T12:30:17+0800 course-node2 kernel:  ? __switch_to+0x309/0x4e0
+2026-11-18T12:30:17+0800 course-node2 kernel:  ? filemap_map_pages+0x181/0x390
+2026-11-18T12:30:17+0800 course-node2 kernel:  ext4_filemap_fault+0x31/0x50
+2026-11-18T12:30:17+0800 course-node2 kernel:  __do_fault+0x34/0x100
+2026-11-18T12:30:17+0800 course-node2 kernel:  __handle_mm_fault+0x982/0xc50
+2026-11-18T12:30:17+0800 course-node2 kernel:  handle_mm_fault+0xe7/0x260
+2026-11-18T12:30:17+0800 course-node2 kernel:  __do_page_fault+0x281/0x4b0
+2026-11-18T12:30:17+0800 course-node2 kernel:  do_page_fault+0x2e/0xe0
+2026-11-18T12:30:17+0800 course-node2 kernel:  ? async_page_fault+0x2f/0x50
+2026-11-18T12:30:17+0800 course-node2 kernel:  do_async_page_fault+0x51/0x80
+2026-11-18T12:30:17+0800 course-node2 kernel:  async_page_fault+0x45/0x50
+2026-11-18T12:30:17+0800 course-node2 kernel: RIP: 0033:0x7f24c8a07f88
+2026-11-18T12:30:17+0800 course-node2 kernel: RSP: 002b:00007f24c6bca010 EFLAGS: 00010202
+2026-11-18T12:30:17+0800 course-node2 kernel: RAX: 000000000000002a RBX: 00007f24c8e00023 RCX: 000000000000002a
+2026-11-18T12:30:17+0800 course-node2 kernel: RDX: 00007f24880e8b30 RSI: 0000000000000072 RDI: 0000000000000010
+2026-11-18T12:30:17+0800 course-node2 kernel: RBP: 00007f24c6bca050 R08: 00007f24a347bad8 R09: 00007f24c6bca130
+2026-11-18T12:30:17+0800 course-node2 kernel: R10: 00007f24c7af3000 R11: 00007f24b41929a0 R12: 00007f24c1ced540
+2026-11-18T12:30:17+0800 course-node2 kernel: R13: 00007f24a347bad8 R14: 00007f247c00d0f0 R15: 0000000000000009
+2026-11-18T12:30:17+0800 course-node2 kernel: Mem-Info:
+2026-11-18T12:30:17+0800 course-node2 kernel: active_anon:146568 inactive_anon:1774 isolated_anon:0
+                                               active_file:119 inactive_file:926 isolated_file:0
+                                               unevictable:0 dirty:0 writeback:2 unstable:0
+                                               slab_reclaimable:7941 slab_unreclaimable:17206
+                                               mapped:108 shmem:2033 pagetables:2148 bounce:0
+                                               free:9900 free_pcp:0 free_cma:0
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 active_anon:586272kB inactive_anon:7096kB active_file:476kB inactive_file:3704kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:432kB dirty:0kB writeback:8kB shmem:8132kB shmem_thp: 0kB shmem_pmdmapped: 0kB anon_thp: 0kB writeback_tmp:0kB unstable:0kB all_unreclaimable? yes
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 DMA free:3548kB min:788kB low:984kB high:1180kB active_anon:7524kB inactive_anon:16kB active_file:0kB inactive_file:52kB unevictable:0kB writepending:4kB present:15992kB managed:15908kB mlocked:0kB kernel_stack:128kB pagetables:48kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+2026-11-18T12:30:17+0800 course-node2 kernel: lowmem_reserve[]: 0 710 710 710 710
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 DMA32 free:36052kB min:36124kB low:45152kB high:54180kB active_anon:578436kB inactive_anon:7080kB active_file:484kB inactive_file:3704kB unevictable:0kB writepending:4kB present:1031680kB managed:795556kB mlocked:0kB kernel_stack:7088kB pagetables:8544kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+2026-11-18T12:30:17+0800 course-node2 kernel: lowmem_reserve[]: 0 0 0 0 0
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 DMA: 64*4kB (UM) 69*8kB (UME) 66*16kB (UM) 18*32kB (UME) 8*64kB (UME) 6*128kB (UME) 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 3720kB
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 DMA32: 242*4kB (UME) 474*8kB (UME) 951*16kB (UME) 226*32kB (UME) 81*64kB (ME) 34*128kB (UM) 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 36744kB
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+2026-11-18T12:30:17+0800 course-node2 kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+2026-11-18T12:30:17+0800 course-node2 kernel: 3117 total pagecache pages
+2026-11-18T12:30:17+0800 course-node2 kernel: 0 pages in swap cache
+2026-11-18T12:30:17+0800 course-node2 kernel: Swap cache stats: add 0, delete 0, find 0/0
+2026-11-18T12:30:17+0800 course-node2 kernel: Free swap  = 0kB
+2026-11-18T12:30:17+0800 course-node2 kernel: Total swap = 0kB
+2026-11-18T12:30:17+0800 course-node2 kernel: 261918 pages RAM
+2026-11-18T12:30:17+0800 course-node2 kernel: 0 pages HighMem/MovableOnly
+2026-11-18T12:30:17+0800 course-node2 kernel: 59052 pages reserved
+2026-11-18T12:30:17+0800 course-node2 kernel: 0 pages cma reserved
+2026-11-18T12:30:17+0800 course-node2 kernel: 0 pages hwpoisoned
+2026-11-18T12:30:17+0800 course-node2 kernel: [ pid ]   uid  tgid total_vm      rss pgtables_bytes swapents oom_score_adj name
+2026-11-18T12:30:17+0800 course-node2 kernel: [  441]     0   441   109343     2969   892928        0             0 systemd-journal
+2026-11-18T12:30:17+0800 course-node2 kernel: [  469]     0   469    26477       45    98304        0             0 lvmetad
+2026-11-18T12:30:17+0800 course-node2 kernel: [  488]     0   488    11793      724   114688        0         -1000 systemd-udevd
+2026-11-18T12:30:17+0800 course-node2 kernel: [  552]   101   552    17657      151   180224        0             0 systemd-resolve
+2026-11-18T12:30:17+0800 course-node2 kernel: [  743]     0   743    17640      194   180224        0             0 systemd-logind
+2026-11-18T12:30:17+0800 course-node2 kernel: [  748]   103   748    12674      279   139264        0          -900 dbus-daemon
+2026-11-18T12:30:17+0800 course-node2 kernel: [  768]     0   768    71881      240   200704        0             0 accounts-daemon
+2026-11-18T12:30:17+0800 course-node2 kernel: [  774]     0   774    27639       96   110592        0             0 irqbalance
+2026-11-18T12:30:17+0800 course-node2 kernel: [  775]     0   775    42706     2042   225280        0             0 networkd-dispat
+2026-11-18T12:30:17+0800 course-node2 kernel: [  782]     0   782   196693     4806   233472        0             0 uniagent
+2026-11-18T12:30:17+0800 course-node2 kernel: [  783]     0   783   114139      160   118784        0             0 lxcfs
+2026-11-18T12:30:17+0800 course-node2 kernel: [  784]     0   784    11310      144   135168        0             0 wpa_supplicant
+2026-11-18T12:30:17+0800 course-node2 kernel: [  786]   102   786    65762      444   163840        0             0 rsyslogd
+2026-11-18T12:30:17+0800 course-node2 kernel: [  790]     0   790    90150      394   331776        0             0 ModemManager
+2026-11-18T12:30:17+0800 course-node2 kernel: [  797]     0   797   138733      859   442368        0             0 NetworkManager
+2026-11-18T12:30:17+0800 course-node2 kernel: [  799]     0   799     7831       72   106496        0             0 cron
+2026-11-18T12:30:17+0800 course-node2 kernel: [  800]     0   800     7084       53   106496        0             0 atd
+2026-11-18T12:30:17+0800 course-node2 kernel: [  835]     0   835    72221      252   208896        0             0 polkitd
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 1083]     0  1083    46783     1977   262144        0             0 unattended-upgr
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 1204]   111  1204    26353       68   126976        0             0 chronyd
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 1240]     0  1240     6499      317    98304        0             0 dhclient
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 1398]     0  1398     5436      170    77824        0             0 HSSInstall
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 3048]     0  3048     6228      305    81920        0             0 uniagentd
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 3289]     0  3289     1159       16    53248        0             0 sh
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 3292]     0  3292     1159       16    53248        0             0 sh
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 3293]     0  3293   118381      441   159744        0             0 uniagentd
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 3294]     0  3294    85651      465   151552        0             0 uniagentd
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 4178]     0  4178     3991       33    81920        0             0 agetty
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 4179]     0  4179     4047       34    77824        0             0 agetty
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 4221]     0  4221    18076      188   184320        0         -1000 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [10765]     0 10765   376269     4050   327680        0          -999 containerd
+2026-11-18T12:30:17+0800 course-node2 kernel: [11282]     0 11282   390257     9228   499712        0          -500 dockerd
+2026-11-18T12:30:17+0800 course-node2 kernel: [11586]     0 11586   178122      698   110592        0          -998 containerd-shim
+2026-11-18T12:30:17+0800 course-node2 kernel: [11608] 65534 11608   311109     2495   172032        0             0 node_exporter
+2026-11-18T12:30:17+0800 course-node2 kernel: [ 1612]     0  1612     1869       15    61440        0             0 sleep
+2026-11-18T12:30:17+0800 course-node2 kernel: [24748]     0 24748    26423      257   253952        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [24750]     0 24750    19161      272   192512        0             0 systemd
+2026-11-18T12:30:17+0800 course-node2 kernel: [24751]     0 24751    64300      683   253952        0             0 (sd-pam)
+2026-11-18T12:30:17+0800 course-node2 kernel: [24939]     0 24939   288058      141   147456        0          -500 docker-proxy
+2026-11-18T12:30:17+0800 course-node2 kernel: [24954]     0 24954   178186      668   110592        0          -998 containerd-shim
+2026-11-18T12:30:17+0800 course-node2 kernel: [24974]     0 24974   482560   107056  1183744        0             0 java
+2026-11-18T12:30:17+0800 course-node2 kernel: [25702]     0 25702    26423      243   245760        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25711]   109 25711    18076      202   172032        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25723]     0 25723    18093      210   188416        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25724]   109 25724    18076      203   180224        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25725]     0 25725    11916       52   122880        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25726]     0 25726    10844       48   114688        0             0 sshd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25727]     0 25727    11793      724   106496        0             0 systemd-udevd
+2026-11-18T12:30:17+0800 course-node2 kernel: [25728]     0 25728    11793      724   106496        0         -1000 systemd-udevd
+2026-11-18T12:30:18+0800 course-node2 kernel: Out of memory: Kill process 24974 (java) score 529 or sacrifice child
+2026-11-18T12:30:18+0800 course-node2 kernel: Killed process 24974 (java) total-vm:1930240kB, anon-rss:428224kB, file-rss:0kB, shmem-rss:0kB
+2026-11-18T12:30:18+0800 course-node2 kernel: oom_reaper: reaped process 24974 (java), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(vetheb248d5) entered disabled state
+2026-11-18T12:30:18+0800 course-node2 kernel: vethcde68ea: renamed from eth0
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(vetheb248d5) entered disabled state
+2026-11-18T12:30:18+0800 course-node2 kernel: device vetheb248d5 left promiscuous mode
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(vetheb248d5) entered disabled state
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(veth3576e99) entered blocking state
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(veth3576e99) entered disabled state
+2026-11-18T12:30:18+0800 course-node2 kernel: device veth3576e99 entered promiscuous mode
+2026-11-18T12:30:18+0800 course-node2 kernel: IPv6: ADDRCONF(NETDEV_UP): veth3576e99: link is not ready
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(veth3576e99) entered blocking state
+2026-11-18T12:30:18+0800 course-node2 kernel: docker0: port 1(veth3576e99) entered forwarding state
+2026-11-18T12:30:19+0800 course-node2 kernel: eth0: renamed from veth2ac68a3
+2026-11-18T12:30:19+0800 course-node2 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth3576e99: link becomes ready

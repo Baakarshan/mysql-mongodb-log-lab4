@@ -1,0 +1,36 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/jmeter/single-shot-logs.jmx
+Starting standalone test @ 2026 Nov 18 12:33:30 CST (1794976410340)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.8/s Avg:   548 Min:   548 Max:   548 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +    971 in 00:00:06 =  165.7/s Avg:  2283 Min:   454 Max:  5005 Err:   257 (26.47%) Active: 2965 Started: 3935 Finished: 970
+summary =    972 in 00:00:06 =  151.4/s Avg:  2281 Min:   454 Max:  5005 Err:   257 (26.44%)
+summary +   3913 in 00:00:06 =  653.3/s Avg:  4047 Min:  1999 Max:  6094 Err:  3677 (93.97%) Active: 2793 Started: 7676 Finished: 4883
+summary =   4885 in 00:00:12 =  393.7/s Avg:  3696 Min:   454 Max:  6094 Err:  3934 (80.53%)
+summary +   5443 in 00:00:06 =  904.9/s Avg:  3260 Min:  1999 Max:  6090 Err:  5443 (100.00%) Active: 2002 Started: 12329 Finished: 10327
+summary =  10328 in 00:00:18 =  560.6/s Avg:  3466 Min:   454 Max:  6094 Err:  9377 (90.79%)
+summary +   8258 in 00:00:06 = 1381.2/s Avg:   520 Min:     0 Max:  2060 Err:  8258 (100.00%) Active: 1 Started: 18585 Finished: 18584
+summary =  18586 in 00:00:24 =  761.7/s Avg:  2157 Min:     0 Max:  6094 Err: 17635 (94.88%)
+summary +   6479 in 00:00:06 = 1079.3/s Avg:     0 Min:     0 Max:  1327 Err:  6478 (99.98%) Active: 2137 Started: 27202 Finished: 25065
+summary =  25065 in 00:00:30 =  824.4/s Avg:  1599 Min:     0 Max:  6094 Err: 24113 (96.20%)
+[33.689s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[33.689s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request group 5 5-5976"
+[33.689s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[33.689s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request group 4 4-5981"
+[33.690s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[33.691s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request group 1 1-5991"
+[33.691s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[33.691s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request group 2 2-5987"
+[33.692s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[33.692s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request group 3 3-5985"
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request group 3-ThreadStarter,5,main]. See log file for details.
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request group 1-ThreadStarter,5,main]. See log file for details.
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request group 4-ThreadStarter,5,main]. See log file for details.
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request group 2-ThreadStarter,5,main]. See log file for details.
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request group 5-ThreadStarter,5,main]. See log file for details.
+summary +   3523 in 00:00:06 =  587.3/s Avg:  4527 Min:   992 Max:  6062 Err:  2926 (83.05%) Active: 1328 Started: 29915 Finished: 28587
+summary =  28588 in 00:00:36 =  785.3/s Avg:  1960 Min:     0 Max:  6094 Err: 27039 (94.58%)

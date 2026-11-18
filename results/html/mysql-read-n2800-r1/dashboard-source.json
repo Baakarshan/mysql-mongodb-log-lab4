@@ -1,0 +1,13 @@
+{
+  "run": "mysql-read-n2800-r1",
+  "display_version": 4,
+  "measurement_gzip_sha256": "8a6bcbd2979072622071281d708371eabfc8f0fcf98f5d2e5c3ebdd2b8fd0c86",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": null,
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "jmeter-single-shot-uniform-ramp"
+}

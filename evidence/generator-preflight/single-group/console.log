@@ -1,0 +1,24 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/jmeter/single-shot-logs.jmx
+Starting standalone test @ 2026 Nov 18 12:19:18 CST (1794975558452)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.7/s Avg:   596 Min:   596 Max:   596 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +   2535 in 00:00:06 =  445.4/s Avg:     4 Min:     2 Max:    63 Err:     0 (0.00%) Active: 3 Started: 2537 Finished: 2534
+summary =   2536 in 00:00:06 =  402.7/s Avg:     4 Min:     2 Max:   596 Err:     0 (0.00%)
+summary +   4004 in 00:00:06 =  667.2/s Avg:     3 Min:     2 Max:    30 Err:     0 (0.00%) Active: 3 Started: 6541 Finished: 6538
+summary =   6540 in 00:00:12 =  531.8/s Avg:     3 Min:     2 Max:   596 Err:     0 (0.00%)
+summary +   4444 in 00:00:06 =  740.8/s Avg:     3 Min:     2 Max:    21 Err:     0 (0.00%) Active: 3 Started: 10985 Finished: 10982
+summary =  10984 in 00:00:18 =  600.3/s Avg:     3 Min:     2 Max:   596 Err:     0 (0.00%)
+summary +   4550 in 00:00:06 =  758.3/s Avg:     3 Min:     2 Max:    16 Err:     0 (0.00%) Active: 3 Started: 15535 Finished: 15532
+summary =  15534 in 00:00:24 =  639.3/s Avg:     3 Min:     2 Max:   596 Err:     0 (0.00%)
+summary +   5826 in 00:00:07 =  851.6/s Avg:   403 Min:     2 Max:  2840 Err:     1 (0.02%) Active: 4202 Started: 25560 Finished: 21358
+summary =  21360 in 00:00:31 =  686.0/s Avg:   112 Min:     2 Max:  2840 Err:     1 (0.00%)
+[32.717s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[32.717s][warning][os,thread] Failed to start the native thread for java.lang.Thread "One request per thread 1-25946"
+Uncaught Exception java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached in thread Thread[One request per thread-ThreadStarter,5,main]. See log file for details.
+summary +   4314 in 00:00:06 =  783.9/s Avg:  2913 Min:  1999 Max:  6057 Err:  4102 (95.09%) Active: 272 Started: 25945 Finished: 25673
+summary =  25674 in 00:00:37 =  700.7/s Avg:   583 Min:     2 Max:  6057 Err:  4103 (15.98%)

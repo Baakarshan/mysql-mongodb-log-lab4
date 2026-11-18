@@ -1,0 +1,18 @@
+-- Logs begin at Thu 2023-07-13 15:38:02 CST, end at Wed 2026-11-18 12:35:28 CST. --
+2026-11-18T12:33:39+0800 course-node2 kernel: TCP: request_sock_TCP: Possible SYN flooding on port 8080. Sending cookies.  Check SNMP counters.
+2026-11-18T12:33:50+0800 course-node2 kernel: docker0: port 1(vetha615991) entered disabled state
+2026-11-18T12:33:50+0800 course-node2 kernel: vethfe1da01: renamed from eth0
+2026-11-18T12:33:50+0800 course-node2 kernel: docker0: port 1(vetha615991) entered disabled state
+2026-11-18T12:33:50+0800 course-node2 kernel: device vetha615991 left promiscuous mode
+2026-11-18T12:33:50+0800 course-node2 kernel: docker0: port 1(vetha615991) entered disabled state
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered blocking state
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered disabled state
+2026-11-18T12:33:51+0800 course-node2 kernel: device veth663cac8 entered promiscuous mode
+2026-11-18T12:33:51+0800 course-node2 kernel: IPv6: ADDRCONF(NETDEV_UP): veth663cac8: link is not ready
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered blocking state
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered forwarding state
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered disabled state
+2026-11-18T12:33:51+0800 course-node2 kernel: eth0: renamed from veth804cc66
+2026-11-18T12:33:51+0800 course-node2 kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth663cac8: link becomes ready
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered blocking state
+2026-11-18T12:33:51+0800 course-node2 kernel: docker0: port 1(veth663cac8) entered forwarding state

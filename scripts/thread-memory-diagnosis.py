@@ -10,7 +10,7 @@ out=a.output.resolve();e=out/'evidence'
 if not (e/'rbac-restoration.json').exists():raise RuntimeError('先完成thread-campaign')
 if not json.loads((e/'rbac-restoration.json').read_text())['restored']:raise RuntimeError('原实验服务尚未恢复')
 original=json.loads((e/'rbac-original.json').read_text())
-r.remote('monitor','docker service scale '+' '.join(n+'=0' for n in original))
+r.remote('monitor','docker service scale --detach=true '+' '.join(n+'=0' for n in original))
 for _ in range(30):
  raw=r.remote('monitor',"docker service ls --filter name=rbac_v33 --format '{{.Name}} {{.Replicas}}'")
  if all(x.endswith('0/0') for x in raw.splitlines()):break
@@ -27,14 +27,19 @@ t.environment.prepare(t.A.backend,t.OUT)
 (t.E/(t.A.backend+'-thread-settings.txt')).write_text(t.remote.remote('app','docker exec lab4-app printenv SERVER_TOMCAT_THREADS_MAX SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE'))
 for op in ['read','write']:
  t.environment.recover(t.OUT)
- for rate in [80,720,1080]:
+ for rate in ([80,720,900,1080,1200,1320,1440] if op=='read' else [80,720,1080,1620,2430,3040]):
   s=t.stage(op,rate,'tomcat40_diagnosis')
-  if s['generator_limit']:break
+  if s['generator_limit'] or s.get('severe_degradation') or not s.get('healthy_after',False):break
 """.replace('BACKEND',repr(b)).replace('OUTPUT',repr(str(out))).replace('ROOT',repr(str(root)))
   subprocess.run([sys.executable,'-c',code],check=True,env=dict(os.environ,PYTHONPATH=str(root/'scripts')))
 finally:
  # 参数修正后的部署保留，连接池仍为20。
- r.remote('monitor','docker service scale '+' '.join(n+'='+str(v) for n,v in original.items()))
+ try:
+  import round_environment as environment
+  environment.recover(out)
+ except Exception as error:
+  (e/'diagnosis-recovery-failure.txt').write_text(str(error)+'\n')
+ r.remote('monitor','docker service scale --detach=true '+' '.join(n+'='+str(v) for n,v in original.items()))
  observed={}
  for _ in range(60):
   raw=r.remote('monitor',"docker service ls --filter name=rbac_v33 --format '{{.Name}} {{.Replicas}}'");observed=dict(x.split() for x in raw.splitlines())

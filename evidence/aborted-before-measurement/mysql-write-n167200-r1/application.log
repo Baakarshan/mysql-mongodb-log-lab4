@@ -1,0 +1,127 @@
+2026-11-18T07:08:25.872264237Z 2026-11-18T07:08:25.871Z  INFO 1 --- [log-benchmark] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:25.875728404Z 2026-11-18T07:08:25.875Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-18T07:08:25.897486873Z 2026-11-18T07:08:25.897Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-18T07:08:28.685220055Z 
+2026-11-18T07:08:28.685246715Z   .   ____          _            __ _ _
+2026-11-18T07:08:28.685250245Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T07:08:28.685252575Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T07:08:28.685254525Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T07:08:28.685256415Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T07:08:28.685258475Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T07:08:28.685260275Z 
+2026-11-18T07:08:28.688570631Z  :: Spring Boot ::               (v3.3.13)
+2026-11-18T07:08:28.688586112Z 
+2026-11-18T07:08:28.856462994Z 2026-11-18T07:08:28.854Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T07:08:28.857550124Z 2026-11-18T07:08:28.857Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T07:08:30.163132758Z 2026-11-18T07:08:30.162Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T07:08:30.163287666Z 2026-11-18T07:08:30.163Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T07:08:30.214337510Z 2026-11-18T07:08:30.214Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2026-11-18T07:08:31.135803821Z 2026-11-18T07:08:31.135Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T07:08:31.151332585Z 2026-11-18T07:08:31.151Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T07:08:31.151626695Z 2026-11-18T07:08:31.151Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T07:08:31.185105034Z 2026-11-18T07:08:31.184Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T07:08:31.186397193Z 2026-11-18T07:08:31.186Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2243 ms
+2026-11-18T07:08:31.500573500Z 2026-11-18T07:08:31.499Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T07:08:31.597788329Z 2026-11-18T07:08:31.597Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T07:08:31.682720890Z 2026-11-18T07:08:31.682Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T07:08:32.051546627Z 2026-11-18T07:08:32.051Z  INFO 1 --- [log-benchmark] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T07:08:32.085683565Z 2026-11-18T07:08:32.085Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T07:08:32.286081487Z 2026-11-18T07:08:32.285Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31533eb1
+2026-11-18T07:08:32.287781296Z 2026-11-18T07:08:32.287Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T07:08:32.398704034Z 2026-11-18T07:08:32.398Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:32.548626723Z 2026-11-18T07:08:32.548Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:32.562354481Z 2026-11-18T07:08:32.562Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:33.275988395Z 2026-11-18T07:08:33.275Z  INFO 1 --- [log-benchmark] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T07:08:33.337571467Z 2026-11-18T07:08:33.337Z  INFO 1 --- [log-benchmark] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:34.378872177Z 2026-11-18T07:08:34.378Z  INFO 1 --- [log-benchmark] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T07:08:34.485339797Z 2026-11-18T07:08:34.484Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-18T07:08:34.508233986Z 2026-11-18T07:08:34.507Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Started Application in 6.293 seconds (process running for 7.09)
+2026-11-18T07:08:34.676227919Z 2026-11-18T07:08:34.675Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T07:08:34.676402219Z 2026-11-18T07:08:34.676Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T07:08:34.678267058Z 2026-11-18T07:08:34.678Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-18T07:08:35.272684693Z 2026-11-18T07:08:35.272Z  INFO 1 --- [log-benchmark] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:35.276839770Z 2026-11-18T07:08:35.276Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-18T07:08:35.286687480Z 2026-11-18T07:08:35.286Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-18T07:08:36.987955134Z 
+2026-11-18T07:08:36.988177744Z   .   ____          _            __ _ _
+2026-11-18T07:08:36.988185674Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T07:08:36.988188254Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T07:08:36.988190174Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T07:08:36.988191864Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T07:08:36.988193774Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T07:08:36.988195404Z 
+2026-11-18T07:08:36.994735338Z  :: Spring Boot ::               (v3.3.13)
+2026-11-18T07:08:36.994833389Z 
+2026-11-18T07:08:37.128641154Z 2026-11-18T07:08:37.126Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T07:08:37.133316579Z 2026-11-18T07:08:37.133Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T07:08:38.422247588Z 2026-11-18T07:08:38.421Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T07:08:38.422380407Z 2026-11-18T07:08:38.422Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T07:08:38.484257229Z 2026-11-18T07:08:38.483Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-11-18T07:08:39.539573746Z 2026-11-18T07:08:39.539Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T07:08:39.553579663Z 2026-11-18T07:08:39.553Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T07:08:39.553892372Z 2026-11-18T07:08:39.553Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T07:08:39.586746341Z 2026-11-18T07:08:39.586Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T07:08:39.587912550Z 2026-11-18T07:08:39.587Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2358 ms
+2026-11-18T07:08:39.880282358Z 2026-11-18T07:08:39.878Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T07:08:39.941355562Z 2026-11-18T07:08:39.941Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T07:08:40.019401559Z 2026-11-18T07:08:40.019Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T07:08:40.313500124Z 2026-11-18T07:08:40.313Z  INFO 1 --- [log-benchmark] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T07:08:40.343547307Z 2026-11-18T07:08:40.343Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T07:08:40.524189668Z 2026-11-18T07:08:40.523Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c6d515
+2026-11-18T07:08:40.526706355Z 2026-11-18T07:08:40.526Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T07:08:40.645133495Z 2026-11-18T07:08:40.644Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:40.815563125Z 2026-11-18T07:08:40.815Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:40.834714499Z 2026-11-18T07:08:40.833Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:41.492337565Z 2026-11-18T07:08:41.491Z  INFO 1 --- [log-benchmark] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T07:08:41.529559291Z 2026-11-18T07:08:41.529Z  INFO 1 --- [log-benchmark] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:42.428823453Z 2026-11-18T07:08:42.428Z  INFO 1 --- [log-benchmark] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T07:08:42.518477758Z 2026-11-18T07:08:42.518Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-18T07:08:42.542344896Z 2026-11-18T07:08:42.542Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Started Application in 6.09 seconds (process running for 6.716)
+2026-11-18T07:08:44.417847428Z 2026-11-18T07:08:44.416Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T07:08:44.418227647Z 2026-11-18T07:08:44.418Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T07:08:44.419769027Z 2026-11-18T07:08:44.419Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T07:08:44.822049941Z 2026-11-18T07:08:44.821Z  INFO 1 --- [log-benchmark] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:44.827085686Z 2026-11-18T07:08:44.826Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-18T07:08:44.836688317Z 2026-11-18T07:08:44.836Z  INFO 1 --- [log-benchmark] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-18T07:08:46.302730570Z 
+2026-11-18T07:08:46.302895851Z   .   ____          _            __ _ _
+2026-11-18T07:08:46.302902740Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T07:08:46.302905240Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T07:08:46.302907271Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T07:08:46.302909111Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T07:08:46.302910911Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T07:08:46.302912511Z 
+2026-11-18T07:08:46.304568509Z  :: Spring Boot ::               (v3.3.13)
+2026-11-18T07:08:46.308163226Z 
+2026-11-18T07:08:46.439256213Z 2026-11-18T07:08:46.437Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Starting Application v1.0.0 using Java 17.0.21 with PID 1 (/app.jar started by root in /)
+2026-11-18T07:08:46.455937397Z 2026-11-18T07:08:46.455Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : The following 1 profile is active: "mysql"
+2026-11-18T07:08:47.439622701Z 2026-11-18T07:08:47.439Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T07:08:47.439716692Z 2026-11-18T07:08:47.439Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T07:08:47.494881909Z 2026-11-18T07:08:47.494Z  INFO 1 --- [log-benchmark] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-11-18T07:08:48.422861104Z 2026-11-18T07:08:48.422Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-18T07:08:48.434969383Z 2026-11-18T07:08:48.434Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T07:08:48.435432142Z 2026-11-18T07:08:48.435Z  INFO 1 --- [log-benchmark] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-11-18T07:08:48.473300996Z 2026-11-18T07:08:48.473Z  INFO 1 --- [log-benchmark] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T07:08:48.474776295Z 2026-11-18T07:08:48.474Z  INFO 1 --- [log-benchmark] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1930 ms
+2026-11-18T07:08:48.783414028Z 2026-11-18T07:08:48.782Z  INFO 1 --- [log-benchmark] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T07:08:48.835298680Z 2026-11-18T07:08:48.834Z  INFO 1 --- [log-benchmark] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T07:08:48.865988981Z 2026-11-18T07:08:48.865Z  INFO 1 --- [log-benchmark] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T07:08:49.193498006Z 2026-11-18T07:08:49.193Z  INFO 1 --- [log-benchmark] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T07:08:49.220595770Z 2026-11-18T07:08:49.220Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T07:08:49.383145209Z 2026-11-18T07:08:49.382Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31533eb1
+2026-11-18T07:08:49.384652418Z 2026-11-18T07:08:49.384Z  INFO 1 --- [log-benchmark] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T07:08:49.489312230Z 2026-11-18T07:08:49.488Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:49.635227474Z 2026-11-18T07:08:49.634Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:49.651268359Z 2026-11-18T07:08:49.650Z  WARN 1 --- [log-benchmark] [           main] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+2026-11-18T07:08:50.241746738Z 2026-11-18T07:08:50.241Z  INFO 1 --- [log-benchmark] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T07:08:50.300389314Z 2026-11-18T07:08:50.300Z  INFO 1 --- [log-benchmark] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T07:08:51.263207676Z 2026-11-18T07:08:51.262Z  INFO 1 --- [log-benchmark] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T07:08:51.370006687Z 2026-11-18T07:08:51.369Z  INFO 1 --- [log-benchmark] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-18T07:08:51.392000106Z 2026-11-18T07:08:51.391Z  INFO 1 --- [log-benchmark] [           main] edu.lab4.Application                     : Started Application in 5.481 seconds (process running for 6.086)
+2026-11-18T07:08:51.822350305Z 2026-11-18T07:08:51.822Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T07:08:51.822621125Z 2026-11-18T07:08:51.822Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T07:08:51.824467203Z 2026-11-18T07:08:51.824Z  INFO 1 --- [log-benchmark] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T07:09:09.978888928Z 2026-11-18T07:09:09.977Z  WARN 1 --- [log-benchmark] [o-8080-exec-160] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Broken pipe]
+2026-11-18T07:09:09.980913367Z 2026-11-18T07:09:09.977Z  WARN 1 --- [log-benchmark] [o-8080-exec-193] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Broken pipe]
+2026-11-18T07:09:09.992451925Z 2026-11-18T07:09:09.992Z  WARN 1 --- [log-benchmark] [io-8080-exec-92] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Broken pipe]
+2026-11-18T07:09:10.035931975Z 2026-11-18T07:09:09.999Z  WARN 1 --- [log-benchmark] [io-8080-exec-88] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Broken pipe]

@@ -22,23 +22,14 @@
         <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Clock" enabled="true">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="cacheKey">clock</stringProp>
-          <stringProp name="script">new File(props.get('clockFile')).text = Long.toString(System.currentTimeMillis())</stringProp>
+          <stringProp name="script">new File(props.get('clockFile')).text = Long.toString(Math.floorDiv(System.currentTimeMillis() + 999L, 1000L) * 1000L)</stringProp>
         </JSR223Sampler>
         <hashTree />
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="One request group 1" enabled="true">
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 1" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(group_threads,560)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,35)}</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(duration,35)}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
-      </ThreadGroup>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers" enabled="true">
           <collectionProp name="HeaderManager.headers">
@@ -118,19 +109,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="One request group 2" enabled="true">
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 2" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(group_threads,560)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,35)}</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(duration,35)}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
-      </ThreadGroup>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers" enabled="true">
           <collectionProp name="HeaderManager.headers">
@@ -210,19 +192,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="One request group 3" enabled="true">
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 3" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(group_threads,560)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,35)}</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(duration,35)}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
-      </ThreadGroup>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers" enabled="true">
           <collectionProp name="HeaderManager.headers">
@@ -302,19 +275,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="One request group 4" enabled="true">
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 4" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(group_threads,560)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,35)}</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(duration,35)}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
-      </ThreadGroup>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers" enabled="true">
           <collectionProp name="HeaderManager.headers">
@@ -394,19 +358,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="One request group 5" enabled="true">
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 5" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(group_threads,560)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,35)}</stringProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(duration,35)}</stringProp>
-        <stringProp name="ThreadGroup.delay">0</stringProp>
-      </ThreadGroup>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers" enabled="true">
           <collectionProp name="HeaderManager.headers">

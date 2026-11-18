@@ -1,0 +1,25 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/even-hps-20261118/mysql-write-n167200-r1-1794985731985129000/run.jmx
+Starting standalone test @ 2026 Nov 18 15:08:56 CST (1794985736397)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.6/s Avg:   613 Min:   613 Max:   613 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +   3189 in 00:00:06 =  559.6/s Avg:  1759 Min:   289 Max:  4047 Err:  1276 (40.01%) Active: 3293 Started: 6511 Finished: 3218
+summary =   3190 in 00:00:06 =  504.1/s Avg:  1759 Min:   289 Max:  4047 Err:  1276 (40.00%)
+summary +   8250 in 00:00:06 = 1370.4/s Avg:  2273 Min:   298 Max:  6691 Err:  5205 (63.09%) Active: 3898 Started: 15338 Finished: 11440
+summary =  11440 in 00:00:12 =  919.1/s Avg:  2130 Min:   289 Max:  6691 Err:  6481 (56.65%)
+[17.298s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[17.299s][warning][os,thread] Failed to start the native thread for java.lang.Thread "pool-3-thread-1052"
+[17.303s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[17.304s][warning][os,thread] Failed to start the native thread for java.lang.Thread "pool-4-thread-864"
+[17.319s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[17.319s][warning][os,thread] Failed to start the native thread for java.lang.Thread "pool-6-thread-1021"
+[17.319s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[17.319s][warning][os,thread] Failed to start the native thread for java.lang.Thread "pool-7-thread-814"
+[17.320s][warning][os,thread] Failed to start thread "Unknown thread" - pthread_create failed (EAGAIN) for attributes: stacksize: 256k, guardsize: 0k, detached.
+[17.320s][warning][os,thread] Failed to start the native thread for java.lang.Thread "pool-5-thread-791"
+summary +   8493 in 00:00:06 = 1410.8/s Avg:  2054 Min:   112 Max:  6391 Err:  4855 (57.16%) Active: 47 Started: 19979 Finished: 19932
+summary =  19933 in 00:00:18 = 1079.3/s Avg:  2097 Min:   112 Max:  6691 Err: 11336 (56.87%)

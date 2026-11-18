@@ -4,9 +4,9 @@
 
 相同日志模型与HTTP接口，比较Spring Data JPA/MySQL和Spring Data MongoDB/MongoDB。四台服务器分两轮复用，Manager使用原生JMeter发压。主指标为平均响应时间（Average ms），同时记录错误率、成功吞吐和P95。
 
-[PDF报告](report/实验四实验报告.pdf) · [Word报告](report/实验四实验报告.docx) · [逐次结果](results/all-runs.csv) · [原始数据页面](results/html/index.html) · [核验结果](results/audit.json) · [跟做稿](docs/实验四复现跟做稿.md)
+[PDF报告](report/实验四实验报告.pdf) · [Word报告](report/实验四实验报告.docx) · [逐次结果](results/all-runs.csv) · [原始数据页面](results/html/index.html) · [HPS逐档核验](results/hps-audit/audit.csv) · [核验结果](results/audit.json) · [跟做稿](docs/实验四复现跟做稿.md)
 
-本轮保留47次探索和诊断，正式窗口记录617,360次请求。逐次状态、均值与发送均匀性见CSV和核验结果。
+本轮保留54次完成正式窗口的探索和诊断，记录982,860次请求。其中49次通过HPS核验，5次发送失败记录用于故障分析；预热期中断另列。逐次状态、均值与发送均匀性见CSV和核验结果。
 
 ## 机器与实现
 
@@ -25,15 +25,15 @@ Java按Google Java Style排版，Spotless锁定google-java-format 1.24.0；中�
 
 ## 负载与压力
 
-每个JMeter线程只执行一次HTTP请求。5个相同线程组平分总线程数，均以35秒Ramp-up启动，循环次数1，启用delayedStart。每档增加总线程数，实际请求启动率由原生JTL时间戳核验；单次线程本身不保证均匀发送。
+每个JMeter逻辑线程只执行一次HTTP请求。5个内置Open Model Thread Group平分发送速率，使用even_arrivals持续55秒，随后留8秒等待响应。下一请求按计划到达，独立于前一请求是否完成；原生执行器复用操作系统线程。每档提高发送速率，逻辑线程总数等于速率乘55。每次实际执行的单操作JMX随结果保存。
 
-每档恢复10万条固定种子日志。前10秒预热，中间20秒测量，最后5秒继续发送以避开结束边界。统计20个完整秒的HPS；最大/最小达到2、存在零启动秒、请求数缺失或发压器失败的运行，标记为发送条件不合格。总线程数与同时活跃线程数分别保存。
+每档恢复10万条固定种子日志。前30秒预热，正式窗口为时钟起点后30–50秒，最后5秒继续发送。统计20个完整秒的Hits Per Second：任一秒偏离窗口均值、前后各5秒均值差、窗口均值偏离计划速率，三项均不超过10%。这是本实验采用的平台核验标准。请求缺失或JMeter异常也判为发送条件不合格。合格档用于性能比较，失败档保留故障证据并重测。报告包含逐档HPS图和原生JMeter HPS截图。
 
-读写分别从2800个总线程（计划80次/秒）起步。响应仍快且无错时逐级增加；平均响应明显上升或错误增加时，细分相邻档位、复测转折并检查CPU、逐核CPU、内存、磁盘、GC、连接池和线程状态。连接池20与40作单参数对照，结束后恢复20并检查低负载。CPU未满时继续核对其他资源，不据此直接判定代码问题。
+读写分别从4400个总线程（计划80次/秒）起步。响应仍快且无错时逐级增加；平均响应明显上升或错误增加时，细分相邻档位、复测转折并检查CPU、逐核CPU、内存、磁盘、GC、连接池和线程状态。应用工作线程上限200与40作对照，连接池保持20，并检查低负载恢复。CPU未满时继续核对其他资源，不据此直接判定代码问题。
 
 正式平均值包含窗口内全部HTTP样本，成功样本平均值单独保存。失败耗时与错误率共同解释。CSV吞吐量使用固定20秒分母，原生JMeter报告使用样本起止跨度。客户端超时后仍提交的写入，通过完整JTL与数据库记录增长核对。
 
-运行名如`mysql-read-n25200-r1`，表示实现、操作、总线程数与重复编号。每次保存all、warmup、measurement、cooldown四份JTL gzip、监控、应用日志、内核日志、配置与校验值。测试采用短档位逐级定位转折，所有复测逐次列出。
+运行名如`mysql-read-n39600-r1`，表示实现、操作、总线程数与重复编号。每次保存all、warmup、measurement、cooldown四份JTL gzip、监控、应用日志、内核日志、配置与校验值。测试采用短档位逐级定位转折，所有复测逐次列出。
 
 ## 查看原始HTML
 
@@ -52,7 +52,9 @@ python3 -m pip install paramiko matplotlib python-docx
 # 通过环境设置LAB_SSH_PASSWORD，服务器地址可用下列变量覆盖
 python3 scripts/thread-campaign.py --output work/rerun
 python3 scripts/thread-memory-diagnosis.py --output work/rerun
+python3 scripts/thread-pool-diagnosis.py --output work/rerun
 python3 scripts/enrich-thread-network.py work/rerun
+python3 scripts/audit-hps.py work/rerun
 python3 scripts/analyze-threads.py work/rerun
 python3 scripts/prepare-thread-assets.py work/rerun
 python3 scripts/generate-adaptive-html.py work/rerun --jmeter /实际路径/apache-jmeter-5.6.3/bin/jmeter
@@ -69,3 +71,5 @@ python3 scripts/generate-adaptive-html.py work/rerun --jmeter /实际路径/apac
 - evidence：部署、接口、配置、诊断与恢复记录。
 - screenshots：真实Edge、JMeter、Prometheus页面及正文配图。
 - report：PDF、Word、Markdown与分析图。
+
+查询在1200次/秒出现响应转折后，保持Tomcat最大工作线程40，另做连接池20与40的同档对照；每次重置数据并预热。`scripts/thread-pool-diagnosis.py --output work/rerun`执行连接池40档，并恢复连接池20、以80次/秒检查恢复。结果按purpose区分。

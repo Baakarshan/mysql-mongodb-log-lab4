@@ -1,0 +1,17 @@
+{
+  "threads": 4400,
+  "thread_groups": 5,
+  "threads_per_group": 880,
+  "ramp_s": 55,
+  "loops": 1,
+  "measurement_offset_s": [
+    30,
+    50
+  ],
+  "pool_size": 20,
+  "jmx_sha256": "9191e522c5d64d608be9f37989c413422e5e012f25279dc7f3bb392ca4d639da",
+  "source_jmx_sha256": "b1ec8c2e2f91ee32275382b890d2621961e6714c632214899ad11b735d89f7e5",
+  "jmeter_heap_mib": 384,
+  "jmeter_stack_kib": 256,
+  "tomcat_max_threads": 40
+}

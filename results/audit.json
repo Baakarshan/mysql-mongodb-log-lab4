@@ -1,28 +1,22 @@
 {
   "verified": true,
-  "load_model": "jmeter-single-shot-uniform-ramp",
-  "runs": 47,
-  "measurement_samples": 617360,
-  "measurement_errors": 111485,
+  "load_model": "jmeter-openmodel-even-arrivals",
+  "runs": 54,
+  "measurement_samples": 982860,
+  "measurement_errors": 29191,
   "each_http_thread_once": true,
   "invalid_hps_runs": [
-    "mysql-read-n31500-r1",
-    "mysql-read-n37800-r2",
-    "mysql-read-n37800-r3",
-    "mysql-write-n56700-r1",
-    "mongo-read-n31500-r1",
-    "mongo-read-n37800-r2",
-    "mongo-read-n37800-r3",
-    "mongo-write-n85050-r1"
+    "mysql-write-n200750-r1",
+    "mongo-read-n59400-r1",
+    "mongo-write-n200750-r1",
+    "mysql-write-n167200-r2",
+    "mongo-write-n167200-r1"
   ],
   "generator_limited_runs": [
-    "mysql-read-n31500-r1",
-    "mysql-read-n37800-r2",
-    "mysql-read-n37800-r3",
-    "mysql-write-n56700-r1",
-    "mongo-read-n31500-r1",
-    "mongo-read-n37800-r2",
-    "mongo-read-n37800-r3",
-    "mongo-write-n85050-r1"
+    "mysql-write-n200750-r1",
+    "mongo-read-n59400-r1",
+    "mongo-write-n200750-r1",
+    "mysql-write-n167200-r2",
+    "mongo-write-n167200-r1"
   ]
 }

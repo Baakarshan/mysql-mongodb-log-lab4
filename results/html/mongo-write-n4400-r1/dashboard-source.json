@@ -1,0 +1,13 @@
+{
+  "run": "mongo-write-n4400-r1",
+  "display_version": 4,
+  "measurement_gzip_sha256": "73323ce008c658863d8a3906eb47e034b7887cc6a4180e04283680b1189b52c9",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": null,
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "jmeter-openmodel-even-arrivals"
+}

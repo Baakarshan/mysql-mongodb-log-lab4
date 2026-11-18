@@ -1,6 +1,7 @@
 """核验单次线程请求、逐秒均匀性与平均响应时间，并生成图表。"""
 from pathlib import Path
 import argparse,csv,gzip,hashlib,json,statistics,collections
+from hps_quality import assess
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -19,7 +20,8 @@ for s in runs:
  assert hps==s['hits_per_second'];assert s['records_before']==100000
  assert s['write_count_difference']==s['records_after']-100000-(s['all_success'] if s['operation']=='write' else 0)
  meta=json.loads((d/'original.json').read_text());data=(d/'all.jtl.gz').read_bytes();assert hashlib.sha256(data).hexdigest()==meta['compressed_sha256'];assert hashlib.sha256(gzip.decompress(data)).hexdigest()==meta['original_jtl_sha256']
- if not s['generator_limit']:assert s['all_http_samples']==s['threads'] and s['hps_max_min_ratio']<2
+ quality=assess(hps,s['target_rps']);assert quality==s['hps_quality']
+ if not s['generator_limit']:assert s['all_http_samples']==s['threads'] and quality['passed']
 if A.check_only:
  print(f'已核验{len(runs)}次运行的原始数据。');raise SystemExit(0)
 for name,rows in [('all-runs',runs)]:
@@ -49,7 +51,7 @@ for op in ['read','write']:
    ax.plot([s['threads'] for s in ss if not s['generator_limit']],[s[key] for s in ss if not s['generator_limit']],'-o' if b=='mysql' else '--s',color=colors[b],label=b,markersize=4);ax.scatter([s['threads'] for s in ss if s['generator_limit']],[s[key] for s in ss if s['generator_limit']],marker='x',color=colors[b],s=35);ax.set(xlabel='Total threads (one request each)',ylabel=ylabel);ax.grid(axis='y',alpha=.15)
   valid=[s for s in ss if not s['generator_limit']]
   lastload=[s for s in valid if s['classification']=='load']
-  choice=[ss[0],lastload[-1] if lastload else ss[0],ss[-1]]
+  choice=[valid[0],lastload[-1] if lastload else valid[0],valid[-1]] if valid else [ss[0]]
   corrected=[s for s in runs if s['backend']==b and s['operation']==op and s['purpose']=='tomcat40_diagnosis' and not s['generator_limit']]
   if corrected:choice.append(corrected[-1])
   selected[f'{b}-{op}']=list(dict.fromkeys(s['name'] for s in choice))
@@ -65,6 +67,17 @@ for op in ['read','write']:
   axes[1].set(xlabel='Measurement time (s)',ylabel='Actual requests started/s');axes[1].legend(title='Threads',fontsize=7,ncol=2)
   for ax in axes:ax.grid(axis='y',alpha=.15)
   export(fig,b+'-'+op+'-cpu-hps')
+for op in ['read','write']:
+ fig,axes=plt.subplots(2,1,figsize=(6.1,4.8),sharex=True)
+ for b in ['mysql','mongo']:
+  ss=[s for s in runs if s['backend']==b and s['operation']==op and s['purpose']=='tomcat40_diagnosis' and not s['generator_limit']]
+  for ax,key,ylabel in zip(axes,['mean_ms','error_rate'],['Mean response time (ms)','Error fraction']):
+   ax.plot([s['target_rps'] for s in ss],[s[key] for s in ss],'-o' if b=='mysql' else '--s',color=colors[b],label=b,markersize=4)
+   ax.set_ylabel(ylabel);ax.grid(axis='y',alpha=.15)
+ axes[0].legend();axes[1].set_xlabel('Planned requests/s (Tomcat max threads = 40)')
+ export(fig,op+'-tomcat40-progression')
+for stale in list(F.glob('*-all-hps-*'))+list(F.glob('*-failed-hps-*')):
+ stale.unlink()
 for b in ['mysql','mongo']:
  ss=[s for s in runs if s['backend']==b and s['operation']=='read']
  if not ss:continue
@@ -77,6 +90,25 @@ for b in ['mysql','mongo']:
  axes[1].set_xticks(range(1,len(ss)+1),[str(i+1)+'\n'+str(s['target_rps']) for i,s in enumerate(ss)],fontsize=8)
  axes[1].set_xlabel('Run order / planned requests per second');axes[0].legend(fontsize=8)
  export(fig,b+'-read-diagnosis-timeline')
+
+for b in ['mysql','mongo']:
+ for op in ['read','write']:
+  for failed,kind in [(False,'all'),(True,'failed')]:
+   series=[s for s in runs if s['backend']==b and s['operation']==op and s['generator_limit']==failed]
+   for offset in range(0,len(series),6):
+    ss=series[offset:offset+6];rows_n=(len(ss)+1)//2
+    fig,axs=plt.subplots(rows_n,2,figsize=(6.1,1.8*rows_n),squeeze=False)
+    for ax,s in zip(axs.flat,ss):
+     rate=s['target_rps'];h=s['hits_per_second']
+     ax.axhspan(rate*.9,rate*1.1,color='#E8EEF4',zorder=0)
+     ax.axhline(rate,color='#777777',linestyle='--',linewidth=.8)
+     ax.plot(range(20),h,color=colors[b],marker='o',markersize=2,linewidth=1)
+     ax.set_title(s['name']+(' INVALID' if s['generator_limit'] else ' PASS'),fontsize=8)
+     ax.set(xlabel='Measurement time (s)',ylabel='Hits per second',xlim=(0,19),ylim=(0,max(max(h),rate*1.1)*1.15))
+     ax.grid(axis='y',alpha=.15)
+    for ax in list(axs.flat)[len(ss):]:ax.set_visible(False)
+    export(fig,b+'-'+op+'-'+kind+'-hps-'+str(offset//6+1))
+
 (R/'results/selected-runs.json').write_text(json.dumps(selected,indent=2)+'\n')
-audit={'verified':True,'load_model':'jmeter-single-shot-uniform-ramp','runs':len(runs),'measurement_samples':sum(s['samples'] for s in runs),'measurement_errors':sum(s['errors'] for s in runs),'each_http_thread_once':True,'invalid_hps_runs':[s['name'] for s in runs if s['hps_max_min_ratio'] is None or s['hps_max_min_ratio']>=2],'generator_limited_runs':[s['name'] for s in runs if s['generator_limit']]}
+audit={'verified':True,'load_model':'jmeter-openmodel-even-arrivals','runs':len(runs),'measurement_samples':sum(s['samples'] for s in runs),'measurement_errors':sum(s['errors'] for s in runs),'each_http_thread_once':True,'invalid_hps_runs':[s['name'] for s in runs if not s['hps_quality']['passed']],'generator_limited_runs':[s['name'] for s in runs if s['generator_limit']]}
 (R/'results/audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n');print(json.dumps(audit,ensure_ascii=False,indent=2))

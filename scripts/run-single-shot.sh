@@ -8,14 +8,15 @@ export JVM_ARGS='-Xss256k -XX:ActiveProcessorCount=2'
 operation=$1
 threads=$2
 output=$3
-ramp=${4:-35}
+ramp=${4:-55}
 mkdir -p "$output"
 test ! -e "$output/all.jtl.gz"
 ulimit -n 65536
-timeout --signal=TERM --kill-after=5s 80s "${JMETER_HOME:-/opt/lab3/tools/apache-jmeter-5.6.3}/bin/jmeter" \
-  -n -t "$ROOT/jmeter/single-shot-logs.jmx" -q "$ROOT/scripts/jmeter.properties" \
+python3 "$ROOT/scripts/select-jmeter-operation.py" "$ROOT/jmeter/single-shot-logs.jmx" "$operation" "$output/run.jmx"
+timeout --signal=TERM --kill-after=5s 100s "${JMETER_HOME:-/opt/lab3/tools/apache-jmeter-5.6.3}/bin/jmeter" \
+  -n -Jjmeterengine.force.system.exit=true -t "$output/run.jmx" -q "$ROOT/scripts/jmeter.properties" \
   -Jhost="${APP_HOST:-172.31.12.145}" -Jport=18080 -Joperation="$operation" \
-  -Jgroup_threads="$((threads / 5))" -Jramp="$ramp" -JclockFile="$output/start-ms.txt" \
+  -Jgroup_rate="$((threads / ramp / 5))" -Jramp="$ramp" -JclockFile="$output/start-ms.txt" \
   -Lorg.apache.jmeter.threads=WARN -Jsummariser.interval=5 -l "$output/all.jtl" -j "$output/jmeter.log" \
   > "$output/console.log" 2>&1 &
 load_pid=$!

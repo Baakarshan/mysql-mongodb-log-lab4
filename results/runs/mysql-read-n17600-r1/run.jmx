@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jmeterTestPlan jmeter="5.6.3" properties="5.0" version="1.2">
+  <hashTree>
+    <TestPlan enabled="true" guiclass="TestPlanGui" testclass="TestPlan" testname="Shared log read/write benchmark">
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp elementType="Arguments" name="TestPlan.user_defined_variables">
+        <collectionProp name="Arguments.arguments" />
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <SetupThreadGroup enabled="true" guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="Record sampling clock">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp elementType="LoopController" guiclass="LoopControlPanel" name="ThreadGroup.main_controller" testclass="LoopController" testname="Loop">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      </SetupThreadGroup>
+      <hashTree>
+        <JSR223Sampler enabled="true" guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Clock">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="cacheKey">clock</stringProp>
+          <stringProp name="script">new File(props.get('clockFile')).text = Long.toString(Math.floorDiv(System.currentTimeMillis() + 999L, 1000L) * 1000L)</stringProp>
+        </JSR223Sampler>
+        <hashTree />
+      </hashTree>
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup enabled="true" guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 1">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
+      <hashTree>
+        <HeaderManager enabled="true" guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp elementType="Header" name="">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree />
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="read">
+            <stringProp name="HTTPSampler.domain">${__P(host,172.31.12.145)}</stringProp>
+            <stringProp name="HTTPSampler.port">${__P(port,18080)}</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/api/logs?level=INFO&amp;from=2026-11-01T06%3A00%3A00Z&amp;to=2026-11-01T07%3A00%3A00Z&amp;page=0&amp;size=20</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <stringProp name="HTTPSampler.connect_timeout">2000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">5000</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp elementType="Arguments" name="HTTPsampler.Arguments">
+              <collectionProp name="Arguments.arguments" />
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion enabled="true" guiclass="AssertionGui" testclass="ResponseAssertion" testname="Expected HTTP status"><collectionProp name="Asserion.test_strings"><stringProp name="code">200</stringProp></collectionProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp><boolProp name="Assertion.assume_success">false</boolProp><intProp name="Assertion.test_type">8</intProp></ResponseAssertion><hashTree />
+          </hashTree>
+        </hashTree>
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup enabled="true" guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 2">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
+      <hashTree>
+        <HeaderManager enabled="true" guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp elementType="Header" name="">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree />
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="read">
+            <stringProp name="HTTPSampler.domain">${__P(host,172.31.12.145)}</stringProp>
+            <stringProp name="HTTPSampler.port">${__P(port,18080)}</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/api/logs?level=INFO&amp;from=2026-11-01T06%3A00%3A00Z&amp;to=2026-11-01T07%3A00%3A00Z&amp;page=0&amp;size=20</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <stringProp name="HTTPSampler.connect_timeout">2000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">5000</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp elementType="Arguments" name="HTTPsampler.Arguments">
+              <collectionProp name="Arguments.arguments" />
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion enabled="true" guiclass="AssertionGui" testclass="ResponseAssertion" testname="Expected HTTP status"><collectionProp name="Asserion.test_strings"><stringProp name="code">200</stringProp></collectionProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp><boolProp name="Assertion.assume_success">false</boolProp><intProp name="Assertion.test_type">8</intProp></ResponseAssertion><hashTree />
+          </hashTree>
+        </hashTree>
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup enabled="true" guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 3">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
+      <hashTree>
+        <HeaderManager enabled="true" guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp elementType="Header" name="">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree />
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="read">
+            <stringProp name="HTTPSampler.domain">${__P(host,172.31.12.145)}</stringProp>
+            <stringProp name="HTTPSampler.port">${__P(port,18080)}</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/api/logs?level=INFO&amp;from=2026-11-01T06%3A00%3A00Z&amp;to=2026-11-01T07%3A00%3A00Z&amp;page=0&amp;size=20</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <stringProp name="HTTPSampler.connect_timeout">2000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">5000</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp elementType="Arguments" name="HTTPsampler.Arguments">
+              <collectionProp name="Arguments.arguments" />
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion enabled="true" guiclass="AssertionGui" testclass="ResponseAssertion" testname="Expected HTTP status"><collectionProp name="Asserion.test_strings"><stringProp name="code">200</stringProp></collectionProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp><boolProp name="Assertion.assume_success">false</boolProp><intProp name="Assertion.test_type">8</intProp></ResponseAssertion><hashTree />
+          </hashTree>
+        </hashTree>
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup enabled="true" guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 4">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
+      <hashTree>
+        <HeaderManager enabled="true" guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp elementType="Header" name="">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree />
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="read">
+            <stringProp name="HTTPSampler.domain">${__P(host,172.31.12.145)}</stringProp>
+            <stringProp name="HTTPSampler.port">${__P(port,18080)}</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/api/logs?level=INFO&amp;from=2026-11-01T06%3A00%3A00Z&amp;to=2026-11-01T07%3A00%3A00Z&amp;page=0&amp;size=20</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <stringProp name="HTTPSampler.connect_timeout">2000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">5000</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp elementType="Arguments" name="HTTPsampler.Arguments">
+              <collectionProp name="Arguments.arguments" />
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion enabled="true" guiclass="AssertionGui" testclass="ResponseAssertion" testname="Expected HTTP status"><collectionProp name="Asserion.test_strings"><stringProp name="code">200</stringProp></collectionProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp><boolProp name="Assertion.assume_success">false</boolProp><intProp name="Assertion.test_type">8</intProp></ResponseAssertion><hashTree />
+          </hashTree>
+        </hashTree>
+      <org.apache.jmeter.threads.openmodel.OpenModelThreadGroup enabled="true" guiclass="org.apache.jmeter.threads.openmodel.gui.OpenModelThreadGroupGui" testclass="org.apache.jmeter.threads.openmodel.OpenModelThreadGroup" testname="One request group 5">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="OpenModelThreadGroup.schedule">rate(${__P(group_rate,16)}/sec) even_arrivals(${__P(ramp,55)} sec) rate(${__P(group_rate,16)}/sec) pause(8 sec)</stringProp>
+      </org.apache.jmeter.threads.openmodel.OpenModelThreadGroup>
+      <hashTree>
+        <HeaderManager enabled="true" guiclass="HeaderPanel" testclass="HeaderManager" testname="JSON headers">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp elementType="Header" name="">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree />
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="read">
+            <stringProp name="HTTPSampler.domain">${__P(host,172.31.12.145)}</stringProp>
+            <stringProp name="HTTPSampler.port">${__P(port,18080)}</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <stringProp name="HTTPSampler.path">/api/logs?level=INFO&amp;from=2026-11-01T06%3A00%3A00Z&amp;to=2026-11-01T07%3A00%3A00Z&amp;page=0&amp;size=20</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <stringProp name="HTTPSampler.connect_timeout">2000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">5000</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp elementType="Arguments" name="HTTPsampler.Arguments">
+              <collectionProp name="Arguments.arguments" />
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion enabled="true" guiclass="AssertionGui" testclass="ResponseAssertion" testname="Expected HTTP status"><collectionProp name="Asserion.test_strings"><stringProp name="code">200</stringProp></collectionProp><stringProp name="Assertion.test_field">Assertion.response_code</stringProp><boolProp name="Assertion.assume_success">false</boolProp><intProp name="Assertion.test_type">8</intProp></ResponseAssertion><hashTree />
+          </hashTree>
+        </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,13 @@
+{
+  "run": "mysql-write-n4400-r1",
+  "display_version": 4,
+  "measurement_gzip_sha256": "e0e4543697d373165b6c5c8d2a1689fcaef2d3f76ab7018b449975ed2fc8695e",
+  "display_timezone": "Asia/Shanghai",
+  "thread_name_prefix": null,
+  "transport_errors_grouped_by_cause": true,
+  "excluded_from_display": [
+    "scheduledTime",
+    "dispatchLagMicros"
+  ],
+  "load_model": "jmeter-openmodel-even-arrivals"
+}

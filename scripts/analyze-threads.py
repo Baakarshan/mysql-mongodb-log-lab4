@@ -4,7 +4,7 @@ import argparse,csv,gzip,hashlib,json,statistics,collections
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-P=argparse.ArgumentParser();P.add_argument('bundle',type=Path);A=P.parse_args();R=A.bundle;F=R/'report/figures';F.mkdir(parents=True,exist_ok=True)
+P=argparse.ArgumentParser();P.add_argument('bundle',type=Path);P.add_argument('--check-only',action='store_true');A=P.parse_args();R=A.bundle;F=R/'report/figures';F.mkdir(parents=True,exist_ok=True)
 runs=sorted([json.loads(p.read_text()) for p in (R/'results/runs').glob('*/summary.json')],key=lambda s:s['start_ms'])
 for s in runs:
  s.setdefault('tomcat_max_threads',200)
@@ -20,6 +20,8 @@ for s in runs:
  assert s['write_count_difference']==s['records_after']-100000-(s['all_success'] if s['operation']=='write' else 0)
  meta=json.loads((d/'original.json').read_text());data=(d/'all.jtl.gz').read_bytes();assert hashlib.sha256(data).hexdigest()==meta['compressed_sha256'];assert hashlib.sha256(gzip.decompress(data)).hexdigest()==meta['original_jtl_sha256']
  if not s['generator_limit']:assert s['all_http_samples']==s['threads'] and s['hps_max_min_ratio']<2
+if A.check_only:
+ print(f'已核验{len(runs)}次运行的原始数据。');raise SystemExit(0)
 for name,rows in [('all-runs',runs)]:
  (R/'results'/f'{name}.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
  fields=['name','backend','operation','threads','ramp_s','loops','target_rps','pool_size','repeat','purpose','classification','samples','mean_ms','successful_mean_ms','throughput_rps','successful_rps','error_rate','hps_min','hps_max','hps_max_min_ratio','hps_cv','max_inflight','healthy_after','tomcat_max_threads','generator_limit','write_count_difference']

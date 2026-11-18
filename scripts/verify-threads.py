@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,subprocess,sys
 p=argparse.ArgumentParser();p.add_argument('bundle',type=Path,nargs='?',default=Path('.'));a=p.parse_args();R=a.bundle
-subprocess.run([sys.executable,str(Path(__file__).with_name('analyze-threads.py')),str(R)],check=True)
+subprocess.run([sys.executable,str(Path(__file__).with_name('analyze-threads.py')),str(R),'--check-only'],check=True)
 selected=json.loads((R/'results/selected-runs.json').read_text())
 for names in selected.values():
  for name in names:

@@ -130,15 +130,15 @@ for ki,k in enumerate(keys,1):
 
  page();image(k+'-dashboard.jpg',names[k]+'原生统计表与请求成功失败饼图')
 page();h('5 压力转折与原因分析')
-for ki,k in enumerate(keys,1):
- h(f'5.{ki} {names[k]}',2);t=turns[k];lo=by[t['normal_confirmation']];hi=by[t['stress_confirmation']]
- p(f'从正常复核{lo["target_rps"]}次/秒到压力复核{hi["target_rps"]}次/秒，平均响应由{lo["mean_ms"]:.2f}升至{hi["mean_ms"]:.2f}毫秒，错误率由{lo["error_rate"]:.2%}变为{hi["error_rate"]:.2%}。应用CPU均值由{val(lo,"cpu_percent","application")}%变为{val(hi,"cpu_percent","application")}%，数据库CPU由{val(lo,"cpu_percent","database")}%变为{val(hi,"cpu_percent","database")}%；应用内存由{val(lo,"memory_percent","application")}%变为{val(hi,"memory_percent","application")}%，数据库内存由{val(lo,"memory_percent","database")}%变为{val(hi,"memory_percent","database")}%。')
- analysis=R/'evidence'/(k+'-analysis.json')
- if analysis.exists():
-  for text in json.loads(analysis.read_text())['paragraphs']:p(text)
- else:raise FileNotFoundError(analysis)
-p('资源均值按正式窗口内实际采集点计算；采集中断的档位同时报告覆盖点数，结合原始缺口分析。内存曲线平稳说明这段时间占用变化较小，判断内存是否限制仍需同时查看最低可用量、GC、OOM和任务限制。整机CPU均值包含两核平均；单核饱和、连接等待、锁和磁盘等待均需结合对应指标排查。转折原因按每类实际证据分别判断。')
-h('6 总结')
+h('5.1 MySQL 读取',2)
+p('转折位于1200–1225次/秒：平均响应由11.13升至75.97毫秒。压力档数据库CPU为90.43%，连接池等待请求平均12.8个；应用CPU为62.08%，数据库内存为53.12%。因此，主要瓶颈是数据库处理能力及连接等待。应用机最低可用内存为81.4 MiB，未发生OOM，内存余量较小。')
+h('5.2 MySQL 写入',2)
+p('转折位于3960–3990次/秒：平均响应由27.71升至42.94毫秒，错误率由0.76%升至1.35%；3990次/秒首次测试均值为61.68毫秒。两档应用CPU均在95%以上，数据库CPU约66%，应用机最低可用内存为103.1 MiB，未发生OOM。因此，主要瓶颈是应用CPU；继续升至4025次/秒时，应用CPU达98.85%，错误率达49.57%，进一步印证这一判断。')
+h('5.3 MongoDB 读取',2)
+p('转折位于1190–1225次/秒：平均响应由8.09升至109.02毫秒。数据库CPU由94.97%升至98.24%，逐核最高100%；应用CPU仅50.86%，数据库内存为36.97%，应用机最低可用内存为162.2 MiB。因此，主要瓶颈是数据库CPU，内存仍有余量。')
+h('5.4 MongoDB 写入',2)
+p('转折复核区间为3775–3840次/秒：平均响应由17.27升至98.30毫秒，错误率由0.46%升至7.75%。压力档应用CPU为70.34%、数据库CPU为53.11%，应用机最低可用内存为156.2 MiB，CPU和内存均未耗尽。3900次/秒预热线程快照显示，40个工作线程中25个等待连接、13个等待数据库返回，证据指向连接与持久化响应等待。3810次/秒两次表现不同，因此以区间描述转折。')
+page();h('6 总结')
 table(['类别','正常次/秒','正常均值ms','压力次/秒','压力均值ms','压力错误率'],[[names[k],turns[k]['last_normal_candidate_rps'],f"{by[turns[k]['normal_confirmation']]['mean_ms']:.2f}",turns[k]['first_stress_candidate_rps'],f"{by[turns[k]['stress_confirmation']]['mean_ms']:.2f}",f"{by[turns[k]['stress_confirmation']]['error_rate']:.2%}"] for k in keys], '四类性能转折复核',[27,24,29,24,29,22])
 for op,title in [('read','读取'),('write','写入')]:
  m={s['target_rps']:s for s in groups['mysql-'+op] if not s['severe_degradation'] and not s['errors']};g={s['target_rps']:s for s in groups['mongo-'+op] if not s['severe_degradation'] and not s['errors']};common=sorted(set(m)&set(g))

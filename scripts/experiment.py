@@ -51,8 +51,9 @@ QUERIES={
  'application_cpu_fraction':'process_cpu_usage',
  'gc_pause_seconds_per_second':'rate(jvm_gc_pause_seconds_sum[30s])',
  'http_requests_per_second':'sum(rate(http_server_requests_seconds_count{uri="/api/logs"}[30s]))'}
+MONITORING_STEP=5
 def monitoring(start,end):
- code='import urllib.request,urllib.parse,json\nqueries='+repr(QUERIES)+'\nout={}\nfor k,q in queries.items():\n u="http://172.31.7.102:19090/api/v1/query_range?"+urllib.parse.urlencode({"query":q,"start":'+str(start)+',"end":'+str(end)+',"step":5})\n out[k]=json.load(urllib.request.urlopen(u,timeout=30))\nprint(json.dumps(out))'
+ code='import urllib.request,urllib.parse,json\nqueries='+repr(QUERIES)+'\nout={}\nfor k,q in queries.items():\n u="http://172.31.7.102:19090/api/v1/query_range?"+urllib.parse.urlencode({"query":q,"start":'+str(start)+',"end":'+str(end)+',"step":'+str(MONITORING_STEP)+'})\n out[k]=json.load(urllib.request.urlopen(u,timeout=30))\nprint(json.dumps(out))'
  return json.loads(remote('monitor','python3 -c '+shlex.quote(code)))
 
 if __name__ == "__main__":

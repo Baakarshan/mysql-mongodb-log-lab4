@@ -25,7 +25,7 @@ def recover(out):
         time.sleep(3)
         remote.remote('app','timeout 20s docker start lab4-app',False)
     remote.app_ready()
-def prepare(backend,out):
+def prepare(backend,out,heap_mib=None):
     out=Path(out)
     remote.remote('app','docker stop lab4-app',False)
     other='mongo' if backend=='mysql' else 'mysql'
@@ -35,12 +35,13 @@ def prepare(backend,out):
         try:remote.count(backend);break
         except Exception:time.sleep(1)
     remove_app()
-    remote.remote('app',f"sed -i 's/^SPRING_PROFILES_ACTIVE=.*/SPRING_PROFILES_ACTIVE={backend}/' /opt/lab4/app.env; bash /opt/lab4/scripts/deploy.sh app")
+    prefix=f'APP_HEAP_MIB={heap_mib} ' if heap_mib else ''
+    remote.remote('app',f"sed -i 's/^SPRING_PROFILES_ACTIVE=.*/SPRING_PROFILES_ACTIVE={backend}/' /opt/lab4/app.env; {prefix}bash /opt/lab4/scripts/deploy.sh app")
     remote.app_ready()
     remote.remote('db',f'bash /opt/lab4/scripts/reset-db.sh {backend}')
     smoke=json.loads(remote.remote('monitor','python3 /opt/lab4/scripts/smoke.py'))
     assert smoke['passed'];save(out/'evidence'/f'{backend}-smoke.json',smoke)
-    deployment={role:remote.remote(role,'date -u; free -m; docker ps --format "{{.Names}} {{.Image}} {{.Status}}"') for role in remote.HOSTS}
+    deployment={role:remote.remote(role,'date -u; free -m; docker ps --format "{{.Names}} {{.Image}} {{.Status}}"',False) for role in remote.HOSTS}
     deployment['jar']=remote.remote('app','sha256sum /opt/lab4/app.jar')
     save(out/'evidence'/f'{backend}-deployment.json',deployment)
     if backend=='mysql':

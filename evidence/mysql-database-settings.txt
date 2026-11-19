@@ -1,9 +1,0 @@
-VERSION()
-8.4.13
-Table	Non_unique	Key_name	Seq_in_index	Column_name	Collation	Cardinality	Sub_part	Packed	Null	Index_type	Comment	Index_comment	Visible	Expression
-logs	0	PRIMARY	1	id	A	97470	NULL	NULL		BTREE			YES	NULL
-logs	1	idx_level_time_id	1	level	A	4	NULL	NULL		BTREE			YES	NULL
-logs	1	idx_level_time_id	2	created_at	D	95048	NULL	NULL		BTREE			YES	NULL
-logs	1	idx_level_time_id	3	id	D	97470	NULL	NULL		BTREE			YES	NULL
-@@innodb_buffer_pool_size	@@innodb_flush_log_at_trx_commit	@@log_bin
-268435456	1	0

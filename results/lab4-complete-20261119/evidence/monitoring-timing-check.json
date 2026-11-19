@@ -1,0 +1,3026 @@
+[
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n17600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n26400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r5",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r6",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r7",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n4400-r8",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.000999927520752,
+    "maximum_gap_s": 1.001000165939331,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.000999927520752,
+    "maximum_gap_s": 1.001999855041504,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 0,
+    "median_gap_s": null,
+    "maximum_gap_s": null,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n49500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.001000165939331,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.003000020980835,
+    "zeros": 6
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 7,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 8.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.001000165939331,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.001000165939331,
+    "zeros": 7
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 5,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.000999927520752,
+    "maximum_gap_s": 1.003999948501587,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.003000020980835,
+    "zeros": 16
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 3,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.003000020980835,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 9,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 4.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.000999927520752,
+    "maximum_gap_s": 1.001000165939331,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.003000020980835,
+    "zeros": 4
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 9,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:18080",
+      "job": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.145:9100",
+      "job": "hosts",
+      "role": "application"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.12.231:9100",
+      "job": "hosts",
+      "role": "database"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.13.146:9100",
+      "job": "hosts",
+      "role": "compiler"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 20
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "scrape",
+    "labels": {
+      "__name__": "up",
+      "instance": "172.31.7.102:9100",
+      "job": "hosts",
+      "role": "monitor"
+    },
+    "formal_points": 20,
+    "median_gap_s": 1.0,
+    "maximum_gap_s": 1.0,
+    "zeros": 0
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.145:9100",
+      "role": "application"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.12.231:9100",
+      "role": "database"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  },
+  {
+    "run": "mysql-read-n8800-r1",
+    "kind": "cpu_recording",
+    "labels": {
+      "__name__": "node:cpu_usage_percent",
+      "instance": "172.31.7.102:9100",
+      "role": "monitor"
+    },
+    "formal_points": 10,
+    "median_gap_s": 2.0,
+    "maximum_gap_s": 2.0,
+    "zeros": null
+  }
+]

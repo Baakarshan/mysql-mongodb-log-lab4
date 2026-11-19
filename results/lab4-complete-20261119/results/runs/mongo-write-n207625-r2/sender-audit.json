@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "hosts": {
+    "monitor": {
+      "rate": 3020,
+      "samples": 166100,
+      "expected": 166100,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.00033112582781456954,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        3021,
+        3019,
+        3020,
+        3021,
+        3019,
+        3020,
+        3020,
+        3021,
+        3019,
+        3020,
+        3021,
+        3019,
+        3021,
+        3020,
+        3019,
+        3020,
+        3020,
+        3020,
+        3020,
+        3020
+      ],
+      "exit_code": 0,
+      "min_available_mib": 439.88671875,
+      "max_threads": 1042,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 755,
+      "samples": 41525,
+      "expected": 41525,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755,
+        755
+      ],
+      "exit_code": 0,
+      "min_available_mib": 240.9375,
+      "max_threads": 190,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "max_threads": 1232,
+  "min_available_mib": 240.9375,
+  "pids_events_before": {
+    "monitor": "max 0\n",
+    "compiler": "max 0\n"
+  },
+  "pids_events_after": {
+    "monitor": "max 0\n",
+    "compiler": "max 0\n"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "threads": 17600,
+  "thread_groups": 10,
+  "threads_per_group": 3520,
+  "ramp_s": 55,
+  "loops": 1,
+  "measurement_offset_s": [
+    30,
+    50
+  ],
+  "pool_size": 20,
+  "jmx_sha256": "7bdd96bafd26c9236626068d669ce9887cb5528c78148786d17df7ebddbd654e",
+  "source_jmx_sha256": "b1ec8c2e2f91ee32275382b890d2621961e6714c632214899ad11b735d89f7e5",
+  "jmeter_heap_mib": {
+    "monitor": 512,
+    "compiler": 192
+  },
+  "jmeter_stack_kib": 192,
+  "tomcat_max_threads": 40,
+  "jmeter_tasks_max": 10000,
+  "sender_roles": [
+    "monitor",
+    "compiler"
+  ],
+  "http_connect_timeout_ms": 200,
+  "http_response_timeout_ms": 500,
+  "http_implementation": "Java",
+  "startup_pause_s": 5,
+  "application_heap_mib": 128,
+  "tomcat_max_connections": 256
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "run": "mongo-write-n207625-r2",
+    "mean_ms": 17.26733774834437,
+    "errors": 350,
+    "resources": {
+      "application": {
+        "cpu_percent": {
+          "min": 62.29508196909394,
+          "max": 70.49999998884266,
+          "mean": 66.25350115584612,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 80.0829118728619,
+          "max": 80.74246054045527,
+          "mean": 80.31892973687064,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 152.60546875,
+          "max": 157.83203125,
+          "mean": 156.24765625,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      },
+      "database": {
+        "cpu_percent": {
+          "min": 53.76884422318583,
+          "max": 62.755102026542446,
+          "mean": 59.344097643946526,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 35.926007888673375,
+          "max": 37.87582933041739,
+          "mean": 36.9667660344446,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 1119.08203125,
+          "max": 1149.9609375,
+          "mean": 1133.6390625,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      }
+    },
+    "metrics": {
+      "gc_pause_seconds_per_second": {
+        "min": 0.02400000000000002,
+        "max": 0.10999999999999976,
+        "mean": 0.0388,
+        "aggregation": "sum GC categories at each timestamp",
+        "roles": {}
+      },
+      "jvm_heap_used_bytes": {
+        "min": 47271704.0,
+        "max": 66472160.0,
+        "mean": 55418015.2,
+        "roles": {}
+      },
+      "host_iowait_percent": {
+        "min": 0.0,
+        "max": 30.500000000029104,
+        "mean": 9.533333333334895,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 0.5000000000109139,
+            "mean": 0.050000000001091394
+          },
+          "database": {
+            "min": 23.999999999978172,
+            "max": 30.500000000029104,
+            "mean": 28.450000000002547
+          }
+        }
+      },
+      "disk_busy_percent": {
+        "min": 0.0,
+        "max": 1.999999999998181,
+        "mean": 0.15999999999849024,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 1.9999999999527063,
+            "mean": 0.23999999999432475
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.4000000000132786,
+            "mean": 0.04000000000132786
+          }
+        }
+      },
+      "jvm_threads_live": {
+        "min": 56.0,
+        "max": 56.0,
+        "mean": 56.0,
+        "roles": {}
+      },
+      "host_cpu_per_core": {
+        "min": 29.99999998137355,
+        "max": 70.99999999627471,
+        "mean": 53.662090847121256,
+        "roles": {
+          "application": {
+            "min": 60.999999986961484,
+            "max": 70.99999999627471,
+            "mean": 66.64999999571592
+          },
+          "database": {
+            "min": 50.0,
+            "max": 64.00000001303852,
+            "mean": 59.600000004284084
+          }
+        }
+      }
+    },
+    "oom_lines": [],
+    "healthy_after": true,
+    "write_count_difference": 11
+  },
+  {
+    "run": "mongo-write-n211200-r2",
+    "mean_ms": 98.30365885416667,
+    "errors": 5951,
+    "resources": {
+      "application": {
+        "cpu_percent": {
+          "min": 66.83168315544117,
+          "max": 74.64114833270867,
+          "mean": 70.34239452848968,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 79.80193822523242,
+          "max": 80.32050713278716,
+          "mean": 80.02730866680469,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 156.21875,
+          "max": 160.45703125,
+          "mean": 158.2625,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      },
+      "database": {
+        "cpu_percent": {
+          "min": 50.505050505451734,
+          "max": 57.49999999734371,
+          "mean": 53.113201316369896,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 42.54394529131248,
+          "max": 42.719466104305795,
+          "mean": 42.61964270991986,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 1031.3046875,
+          "max": 1034.46484375,
+          "mean": 1033.101953125,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      }
+    },
+    "metrics": {
+      "gc_pause_seconds_per_second": {
+        "min": 0.03699999999999992,
+        "max": 0.10900000000000021,
+        "mean": 0.06290000000000001,
+        "aggregation": "sum GC categories at each timestamp",
+        "roles": {}
+      },
+      "jvm_heap_used_bytes": {
+        "min": 31756504.0,
+        "max": 67823288.0,
+        "mean": 52708979.2,
+        "roles": {}
+      },
+      "host_iowait_percent": {
+        "min": 0.0,
+        "max": 26.99999999999818,
+        "mean": 8.36666666666891,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          },
+          "database": {
+            "min": 23.999999999978172,
+            "max": 26.99999999999818,
+            "mean": 25.10000000000673
+          }
+        }
+      },
+      "disk_busy_percent": {
+        "min": 0.0,
+        "max": 0.7999999999810825,
+        "mean": 0.07999999999886616,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 0.7999999999810825,
+            "mean": 0.1599999999962165
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.4000000000132786,
+            "mean": 0.08000000000038199
+          }
+        }
+      },
+      "jvm_threads_live": {
+        "min": 56.0,
+        "max": 56.0,
+        "mean": 56.0,
+        "roles": {}
+      },
+      "host_cpu_per_core": {
+        "min": 32.00000002980232,
+        "max": 75.99999997764826,
+        "mean": 54.86666666576639,
+        "roles": {
+          "application": {
+            "min": 68.0000000167638,
+            "max": 75.99999997764826,
+            "mean": 71.45000000018626
+          },
+          "database": {
+            "min": 50.0,
+            "max": 58.00000000745058,
+            "mean": 53.90000000130385
+          }
+        }
+      }
+    },
+    "oom_lines": [],
+    "healthy_after": true,
+    "write_count_difference": 39
+  }
+]

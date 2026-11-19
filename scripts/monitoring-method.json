@@ -1,0 +1,70 @@
+{
+  "scrape_interval_s": 1,
+  "recording_interval_s": 2,
+  "query_step_s": 2,
+  "rate_window_s": 2,
+  "queries": {
+    "host_cpu_percent": "node:cpu_usage_percent",
+    "host_memory_used_percent": "node:memory_usage_percent",
+    "host_memory_available_mib": "node_memory_MemAvailable_bytes / 1024 / 1024",
+    "disk_read_bytes_per_second": "node:disk_read_bytes:rate2s{device=\"vda\"}",
+    "disk_write_bytes_per_second": "node:disk_written_bytes:rate2s{device=\"vda\"}",
+    "jvm_heap_used_bytes": "sum(jvm_memory_used_bytes{area=\"heap\"})",
+    "application_cpu_fraction": "process_cpu_usage",
+    "gc_pause_seconds_per_second": "rate(jvm_gc_pause_seconds_sum[2s])",
+    "http_requests_per_second": "sum(spring:http_requests:rate2s{uri=\"/api/logs\",method=\"GET\"})",
+    "host_cpu_per_core": "100 * (1 - irate(node_cpu_seconds_total{mode=\"idle\"}[2s]))",
+    "host_load1": "node_load1",
+    "host_iowait_percent": "100 * avg by (role) (irate(node_cpu_seconds_total{mode=\"iowait\"}[2s]))",
+    "disk_busy_percent": "100 * rate(node_disk_io_time_seconds_total{device=\"vda\"}[2s])",
+    "hikari_active": "hikaricp_connections_active",
+    "hikari_pending": "hikaricp_connections_pending",
+    "hikari_max": "hikaricp_connections_max",
+    "jvm_threads_live": "spring:jvm_threads_live_threads",
+    "process_open_fds": "process_files_open_files",
+    "gc_pause_count": "spring:jvm_gc_pause:rate2s",
+    "http_mean_seconds": "sum(rate(http_server_requests_seconds_sum{uri=\"/api/logs\",method=\"GET\"}[2s])) / sum(rate(http_server_requests_seconds_count{uri=\"/api/logs\",method=\"GET\"}[2s]))",
+    "http_mean_seconds_by_status": "spring:http_request_duration:avg2s{uri=\"/api/logs\",method=\"GET\"}",
+    "jvm_heap_usage_by_pool": "spring:jvm_memory_heap_usage_ratio",
+    "jvm_nonheap_usage_by_pool": "spring:jvm_memory_nonheap_usage_ratio",
+    "filesystem_usage_percent": "node:filesystem_usage_percent",
+    "network_receive_bytes_per_second": "sum by (role) (node:network_receive_bytes:rate2s{device!=\"lo\",device!~\"docker.*|veth.*|br-.*\"})",
+    "network_transmit_bytes_per_second": "sum by (role) (node:network_transmit_bytes:rate2s{device!=\"lo\",device!~\"docker.*|veth.*|br-.*\"})",
+    "scrape_up": "up",
+    "scrape_duration_seconds": "scrape_duration_seconds"
+  },
+  "tomcat_max_threads": 40,
+  "pool_size": 20,
+  "seed_records": 100000,
+  "arrival_duration_s": 55,
+  "measurement_offset_s": [
+    30,
+    50
+  ],
+  "primary_metric": "mean_ms",
+  "sender": {
+    "roles": [
+      "monitor",
+      "compiler"
+    ],
+    "ratio": "approximately 4:1; multiples of 5 rps",
+    "heap_mib": {
+      "monitor": 512,
+      "compiler": 192
+    },
+    "stack_kib": 192,
+    "tasks_max": 10000,
+    "http_implementation": "Java",
+    "timeout_ms": {
+      "read": 2000,
+      "write": 500
+    },
+    "worst_case_timeout_preflight_rps": 1000,
+    "higher_rates": "逐档核验发送质量；失败档排查并重测",
+    "warmup_s": 30,
+    "formal_window_s": [
+      30,
+      50
+    ]
+  }
+}

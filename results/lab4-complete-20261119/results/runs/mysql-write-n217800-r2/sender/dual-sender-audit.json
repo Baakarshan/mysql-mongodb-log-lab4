@@ -1,0 +1,98 @@
+{
+  "rates": {
+    "monitor": 3170,
+    "compiler": 790
+  },
+  "hosts": {
+    "monitor": {
+      "rate": 3170,
+      "samples": 174350,
+      "expected": 174350,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0006309148264984228,
+        "edge_drift_fraction": 6.30914826497849e-05,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        3170,
+        3170,
+        3170,
+        3169,
+        3172,
+        3169,
+        3171,
+        3169,
+        3170,
+        3171,
+        3170,
+        3170,
+        3170,
+        3169,
+        3170,
+        3170,
+        3170,
+        3171,
+        3170,
+        3169
+      ],
+      "exit_code": 0,
+      "min_available_mib": 437.765625,
+      "max_threads": 1099,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 790,
+      "samples": 43450,
+      "expected": 43450,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790,
+        790
+      ],
+      "exit_code": 0,
+      "min_available_mib": 210.14453125,
+      "max_threads": 197,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "errors": 14389,
+  "samples": 217800,
+  "planned": 217800,
+  "clock_offset_ms": {
+    "monitor": 0,
+    "compiler": 0
+  }
+}

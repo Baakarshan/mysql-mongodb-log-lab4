@@ -1,0 +1,98 @@
+{
+  "rates": {
+    "monitor": 3120,
+    "compiler": 780
+  },
+  "hosts": {
+    "monitor": {
+      "rate": 3120,
+      "samples": 171600,
+      "expected": 171600,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.008269760882107886,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 6.410256410249726e-05,
+        "reasons": []
+      },
+      "hps": [
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3120,
+        3118,
+        3122,
+        3120,
+        3115,
+        3121,
+        3094,
+        3145,
+        3120,
+        3120,
+        3121
+      ],
+      "exit_code": 0,
+      "min_available_mib": 433.77734375,
+      "max_threads": 1138,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 780,
+      "samples": 42900,
+      "expected": 42900,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780,
+        780
+      ],
+      "exit_code": 0,
+      "min_available_mib": 193.984375,
+      "max_threads": 202,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "errors": 23318,
+  "samples": 214500,
+  "planned": 214500,
+  "clock_offset_ms": {
+    "monitor": 0,
+    "compiler": 0
+  }
+}

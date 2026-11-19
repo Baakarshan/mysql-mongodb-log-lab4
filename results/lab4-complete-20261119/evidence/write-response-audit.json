@@ -1,0 +1,390 @@
+{
+  "mysql-write-n159500-r3": {
+    "rate": 2900,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 58000
+    },
+    "error_messages": {},
+    "success_mean_ms": 4.424775862068966,
+    "write_count_difference": 0
+  },
+  "mysql-write-n17600-r6": {
+    "rate": 320,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 6400
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.44984375,
+    "write_count_difference": 0
+  },
+  "mysql-write-n221375-r3": {
+    "rate": 4025,
+    "purpose": "exploration",
+    "response_codes": {
+      "Non HTTP response code: java.net.SocketTimeoutException": 39897,
+      "201": 40593,
+      "Non HTTP response code: java.net.SocketException": 10
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 35763,
+      "Non HTTP response message: Read timed out": 4134,
+      "Non HTTP response message: Connection reset": 10
+    },
+    "success_mean_ms": 120.08021087379598,
+    "write_count_difference": 17169
+  },
+  "mysql-write-n214500-r1": {
+    "rate": 3900,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 77748,
+      "Non HTTP response code: java.net.SocketTimeoutException": 249
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 249
+    },
+    "success_mean_ms": 7.038843442918146,
+    "write_count_difference": 1
+  },
+  "mysql-write-n122375-r3": {
+    "rate": 2225,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 44500
+    },
+    "error_messages": {},
+    "success_mean_ms": 3.125123595505618,
+    "write_count_difference": 0
+  },
+  "mysql-write-n71500-r3": {
+    "rate": 1300,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 26000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.3538846153846156,
+    "write_count_difference": 0
+  },
+  "mongo-write-n93500-r1": {
+    "rate": 1700,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 34000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.6535294117647057,
+    "write_count_difference": 0
+  },
+  "mongo-write-n122375-r1": {
+    "rate": 2225,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 44500
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.691730337078652,
+    "write_count_difference": 0
+  },
+  "mysql-write-n219450-r2": {
+    "rate": 3990,
+    "purpose": "stress_confirmation",
+    "response_codes": {
+      "201": 78724,
+      "Non HTTP response code: java.net.SocketTimeoutException": 1078
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 1078
+    },
+    "success_mean_ms": 40.790114831563436,
+    "write_count_difference": 12
+  },
+  "mongo-write-n209550-r2": {
+    "rate": 3810,
+    "purpose": "normal_confirmation",
+    "response_codes": {
+      "201": 71560,
+      "Non HTTP response code: java.net.SocketTimeoutException": 4639
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 4632,
+      "Non HTTP response message: Read timed out": 7
+    },
+    "success_mean_ms": 87.99925936277249,
+    "write_count_difference": 17
+  },
+  "mongo-write-n211200-r2": {
+    "rate": 3840,
+    "purpose": "stress_confirmation",
+    "response_codes": {
+      "201": 70849,
+      "Non HTTP response code: java.net.SocketTimeoutException": 5951
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 5938,
+      "Non HTTP response message: Read timed out": 13
+    },
+    "success_mean_ms": 89.68620587446541,
+    "write_count_difference": 39
+  },
+  "mongo-write-n159500-r1": {
+    "rate": 2900,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 58000
+    },
+    "error_messages": {},
+    "success_mean_ms": 3.190137931034483,
+    "write_count_difference": 0
+  },
+  "mongo-write-n207625-r2": {
+    "rate": 3775,
+    "purpose": "normal_confirmation",
+    "response_codes": {
+      "201": 75150,
+      "Non HTTP response code: java.net.SocketTimeoutException": 350
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 350
+    },
+    "success_mean_ms": 16.412894211576845,
+    "write_count_difference": 11
+  },
+  "mongo-write-n71500-r1": {
+    "rate": 1300,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 26000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.346230769230769,
+    "write_count_difference": 0
+  },
+  "mongo-write-n221375-r1": {
+    "rate": 4025,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 74383,
+      "Non HTTP response code: java.net.SocketTimeoutException": 6117
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 6112,
+      "Non HTTP response message: Read timed out": 5
+    },
+    "success_mean_ms": 88.37060887568396,
+    "write_count_difference": 51
+  },
+  "mysql-write-n93500-r3": {
+    "rate": 1700,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 34000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.6711176470588236,
+    "write_count_difference": 0
+  },
+  "mongo-write-n4400-r3": {
+    "rate": 80,
+    "purpose": "recovery",
+    "response_codes": {
+      "201": 1600
+    },
+    "error_messages": {},
+    "success_mean_ms": 3.05375,
+    "write_count_difference": 0
+  },
+  "mysql-write-n39600-r4": {
+    "rate": 720,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 14400
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.3230555555555554,
+    "write_count_difference": 0
+  },
+  "mongo-write-n4400-r2": {
+    "rate": 80,
+    "purpose": "recovery",
+    "response_codes": {
+      "201": 1600
+    },
+    "error_messages": {},
+    "success_mean_ms": 3.083125,
+    "write_count_difference": 0
+  },
+  "mongo-write-n39600-r1": {
+    "rate": 720,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 14400
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.457222222222222,
+    "write_count_difference": 0
+  },
+  "mysql-write-n4400-r8": {
+    "rate": 80,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 1600
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.80875,
+    "write_count_difference": 0
+  },
+  "mysql-write-n217800-r1": {
+    "rate": 3960,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 78982,
+      "Non HTTP response code: java.net.SocketTimeoutException": 219
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 219
+    },
+    "success_mean_ms": 10.292256463498012,
+    "write_count_difference": 4
+  },
+  "mysql-write-n4400-r9": {
+    "rate": 80,
+    "purpose": "recovery",
+    "response_codes": {
+      "201": 1600
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.760625,
+    "write_count_difference": 0
+  },
+  "mysql-write-n207625-r4": {
+    "rate": 3775,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 75500
+    },
+    "error_messages": {},
+    "success_mean_ms": 5.259364238410596,
+    "write_count_difference": 0
+  },
+  "mongo-write-n55000-r1": {
+    "rate": 1000,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 20000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.57285,
+    "write_count_difference": 0
+  },
+  "mongo-write-n211200-r1": {
+    "rate": 3840,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 73616,
+      "Non HTTP response code: java.net.SocketTimeoutException": 3189
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 3188,
+      "Non HTTP response message: Read timed out": 1
+    },
+    "success_mean_ms": 81.52931427950446,
+    "write_count_difference": 23
+  },
+  "mongo-write-n209550-r1": {
+    "rate": 3810,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 75938,
+      "Non HTTP response code: java.net.SocketTimeoutException": 261
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 261
+    },
+    "success_mean_ms": 17.507282256577735,
+    "write_count_difference": 29
+  },
+  "mongo-write-n214500-r1": {
+    "rate": 3900,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 71621,
+      "Non HTTP response code: java.net.SocketTimeoutException": 6375
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 6343,
+      "Non HTTP response message: Read timed out": 32
+    },
+    "success_mean_ms": 93.47775093897042,
+    "write_count_difference": 71
+  },
+  "mysql-write-n219450-r1": {
+    "rate": 3990,
+    "purpose": "refinement",
+    "response_codes": {
+      "201": 77497,
+      "Non HTTP response code: java.net.SocketTimeoutException": 2302
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 2290,
+      "Non HTTP response message: Read timed out": 12
+    },
+    "success_mean_ms": 57.519271713743755,
+    "write_count_difference": 77
+  },
+  "mysql-write-n55000-r5": {
+    "rate": 1000,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 20000
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.3254,
+    "write_count_difference": 0
+  },
+  "mongo-write-n17600-r1": {
+    "rate": 320,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 6400
+    },
+    "error_messages": {},
+    "success_mean_ms": 2.485625,
+    "write_count_difference": 0
+  },
+  "mongo-write-n207625-r1": {
+    "rate": 3775,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 75504
+    },
+    "error_messages": {},
+    "success_mean_ms": 4.651488662852299,
+    "write_count_difference": 0
+  },
+  "mongo-write-n4400-r1": {
+    "rate": 80,
+    "purpose": "exploration",
+    "response_codes": {
+      "201": 1600
+    },
+    "error_messages": {},
+    "success_mean_ms": 3.354375,
+    "write_count_difference": 0
+  },
+  "mysql-write-n217800-r2": {
+    "rate": 3960,
+    "purpose": "normal_confirmation",
+    "response_codes": {
+      "201": 78596,
+      "Non HTTP response code: java.net.SocketTimeoutException": 604
+    },
+    "error_messages": {
+      "Non HTTP response message: Connect timed out": 604
+    },
+    "success_mean_ms": 26.383123823095325,
+    "write_count_difference": 33
+  }
+}

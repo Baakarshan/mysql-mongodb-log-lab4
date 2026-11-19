@@ -1,0 +1,18 @@
+{
+  "selected": [
+    "mysql-read-n17600-r2",
+    "mysql-read-n39600-r2",
+    "mysql-read-n4400-r10",
+    "mysql-read-n4400-r4",
+    "mysql-read-n55000-r3",
+    "mysql-read-n60500-r2",
+    "mysql-read-n66000-r3",
+    "mysql-read-n66000-r4",
+    "mysql-read-n67375-r1",
+    "mysql-read-n67375-r2",
+    "mysql-read-n68750-r1",
+    "mysql-read-n71500-r1"
+  ],
+  "rule": "统一应用堆192MiB、发送前等待5秒；排除低负载预热运行，其他配置和诊断单独保留",
+  "diagnostic_work_bundle": "mysql-read-certified-20261119"
+}

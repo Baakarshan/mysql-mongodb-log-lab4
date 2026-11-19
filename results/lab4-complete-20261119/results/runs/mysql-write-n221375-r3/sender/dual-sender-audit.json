@@ -1,0 +1,98 @@
+{
+  "rates": {
+    "monitor": 3220,
+    "compiler": 805
+  },
+  "hosts": {
+    "monitor": {
+      "rate": 3220,
+      "samples": 177100,
+      "expected": 177100,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0018943511071084467,
+        "edge_drift_fraction": 0.00018632961709260865,
+        "target_deviation_fraction": 3.105590062113528e-05,
+        "reasons": []
+      },
+      "hps": [
+        3222,
+        3220,
+        3218,
+        3221,
+        3216,
+        3224,
+        3219,
+        3223,
+        3214,
+        3226,
+        3219,
+        3221,
+        3220,
+        3218,
+        3221,
+        3220,
+        3220,
+        3221,
+        3218,
+        3221
+      ],
+      "exit_code": 0,
+      "min_available_mib": 315.88671875,
+      "max_threads": 1782,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 805,
+      "samples": 44275,
+      "expected": 44275,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.003851410113057551,
+        "edge_drift_fraction": 0.0004969561436202973,
+        "target_deviation_fraction": 0.00012422360248454112,
+        "reasons": []
+      },
+      "hps": [
+        805,
+        805,
+        805,
+        805,
+        805,
+        805,
+        805,
+        802,
+        808,
+        805,
+        805,
+        805,
+        804,
+        804,
+        807,
+        805,
+        805,
+        805,
+        805,
+        803
+      ],
+      "exit_code": 0,
+      "min_available_mib": 116.875,
+      "max_threads": 367,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "errors": 154434,
+  "samples": 221375,
+  "planned": 221375,
+  "clock_offset_ms": {
+    "monitor": 0,
+    "compiler": 0
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "rates": {
+    "monitor": 880,
+    "compiler": 220
+  },
+  "hosts": {
+    "monitor": {
+      "rate": 880,
+      "samples": 48400,
+      "expected": 48400,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0042601533655211585,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.00028409090909087276,
+        "reasons": []
+      },
+      "hps": [
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        881,
+        880,
+        884,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880,
+        880
+      ],
+      "exit_code": 0,
+      "min_available_mib": 1021.015625,
+      "max_threads": 160,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 220,
+      "samples": 12100,
+      "expected": 12100,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220,
+        220
+      ],
+      "exit_code": 0,
+      "min_available_mib": 305.61328125,
+      "max_threads": 65,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "errors": 0,
+  "samples": 60500,
+  "planned": 60500,
+  "clock_offset_ms": {
+    "monitor": 0,
+    "compiler": 0
+  }
+}

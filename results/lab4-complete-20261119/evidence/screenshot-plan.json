@@ -1,0 +1,643 @@
+{
+  "mysql-read": {
+    "begin": 1795056480,
+    "end": 1795057860,
+    "urls": {
+      "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A11%3A00&g0.moment_input=2026-11-19+03%3A11%3A00&g0.range_input=23m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A11%3A00&g0.moment_input=2026-11-19+03%3A11%3A00&g0.range_input=23m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+      "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A11%3A00&g0.moment_input=2026-11-19+03%3A11%3A00&g0.range_input=23m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A11%3A00&g0.moment_input=2026-11-19+03%3A11%3A00&g0.range_input=23m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+    },
+    "runs": [
+      {
+        "number": 1,
+        "name": "mysql-read-n4400-r4",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795056528000,
+        "formal_end_ms": 1795056548000
+      },
+      {
+        "number": 2,
+        "name": "mysql-read-n17600-r2",
+        "rate": 320,
+        "N": 17600,
+        "formal_start_ms": 1795056602000,
+        "formal_end_ms": 1795056622000
+      },
+      {
+        "number": 3,
+        "name": "mysql-read-n39600-r2",
+        "rate": 720,
+        "N": 39600,
+        "formal_start_ms": 1795056677000,
+        "formal_end_ms": 1795056697000
+      },
+      {
+        "number": 4,
+        "name": "mysql-read-n55000-r3",
+        "rate": 1000,
+        "N": 55000,
+        "formal_start_ms": 1795056752000,
+        "formal_end_ms": 1795056772000
+      },
+      {
+        "number": 5,
+        "name": "mysql-read-n60500-r2",
+        "rate": 1100,
+        "N": 60500,
+        "formal_start_ms": 1795056829000,
+        "formal_end_ms": 1795056849000
+      },
+      {
+        "number": 6,
+        "name": "mysql-read-n66000-r3",
+        "rate": 1200,
+        "N": 66000,
+        "formal_start_ms": 1795056905000,
+        "formal_end_ms": 1795056925000
+      },
+      {
+        "number": 7,
+        "name": "mysql-read-n71500-r1",
+        "rate": 1300,
+        "N": 71500,
+        "formal_start_ms": 1795056989000,
+        "formal_end_ms": 1795057009000
+      },
+      {
+        "number": 8,
+        "name": "mysql-read-n68750-r1",
+        "rate": 1250,
+        "N": 68750,
+        "formal_start_ms": 1795057173000,
+        "formal_end_ms": 1795057193000
+      },
+      {
+        "number": 9,
+        "name": "mysql-read-n67375-r1",
+        "rate": 1225,
+        "N": 67375,
+        "formal_start_ms": 1795057336000,
+        "formal_end_ms": 1795057356000
+      },
+      {
+        "number": 10,
+        "name": "mysql-read-n66000-r4",
+        "rate": 1200,
+        "N": 66000,
+        "formal_start_ms": 1795057498000,
+        "formal_end_ms": 1795057518000
+      },
+      {
+        "number": 11,
+        "name": "mysql-read-n67375-r2",
+        "rate": 1225,
+        "N": 67375,
+        "formal_start_ms": 1795057659000,
+        "formal_end_ms": 1795057679000
+      },
+      {
+        "number": 12,
+        "name": "mysql-read-n4400-r10",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795057822000,
+        "formal_end_ms": 1795057842000
+      }
+    ],
+    "panels": [
+      {
+        "begin": 1795056493,
+        "end": 1795057847,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A10%3A47&g0.moment_input=2026-11-19+03%3A10%3A47&g0.range_input=1354s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A10%3A47&g0.moment_input=2026-11-19+03%3A10%3A47&g0.range_input=1354s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A10%3A47&g0.moment_input=2026-11-19+03%3A10%3A47&g0.range_input=1354s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+03%3A10%3A47&g0.moment_input=2026-11-19+03%3A10%3A47&g0.range_input=1354s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      }
+    ]
+  },
+  "mysql-write": {
+    "begin": 1795078200,
+    "end": 1795083900,
+    "urls": {
+      "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A25%3A00&g0.moment_input=2026-11-19+10%3A25%3A00&g0.range_input=95m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A25%3A00&g0.moment_input=2026-11-19+10%3A25%3A00&g0.range_input=95m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+      "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A25%3A00&g0.moment_input=2026-11-19+10%3A25%3A00&g0.range_input=95m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A25%3A00&g0.moment_input=2026-11-19+10%3A25%3A00&g0.range_input=95m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+    },
+    "runs": [
+      {
+        "number": 1,
+        "name": "mysql-write-n4400-r8",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795078243000,
+        "formal_end_ms": 1795078263000
+      },
+      {
+        "number": 2,
+        "name": "mysql-write-n17600-r6",
+        "rate": 320,
+        "N": 17600,
+        "formal_start_ms": 1795078317000,
+        "formal_end_ms": 1795078337000
+      },
+      {
+        "number": 3,
+        "name": "mysql-write-n39600-r4",
+        "rate": 720,
+        "N": 39600,
+        "formal_start_ms": 1795078391000,
+        "formal_end_ms": 1795078411000
+      },
+      {
+        "number": 4,
+        "name": "mysql-write-n55000-r5",
+        "rate": 1000,
+        "N": 55000,
+        "formal_start_ms": 1795078466000,
+        "formal_end_ms": 1795078486000
+      },
+      {
+        "number": 5,
+        "name": "mysql-write-n71500-r3",
+        "rate": 1300,
+        "N": 71500,
+        "formal_start_ms": 1795078540000,
+        "formal_end_ms": 1795078560000
+      },
+      {
+        "number": 6,
+        "name": "mysql-write-n93500-r3",
+        "rate": 1700,
+        "N": 93500,
+        "formal_start_ms": 1795078615000,
+        "formal_end_ms": 1795078635000
+      },
+      {
+        "number": 7,
+        "name": "mysql-write-n122375-r3",
+        "rate": 2225,
+        "N": 122375,
+        "formal_start_ms": 1795078690000,
+        "formal_end_ms": 1795078710000
+      },
+      {
+        "number": 8,
+        "name": "mysql-write-n159500-r3",
+        "rate": 2900,
+        "N": 159500,
+        "formal_start_ms": 1795078766000,
+        "formal_end_ms": 1795078786000
+      },
+      {
+        "number": 9,
+        "name": "mysql-write-n207625-r4",
+        "rate": 3775,
+        "N": 207625,
+        "formal_start_ms": 1795078842000,
+        "formal_end_ms": 1795078862000
+      },
+      {
+        "number": 10,
+        "name": "mysql-write-n221375-r3",
+        "rate": 4025,
+        "N": 221375,
+        "formal_start_ms": 1795082791000,
+        "formal_end_ms": 1795082811000
+      },
+      {
+        "number": 11,
+        "name": "mysql-write-n214500-r1",
+        "rate": 3900,
+        "N": 214500,
+        "formal_start_ms": 1795082971000,
+        "formal_end_ms": 1795082991000
+      },
+      {
+        "number": 12,
+        "name": "mysql-write-n217800-r1",
+        "rate": 3960,
+        "N": 217800,
+        "formal_start_ms": 1795083137000,
+        "formal_end_ms": 1795083157000
+      },
+      {
+        "number": 13,
+        "name": "mysql-write-n219450-r1",
+        "rate": 3990,
+        "N": 219450,
+        "formal_start_ms": 1795083304000,
+        "formal_end_ms": 1795083324000
+      },
+      {
+        "number": 14,
+        "name": "mysql-write-n217800-r2",
+        "rate": 3960,
+        "N": 217800,
+        "formal_start_ms": 1795083482000,
+        "formal_end_ms": 1795083502000
+      },
+      {
+        "number": 15,
+        "name": "mysql-write-n219450-r2",
+        "rate": 3990,
+        "N": 219450,
+        "formal_start_ms": 1795083652000,
+        "formal_end_ms": 1795083672000
+      },
+      {
+        "number": 16,
+        "name": "mysql-write-n4400-r9",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795083830000,
+        "formal_end_ms": 1795083850000
+      }
+    ],
+    "panels": [
+      {
+        "begin": 1795078208,
+        "end": 1795078867,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A01%3A07&g0.moment_input=2026-11-19+09%3A01%3A07&g0.range_input=659s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A01%3A07&g0.moment_input=2026-11-19+09%3A01%3A07&g0.range_input=659s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A01%3A07&g0.moment_input=2026-11-19+09%3A01%3A07&g0.range_input=659s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A01%3A07&g0.moment_input=2026-11-19+09%3A01%3A07&g0.range_input=659s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      },
+      {
+        "begin": 1795082756,
+        "end": 1795083855,
+        "numbers": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A24%3A15&g0.moment_input=2026-11-19+10%3A24%3A15&g0.range_input=1099s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A24%3A15&g0.moment_input=2026-11-19+10%3A24%3A15&g0.range_input=1099s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A24%3A15&g0.moment_input=2026-11-19+10%3A24%3A15&g0.range_input=1099s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A24%3A15&g0.moment_input=2026-11-19+10%3A24%3A15&g0.range_input=1099s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      }
+    ]
+  },
+  "mongo-read": {
+    "begin": 1795079460,
+    "end": 1795080900,
+    "urls": {
+      "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A35%3A00&g0.moment_input=2026-11-19+09%3A35%3A00&g0.range_input=24m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A35%3A00&g0.moment_input=2026-11-19+09%3A35%3A00&g0.range_input=24m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+      "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A35%3A00&g0.moment_input=2026-11-19+09%3A35%3A00&g0.range_input=24m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A35%3A00&g0.moment_input=2026-11-19+09%3A35%3A00&g0.range_input=24m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+    },
+    "runs": [
+      {
+        "number": 1,
+        "name": "mongo-read-n4400-r1",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795079557000,
+        "formal_end_ms": 1795079577000
+      },
+      {
+        "number": 2,
+        "name": "mongo-read-n17600-r1",
+        "rate": 320,
+        "N": 17600,
+        "formal_start_ms": 1795079633000,
+        "formal_end_ms": 1795079653000
+      },
+      {
+        "number": 3,
+        "name": "mongo-read-n39600-r1",
+        "rate": 720,
+        "N": 39600,
+        "formal_start_ms": 1795079711000,
+        "formal_end_ms": 1795079731000
+      },
+      {
+        "number": 4,
+        "name": "mongo-read-n55000-r1",
+        "rate": 1000,
+        "N": 55000,
+        "formal_start_ms": 1795079788000,
+        "formal_end_ms": 1795079808000
+      },
+      {
+        "number": 5,
+        "name": "mongo-read-n71500-r1",
+        "rate": 1300,
+        "N": 71500,
+        "formal_start_ms": 1795079866000,
+        "formal_end_ms": 1795079886000
+      },
+      {
+        "number": 6,
+        "name": "mongo-read-n63250-r1",
+        "rate": 1150,
+        "N": 63250,
+        "formal_start_ms": 1795080044000,
+        "formal_end_ms": 1795080064000
+      },
+      {
+        "number": 7,
+        "name": "mongo-read-n67375-r1",
+        "rate": 1225,
+        "N": 67375,
+        "formal_start_ms": 1795080208000,
+        "formal_end_ms": 1795080228000
+      },
+      {
+        "number": 8,
+        "name": "mongo-read-n65450-r1",
+        "rate": 1190,
+        "N": 65450,
+        "formal_start_ms": 1795080371000,
+        "formal_end_ms": 1795080391000
+      },
+      {
+        "number": 9,
+        "name": "mongo-read-n65450-r2",
+        "rate": 1190,
+        "N": 65450,
+        "formal_start_ms": 1795080534000,
+        "formal_end_ms": 1795080554000
+      },
+      {
+        "number": 10,
+        "name": "mongo-read-n67375-r2",
+        "rate": 1225,
+        "N": 67375,
+        "formal_start_ms": 1795080697000,
+        "formal_end_ms": 1795080717000
+      },
+      {
+        "number": 11,
+        "name": "mongo-read-n4400-r2",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795080860000,
+        "formal_end_ms": 1795080880000
+      }
+    ],
+    "panels": [
+      {
+        "begin": 1795079522,
+        "end": 1795080885,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A34%3A45&g0.moment_input=2026-11-19+09%3A34%3A45&g0.range_input=1363s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A34%3A45&g0.moment_input=2026-11-19+09%3A34%3A45&g0.range_input=1363s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A34%3A45&g0.moment_input=2026-11-19+09%3A34%3A45&g0.range_input=1363s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+09%3A34%3A45&g0.moment_input=2026-11-19+09%3A34%3A45&g0.range_input=1363s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      }
+    ]
+  },
+  "mongo-write": {
+    "begin": 1795080900,
+    "end": 1795084260,
+    "urls": {
+      "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A31%3A00&g0.moment_input=2026-11-19+10%3A31%3A00&g0.range_input=56m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A31%3A00&g0.moment_input=2026-11-19+10%3A31%3A00&g0.range_input=56m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+      "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A31%3A00&g0.moment_input=2026-11-19+10%3A31%3A00&g0.range_input=56m&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+      "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A31%3A00&g0.moment_input=2026-11-19+10%3A31%3A00&g0.range_input=56m&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+    },
+    "runs": [
+      {
+        "number": 1,
+        "name": "mongo-write-n4400-r1",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795080953000,
+        "formal_end_ms": 1795080973000
+      },
+      {
+        "number": 2,
+        "name": "mongo-write-n17600-r1",
+        "rate": 320,
+        "N": 17600,
+        "formal_start_ms": 1795081029000,
+        "formal_end_ms": 1795081049000
+      },
+      {
+        "number": 3,
+        "name": "mongo-write-n39600-r1",
+        "rate": 720,
+        "N": 39600,
+        "formal_start_ms": 1795081106000,
+        "formal_end_ms": 1795081126000
+      },
+      {
+        "number": 4,
+        "name": "mongo-write-n55000-r1",
+        "rate": 1000,
+        "N": 55000,
+        "formal_start_ms": 1795081184000,
+        "formal_end_ms": 1795081204000
+      },
+      {
+        "number": 5,
+        "name": "mongo-write-n71500-r1",
+        "rate": 1300,
+        "N": 71500,
+        "formal_start_ms": 1795081262000,
+        "formal_end_ms": 1795081282000
+      },
+      {
+        "number": 6,
+        "name": "mongo-write-n93500-r1",
+        "rate": 1700,
+        "N": 93500,
+        "formal_start_ms": 1795081340000,
+        "formal_end_ms": 1795081360000
+      },
+      {
+        "number": 7,
+        "name": "mongo-write-n122375-r1",
+        "rate": 2225,
+        "N": 122375,
+        "formal_start_ms": 1795081418000,
+        "formal_end_ms": 1795081438000
+      },
+      {
+        "number": 8,
+        "name": "mongo-write-n159500-r1",
+        "rate": 2900,
+        "N": 159500,
+        "formal_start_ms": 1795081497000,
+        "formal_end_ms": 1795081517000
+      },
+      {
+        "number": 9,
+        "name": "mongo-write-n207625-r1",
+        "rate": 3775,
+        "N": 207625,
+        "formal_start_ms": 1795081576000,
+        "formal_end_ms": 1795081596000
+      },
+      {
+        "number": 10,
+        "name": "mongo-write-n221375-r1",
+        "rate": 4025,
+        "N": 221375,
+        "formal_start_ms": 1795081656000,
+        "formal_end_ms": 1795081676000
+      },
+      {
+        "number": 11,
+        "name": "mongo-write-n214500-r1",
+        "rate": 3900,
+        "N": 214500,
+        "formal_start_ms": 1795081829000,
+        "formal_end_ms": 1795081849000
+      },
+      {
+        "number": 12,
+        "name": "mongo-write-n211200-r1",
+        "rate": 3840,
+        "N": 211200,
+        "formal_start_ms": 1795082001000,
+        "formal_end_ms": 1795082021000
+      },
+      {
+        "number": 13,
+        "name": "mongo-write-n209550-r1",
+        "rate": 3810,
+        "N": 209550,
+        "formal_start_ms": 1795082177000,
+        "formal_end_ms": 1795082197000
+      },
+      {
+        "number": 14,
+        "name": "mongo-write-n209550-r2",
+        "rate": 3810,
+        "N": 209550,
+        "formal_start_ms": 1795082345000,
+        "formal_end_ms": 1795082365000
+      },
+      {
+        "number": 15,
+        "name": "mongo-write-n211200-r2",
+        "rate": 3840,
+        "N": 211200,
+        "formal_start_ms": 1795082520000,
+        "formal_end_ms": 1795082540000
+      },
+      {
+        "number": 16,
+        "name": "mongo-write-n4400-r2",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795082698000,
+        "formal_end_ms": 1795082718000
+      },
+      {
+        "number": 17,
+        "name": "mongo-write-n207625-r2",
+        "rate": 3775,
+        "N": 207625,
+        "formal_start_ms": 1795084129000,
+        "formal_end_ms": 1795084149000
+      },
+      {
+        "number": 18,
+        "name": "mongo-write-n4400-r3",
+        "rate": 80,
+        "N": 4400,
+        "formal_start_ms": 1795084218000,
+        "formal_end_ms": 1795084238000
+      }
+    ],
+    "panels": [
+      {
+        "begin": 1795080918,
+        "end": 1795082723,
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A05%3A23&g0.moment_input=2026-11-19+10%3A05%3A23&g0.range_input=1805s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A05%3A23&g0.moment_input=2026-11-19+10%3A05%3A23&g0.range_input=1805s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A05%3A23&g0.moment_input=2026-11-19+10%3A05%3A23&g0.range_input=1805s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A05%3A23&g0.moment_input=2026-11-19+10%3A05%3A23&g0.range_input=1805s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      },
+      {
+        "begin": 1795084094,
+        "end": 1795084243,
+        "numbers": [
+          17,
+          18
+        ],
+        "urls": {
+          "cpu": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A30%3A43&g0.moment_input=2026-11-19+10%3A30%3A43&g0.range_input=149s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "cpu-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Acpu_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A30%3A43&g0.moment_input=2026-11-19+10%3A30%3A43&g0.range_input=149s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0",
+          "memory": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A30%3A43&g0.moment_input=2026-11-19+10%3A30%3A43&g0.range_input=149s&g0.res_type=custom&g0.res_step=2&g0.display_mode=lines&g0.show_exemplars=0",
+          "memory-stacked": "http://127.0.0.1:19093/query?g0.expr=node%3Amemory_usage_percent%7Brole%3D~%22application%7Cdatabase%22%7D&g0.show_tree=0&g0.tab=graph&g0.end_input=2026-11-19+10%3A30%3A43&g0.moment_input=2026-11-19+10%3A30%3A43&g0.range_input=149s&g0.res_type=custom&g0.res_step=2&g0.display_mode=stacked&g0.show_exemplars=0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1199 @@
+[
+  {
+    "run": "mysql-write-n159500-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 24.39205053045715,
+        "formal_cpu_max_percent": 27.669902912621357,
+        "min_available_mib": 911.6875,
+        "max_java_threads": 334,
+        "max_java_rss_mib": 300.75390625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.715346186905556,
+        "formal_cpu_max_percent": 7.389162561576357,
+        "min_available_mib": 301.06640625,
+        "max_java_threads": 111,
+        "max_java_rss_mib": 188.53125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n17600-r6",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.49729388536509,
+        "formal_cpu_max_percent": 23.5,
+        "min_available_mib": 1032.4375,
+        "max_java_threads": 51,
+        "max_java_rss_mib": 219.32421875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.491070748303363,
+        "formal_cpu_max_percent": 8.955223880597018,
+        "min_available_mib": 316.51171875,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 185.8046875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 10.891470495333794,
+        "formal_cpu_max_percent": 15.270935960591137,
+        "min_available_mib": 1021.015625,
+        "max_java_threads": 160,
+        "max_java_rss_mib": 203.3984375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.31995682414418,
+        "formal_cpu_max_percent": 15.841584158415845,
+        "min_available_mib": 305.61328125,
+        "max_java_threads": 65,
+        "max_java_rss_mib": 190.69921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n221375-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 67.17555183621982,
+        "formal_cpu_max_percent": 72.59615384615384,
+        "min_available_mib": 315.88671875,
+        "max_java_threads": 1782,
+        "max_java_rss_mib": 698.48828125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 22.33251070855549,
+        "formal_cpu_max_percent": 30.476190476190478,
+        "min_available_mib": 116.875,
+        "max_java_threads": 367,
+        "max_java_rss_mib": 323.66796875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n214500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 34.04173240772236,
+        "formal_cpu_max_percent": 37.1859296482412,
+        "min_available_mib": 562.42578125,
+        "max_java_threads": 1027,
+        "max_java_rss_mib": 577.51953125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.998924817982404,
+        "formal_cpu_max_percent": 13.725490196078427,
+        "min_available_mib": 259.51953125,
+        "max_java_threads": 188,
+        "max_java_rss_mib": 211.19921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n122375-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 17.91299213987484,
+        "formal_cpu_max_percent": 22.959183673469386,
+        "min_available_mib": 1029.84375,
+        "max_java_threads": 161,
+        "max_java_rss_mib": 207.0546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.764126411910994,
+        "formal_cpu_max_percent": 9.999999999999998,
+        "min_available_mib": 310.47265625,
+        "max_java_threads": 62,
+        "max_java_rss_mib": 187.9140625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n71500-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 9.617037477083123,
+        "formal_cpu_max_percent": 12.43781094527363,
+        "min_available_mib": 1042.90625,
+        "max_java_threads": 107,
+        "max_java_rss_mib": 203.46484375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.448632110253272,
+        "formal_cpu_max_percent": 18.31683168316832,
+        "min_available_mib": 308.5546875,
+        "max_java_threads": 51,
+        "max_java_rss_mib": 193.0859375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n93500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 12.506075778540326,
+        "formal_cpu_max_percent": 15.34653465346535,
+        "min_available_mib": 967.5703125,
+        "max_java_threads": 93,
+        "max_java_rss_mib": 272.375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 6.414035272396129,
+        "formal_cpu_max_percent": 21.212121212121215,
+        "min_available_mib": 304.32421875,
+        "max_java_threads": 51,
+        "max_java_rss_mib": 188.79296875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n67375-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 12.206659185809364,
+        "formal_cpu_max_percent": 19.417475728155342,
+        "min_available_mib": 854.76953125,
+        "max_java_threads": 348,
+        "max_java_rss_mib": 367.49609375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.8765845438849915,
+        "formal_cpu_max_percent": 25.373134328358205,
+        "min_available_mib": 291.38671875,
+        "max_java_threads": 114,
+        "max_java_rss_mib": 199.98046875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n63250-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 10.990141234930633,
+        "formal_cpu_max_percent": 13.366336633663368,
+        "min_available_mib": 1035.91015625,
+        "max_java_threads": 92,
+        "max_java_rss_mib": 204.85546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 3.532316358870611,
+        "formal_cpu_max_percent": 16.666666666666664,
+        "min_available_mib": 310.87890625,
+        "max_java_threads": 50,
+        "max_java_rss_mib": 187.35546875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n122375-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 14.542613830557764,
+        "formal_cpu_max_percent": 19.289340101522846,
+        "min_available_mib": 940.3671875,
+        "max_java_threads": 104,
+        "max_java_rss_mib": 292.39453125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.127798670039769,
+        "formal_cpu_max_percent": 16.582914572864325,
+        "min_available_mib": 301.39453125,
+        "max_java_threads": 59,
+        "max_java_rss_mib": 194.53515625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n219450-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 34.07244359644873,
+        "formal_cpu_max_percent": 44.33497536945813,
+        "min_available_mib": 513.1796875,
+        "max_java_threads": 1050,
+        "max_java_rss_mib": 593.96484375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 9.29802618565019,
+        "formal_cpu_max_percent": 15.841584158415845,
+        "min_available_mib": 200.484375,
+        "max_java_threads": 211,
+        "max_java_rss_mib": 267.5390625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n209550-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 39.794127510909306,
+        "formal_cpu_max_percent": 45.04950495049505,
+        "min_available_mib": 414.7109375,
+        "max_java_threads": 1367,
+        "max_java_rss_mib": 657.60546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.79182583382125,
+        "formal_cpu_max_percent": 21.78217821782178,
+        "min_available_mib": 211.578125,
+        "max_java_threads": 192,
+        "max_java_rss_mib": 253.2578125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 12.082204833843921,
+        "formal_cpu_max_percent": 15.609756097560979,
+        "min_available_mib": 788.6875,
+        "max_java_threads": 667,
+        "max_java_rss_mib": 389.16015625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.638716314731535,
+        "formal_cpu_max_percent": 15.500000000000004,
+        "min_available_mib": 211.97265625,
+        "max_java_threads": 195,
+        "max_java_rss_mib": 261.9453125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n211200-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 40.103595035243565,
+        "formal_cpu_max_percent": 43.269230769230774,
+        "min_available_mib": 378.4296875,
+        "max_java_threads": 1110,
+        "max_java_rss_mib": 672.0,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.730938657223579,
+        "formal_cpu_max_percent": 17.76649746192893,
+        "min_available_mib": 208.62109375,
+        "max_java_threads": 197,
+        "max_java_rss_mib": 262.48828125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n159500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 24.367803755921955,
+        "formal_cpu_max_percent": 33.333333333333336,
+        "min_available_mib": 930.734375,
+        "max_java_threads": 300,
+        "max_java_rss_mib": 274.28125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.8275213988382175,
+        "formal_cpu_max_percent": 7.425742574257422,
+        "min_available_mib": 305.984375,
+        "max_java_threads": 56,
+        "max_java_rss_mib": 188.6171875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n207625-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 33.63361840615224,
+        "formal_cpu_max_percent": 41.14832535885168,
+        "min_available_mib": 439.88671875,
+        "max_java_threads": 1042,
+        "max_java_rss_mib": 607.34375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.9396288536014055,
+        "formal_cpu_max_percent": 15.500000000000004,
+        "min_available_mib": 240.9375,
+        "max_java_threads": 190,
+        "max_java_rss_mib": 227.73046875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n71500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 9.362295173796486,
+        "formal_cpu_max_percent": 10.837438423645319,
+        "min_available_mib": 1037.13671875,
+        "max_java_threads": 77,
+        "max_java_rss_mib": 203.28515625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 3.954226141988525,
+        "formal_cpu_max_percent": 16.000000000000004,
+        "min_available_mib": 302.7734375,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 194.69140625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n4400-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 4.195567838678415,
+        "formal_cpu_max_percent": 17.000000000000004,
+        "min_available_mib": 1070.8203125,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 182.578125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.5450668219346575,
+        "formal_cpu_max_percent": 2.9556650246305383,
+        "min_available_mib": 323.20703125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 176.9609375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n221375-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 44.01487099707692,
+        "formal_cpu_max_percent": 49.50980392156863,
+        "min_available_mib": 465.94921875,
+        "max_java_threads": 1012,
+        "max_java_rss_mib": 643.10546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.381303691331869,
+        "formal_cpu_max_percent": 12.562814070351758,
+        "min_available_mib": 184.23828125,
+        "max_java_threads": 186,
+        "max_java_rss_mib": 283.0234375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n93500-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 11.17008910089028,
+        "formal_cpu_max_percent": 15.025906735751294,
+        "min_available_mib": 1043.41015625,
+        "max_java_threads": 129,
+        "max_java_rss_mib": 197.09375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.274304511539943,
+        "formal_cpu_max_percent": 15.500000000000004,
+        "min_available_mib": 282.33203125,
+        "max_java_threads": 57,
+        "max_java_rss_mib": 217.0546875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 34.88886792604734,
+        "formal_cpu_max_percent": 73.01587301587303,
+        "min_available_mib": 512.71484375,
+        "max_java_threads": 2316,
+        "max_java_rss_mib": 673.26171875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 9.972696406732503,
+        "formal_cpu_max_percent": 25.628140703517587,
+        "min_available_mib": 156.09375,
+        "max_java_threads": 595,
+        "max_java_rss_mib": 285.69921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n4400-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.5178760219531573,
+        "formal_cpu_max_percent": 10.606060606060607,
+        "min_available_mib": 1027.8828125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 194.97265625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.8415830754679767,
+        "formal_cpu_max_percent": 5.44554455445545,
+        "min_available_mib": 312.15625,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 175.5703125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.35377301338536,
+        "formal_cpu_max_percent": 13.5,
+        "min_available_mib": 1048.1953125,
+        "max_java_threads": 46,
+        "max_java_rss_mib": 199.8125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 3.4160671281633523,
+        "formal_cpu_max_percent": 15.000000000000002,
+        "min_available_mib": 314.8671875,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 183.78515625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n39600-r4",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.668178207350788,
+        "formal_cpu_max_percent": 8.780487804878046,
+        "min_available_mib": 1059.39453125,
+        "max_java_threads": 59,
+        "max_java_rss_mib": 190.40234375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.3550136722645405,
+        "formal_cpu_max_percent": 22.388059701492537,
+        "min_available_mib": 282.8984375,
+        "max_java_threads": 40,
+        "max_java_rss_mib": 217.71484375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n4400-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.3935803620576293,
+        "formal_cpu_max_percent": 12.935323383084574,
+        "min_available_mib": 1057.84375,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 184.28515625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.0664388639418974,
+        "formal_cpu_max_percent": 4.477611940298509,
+        "min_available_mib": 315.78515625,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 178.95703125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n65450-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 9.638638687206285,
+        "formal_cpu_max_percent": 12.315270935960587,
+        "min_available_mib": 980.59375,
+        "max_java_threads": 205,
+        "max_java_rss_mib": 254.0625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.391251363235139,
+        "formal_cpu_max_percent": 15.000000000000002,
+        "min_available_mib": 307.9609375,
+        "max_java_threads": 79,
+        "max_java_rss_mib": 189.70703125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n55000-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 9.077194843498333,
+        "formal_cpu_max_percent": 17.76649746192893,
+        "min_available_mib": 1051.9609375,
+        "max_java_threads": 67,
+        "max_java_rss_mib": 196.53515625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.417692464196983,
+        "formal_cpu_max_percent": 18.500000000000007,
+        "min_available_mib": 307.4140625,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 191.46875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n39600-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.621037811523239,
+        "formal_cpu_max_percent": 10.89108910891089,
+        "min_available_mib": 1049.3125,
+        "max_java_threads": 59,
+        "max_java_rss_mib": 195.5703125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 8.332655415999717,
+        "formal_cpu_max_percent": 23.38308457711443,
+        "min_available_mib": 282.58984375,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 214.34765625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n4400-r8",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.5833429721637793,
+        "formal_cpu_max_percent": 13.300492610837434,
+        "min_available_mib": 1051.80078125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 200.62109375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.7199240253283565,
+        "formal_cpu_max_percent": 3.0000000000000027,
+        "min_available_mib": 329.0078125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 176.265625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n217800-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 34.51418985546487,
+        "formal_cpu_max_percent": 45.14563106796117,
+        "min_available_mib": 479.34375,
+        "max_java_threads": 1109,
+        "max_java_rss_mib": 567.15234375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.913250731520326,
+        "formal_cpu_max_percent": 10.1010101010101,
+        "min_available_mib": 242.69140625,
+        "max_java_threads": 182,
+        "max_java_rss_mib": 230.71484375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n4400-r9",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 2.982958174148158,
+        "formal_cpu_max_percent": 10.050251256281406,
+        "min_available_mib": 1050.30078125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 185.60546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.038737028057219,
+        "formal_cpu_max_percent": 4.5000000000000036,
+        "min_available_mib": 314.390625,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 176.26171875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 8.099117645953566,
+        "formal_cpu_max_percent": 10.89108910891089,
+        "min_available_mib": 1032.4140625,
+        "max_java_threads": 80,
+        "max_java_rss_mib": 202.28515625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.675620134465128,
+        "formal_cpu_max_percent": 19.999999999999996,
+        "min_available_mib": 307.0390625,
+        "max_java_threads": 43,
+        "max_java_rss_mib": 192.921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n17600-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 4.494494609675094,
+        "formal_cpu_max_percent": 14.634146341463417,
+        "min_available_mib": 1059.79296875,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 196.91796875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.9436149994501046,
+        "formal_cpu_max_percent": 9.950248756218905,
+        "min_available_mib": 301.5703125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 196.0625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n207625-r4",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 30.992108973817455,
+        "formal_cpu_max_percent": 35.88516746411483,
+        "min_available_mib": 740.23828125,
+        "max_java_threads": 604,
+        "max_java_rss_mib": 363.9453125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.027094173146532,
+        "formal_cpu_max_percent": 9.756097560975608,
+        "min_available_mib": 295.96875,
+        "max_java_threads": 137,
+        "max_java_rss_mib": 188.23828125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.069224447595463,
+        "formal_cpu_max_percent": 7.881773399014779,
+        "min_available_mib": 1037.21484375,
+        "max_java_threads": 62,
+        "max_java_rss_mib": 203.8203125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 8.821398410867012,
+        "formal_cpu_max_percent": 38.0,
+        "min_available_mib": 304.15625,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 196.5546875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n67375-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 11.91241894431855,
+        "formal_cpu_max_percent": 15.19607843137255,
+        "min_available_mib": 893.90234375,
+        "max_java_threads": 296,
+        "max_java_rss_mib": 331.91796875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.124403028292413,
+        "formal_cpu_max_percent": 19.999999999999996,
+        "min_available_mib": 303.5,
+        "max_java_threads": 101,
+        "max_java_rss_mib": 190.453125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n55000-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 7.7926180507022,
+        "formal_cpu_max_percent": 10.999999999999998,
+        "min_available_mib": 1048.5859375,
+        "max_java_threads": 68,
+        "max_java_rss_mib": 197.66015625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.816904272105966,
+        "formal_cpu_max_percent": 18.500000000000007,
+        "min_available_mib": 287.7890625,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 207.05859375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 12.42491132172166,
+        "formal_cpu_max_percent": 15.000000000000002,
+        "min_available_mib": 802.609375,
+        "max_java_threads": 526,
+        "max_java_rss_mib": 388.5546875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.004296725641194,
+        "formal_cpu_max_percent": 15.000000000000002,
+        "min_available_mib": 217.63671875,
+        "max_java_threads": 161,
+        "max_java_rss_mib": 257.6015625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 10.992656116285394,
+        "formal_cpu_max_percent": 13.567839195979904,
+        "min_available_mib": 1015.16015625,
+        "max_java_threads": 98,
+        "max_java_rss_mib": 217.2734375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 4.467338844265424,
+        "formal_cpu_max_percent": 14.500000000000002,
+        "min_available_mib": 313.5234375,
+        "max_java_threads": 51,
+        "max_java_rss_mib": 186.671875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 16.31102561981793,
+        "formal_cpu_max_percent": 21.499999999999996,
+        "min_available_mib": 702.08984375,
+        "max_java_threads": 1015,
+        "max_java_rss_mib": 432.05859375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 6.926724573617676,
+        "formal_cpu_max_percent": 20.398009950248753,
+        "min_available_mib": 194.07421875,
+        "max_java_threads": 281,
+        "max_java_rss_mib": 273.4609375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n211200-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 38.71565601273739,
+        "formal_cpu_max_percent": 42.79069767441861,
+        "min_available_mib": 476.01171875,
+        "max_java_threads": 1063,
+        "max_java_rss_mib": 620.7265625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.99171444254367,
+        "formal_cpu_max_percent": 13.93034825870647,
+        "min_available_mib": 210.38671875,
+        "max_java_threads": 183,
+        "max_java_rss_mib": 261.84375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n39600-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 5.056764317588934,
+        "formal_cpu_max_percent": 7.462686567164178,
+        "min_available_mib": 1043.59375,
+        "max_java_threads": 61,
+        "max_java_rss_mib": 202.56640625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 8.100544027439572,
+        "formal_cpu_max_percent": 34.32835820895522,
+        "min_available_mib": 302.078125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 196.4921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n209550-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 33.164115439362114,
+        "formal_cpu_max_percent": 40.09661835748793,
+        "min_available_mib": 468.6015625,
+        "max_java_threads": 1163,
+        "max_java_rss_mib": 632.14453125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.766482943518606,
+        "formal_cpu_max_percent": 9.9009900990099,
+        "min_available_mib": 200.3125,
+        "max_java_threads": 186,
+        "max_java_rss_mib": 272.9140625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 4.186230476712548,
+        "formal_cpu_max_percent": 10.344827586206895,
+        "min_available_mib": 1058.6875,
+        "max_java_threads": 66,
+        "max_java_rss_mib": 181.98828125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.8180964975311138,
+        "formal_cpu_max_percent": 3.9800995024875663,
+        "min_available_mib": 331.7265625,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 168.84375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n214500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 45.01163249151113,
+        "formal_cpu_max_percent": 50.0,
+        "min_available_mib": 433.77734375,
+        "max_java_threads": 1138,
+        "max_java_rss_mib": 612.56640625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.715051944875903,
+        "formal_cpu_max_percent": 14.070351758793976,
+        "min_available_mib": 193.984375,
+        "max_java_threads": 202,
+        "max_java_rss_mib": 279.40234375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n219450-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 39.03110000310041,
+        "formal_cpu_max_percent": 45.58823529411765,
+        "min_available_mib": 395.87890625,
+        "max_java_threads": 1219,
+        "max_java_rss_mib": 639.078125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 10.297263207052492,
+        "formal_cpu_max_percent": 14.356435643564359,
+        "min_available_mib": 197.50390625,
+        "max_java_threads": 203,
+        "max_java_rss_mib": 274.453125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n55000-r5",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 7.007412216793007,
+        "formal_cpu_max_percent": 9.045226130653262,
+        "min_available_mib": 1059.3046875,
+        "max_java_threads": 79,
+        "max_java_rss_mib": 190.5625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 5.463016931269211,
+        "formal_cpu_max_percent": 23.38308457711443,
+        "min_available_mib": 305.60546875,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 197.33203125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n4400-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.418330749110312,
+        "formal_cpu_max_percent": 11.940298507462687,
+        "min_available_mib": 1059.984375,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 190.1640625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.7210335951468099,
+        "formal_cpu_max_percent": 3.500000000000003,
+        "min_available_mib": 311.609375,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 186.12890625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n17600-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 4.848914068865735,
+        "formal_cpu_max_percent": 17.000000000000004,
+        "min_available_mib": 1051.69921875,
+        "max_java_threads": 41,
+        "max_java_rss_mib": 198.32421875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.7493788243611794,
+        "formal_cpu_max_percent": 9.9009900990099,
+        "min_available_mib": 320.28125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 176.09765625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 20.08261678188149,
+        "formal_cpu_max_percent": 26.57004830917874,
+        "min_available_mib": 707.74609375,
+        "max_java_threads": 1088,
+        "max_java_rss_mib": 418.859375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 9.801875877118336,
+        "formal_cpu_max_percent": 17.619047619047624,
+        "min_available_mib": 196.30078125,
+        "max_java_threads": 301,
+        "max_java_rss_mib": 273.46484375,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n207625-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 31.18004809891021,
+        "formal_cpu_max_percent": 38.19095477386934,
+        "min_available_mib": 476.5859375,
+        "max_java_threads": 856,
+        "max_java_rss_mib": 624.63671875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 7.212994858881937,
+        "formal_cpu_max_percent": 9.045226130653262,
+        "min_available_mib": 255.25,
+        "max_java_threads": 185,
+        "max_java_rss_mib": 219.9921875,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-write-n4400-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.0733313624339935,
+        "formal_cpu_max_percent": 12.5,
+        "min_available_mib": 1065.921875,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 187.5625,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 1.8906040425543646,
+        "formal_cpu_max_percent": 4.455445544554459,
+        "min_available_mib": 323.2421875,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 172.5078125,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n65450-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 11.586982393144936,
+        "formal_cpu_max_percent": 22.277227722772274,
+        "min_available_mib": 961.8984375,
+        "max_java_threads": 159,
+        "max_java_rss_mib": 271.02734375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 3.63476491556695,
+        "formal_cpu_max_percent": 11.940298507462687,
+        "min_available_mib": 309.6796875,
+        "max_java_threads": 66,
+        "max_java_rss_mib": 186.41015625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-write-n217800-r2",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 34.38910534884312,
+        "formal_cpu_max_percent": 39.69849246231156,
+        "min_available_mib": 437.765625,
+        "max_java_threads": 1099,
+        "max_java_rss_mib": 657.328125,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 8.494590596895646,
+        "formal_cpu_max_percent": 11.22448979591837,
+        "min_available_mib": 210.14453125,
+        "max_java_threads": 197,
+        "max_java_rss_mib": 257.62890625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mysql-read-n4400-r10",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 3.434979301130927,
+        "formal_cpu_max_percent": 9.090909090909093,
+        "min_available_mib": 1062.90625,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 197.2734375,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 2.0648502930158195,
+        "formal_cpu_max_percent": 3.9800995024875663,
+        "min_available_mib": 324.203125,
+        "max_java_threads": 36,
+        "max_java_rss_mib": 174.7265625,
+        "pids_events_unchanged": true
+      }
+    }
+  },
+  {
+    "run": "mongo-read-n71500-r1",
+    "hosts": {
+      "monitor": {
+        "formal_cpu_mean_percent": 33.841671989404226,
+        "formal_cpu_max_percent": 53.94736842105263,
+        "min_available_mib": 222.5703125,
+        "max_java_threads": 2496,
+        "max_java_rss_mib": 794.3046875,
+        "pids_events_unchanged": true
+      },
+      "compiler": {
+        "formal_cpu_mean_percent": 9.275315414021206,
+        "formal_cpu_max_percent": 34.183673469387756,
+        "min_available_mib": 84.57421875,
+        "max_java_threads": 620,
+        "max_java_rss_mib": 346.91015625,
+        "pids_events_unchanged": true
+      }
+    }
+  }
+]

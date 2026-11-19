@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/baakarshan/Documents/Anything/mysql-mongodb-log-lab4/work/full-certified-20261119/campaign.py", line 97, in <module>
+    for backend,op in [('mongo','read'),('mongo','write'),('mysql','write')]:campaign(backend,op)
+                                                                             ~~~~~~~~^^^^^^^^^^^^
+  File "/Users/baakarshan/Documents/Anything/mysql-mongodb-log-lab4/work/full-certified-20261119/campaign.py", line 52, in campaign
+    if (backend=='mongo' and op=='read') or backend=='mysql':t.environment.prepare(backend,OUT)
+                                                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/baakarshan/Documents/Anything/mysql-mongodb-log-lab4/scripts/round_environment.py", line 43, in prepare
+    deployment={role:remote.remote(role,'date -u; free -m; docker ps --format "{{.Names}} {{.Image}} {{.Status}}"') for role in remote.HOSTS}
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/baakarshan/Documents/Anything/mysql-mongodb-log-lab4/work/full-certified-20261119/campaign.py", line 13, in remote
+    return real_remote(role,cmd,check)
+  File "/Users/baakarshan/Documents/Anything/mysql-mongodb-log-lab4/scripts/experiment.py", line 14, in remote
+    if check and rc:raise RuntimeError(f'{role} exited {rc}: {e[-1200:]} {s[-1000:]}')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: compiler exited 1: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+ Thu Nov 19 09:06:22 UTC 2026
+              total        used        free      shared  buff/cache   available
+Mem:            792         183         280           8         327         482
+Swap:             0           0           0
+

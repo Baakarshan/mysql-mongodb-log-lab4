@@ -1,6 +1,6 @@
 # 实验四 MySQL 与 MongoDB 日志读写性能对比
 
-作者：温子健 / CHIKIN WEN。
+作者：温子健 / CHIKIN WEN、郑本壹 / Benyi Zheng。
 
 同一日志模型、相同HTTP接口和请求数据，比较Spring Data JPA/MySQL与Spring Data MongoDB/MongoDB的读取和写入。四台服务器分两轮复用，以平均HTTP响应时间为主指标，逐级提高均匀发送的负载并复核响应转折。
 

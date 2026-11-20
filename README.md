@@ -6,6 +6,22 @@
 
 [完整PDF](report/实验四实验报告.pdf) · [Word](report/实验四实验报告.docx) · [四类原始结果](results/lab4-complete-20261119/index.html) · [逐次CSV](results/lab4-complete-20261119/results/all-runs.csv) · [核验结果](results/lab4-complete-20261119/results/audit.json)
 
+## 提交材料直达
+
+| 材料 | 直接链接 |
+|---|---|
+| Spring Data JPA / MySQL 实现 | [MySQL 实现源码](src/main/java/edu/lab4/mysql/) · [MySQL 配置](src/main/resources/application-mysql.yml) |
+| Spring Data MongoDB 实现 | [MongoDB 实现源码](src/main/java/edu/lab4/mongo/) · [MongoDB 配置](src/main/resources/application-mongo.yml) |
+| 数据库初始化脚本 | [MySQL 表与索引](database/mysql.sql) · [MongoDB 索引](database/mongo.js) · [生成相同初始数据](scripts/generate-data.py) · [重置并导入10万条日志](scripts/reset-db.sh) |
+| JMeter JMX 文件 | [测试计划](jmeter/single-shot-logs.jmx) · [各次运行目录](results/lab4-complete-20261119/results/runs/)（每次运行保留实际使用的 run.jmx） |
+| 运行说明 | [逐档复现](#逐档复现) · [完整复现跟做稿](docs/实验四复现跟做稿.md) · [环境变量示例](.env.example) · [部署脚本](scripts/deploy.sh) |
+| JMeter 原始 JTL | [全部57次运行](results/lab4-complete-20261119/results/runs/) · [四类数据索引](results/lab4-complete-20261119/index.html) · [SHA-256 校验值](results/lab4-complete-20261119/SHA256SUMS) |
+| 实验报告 | [PDF](report/实验四实验报告.pdf) · [Word](report/实验四实验报告.docx) · [Markdown](report/实验四实验报告.md) |
+
+原始 JTL 以无损 gzip 保存，各次运行包含全部请求、预热、正式测量和收尾数据。HTML 页面下载仓库后按[查看原始页面](#查看原始页面)启动本地服务查看。
+
+账号、密码和令牌通过环境变量或本机配置提供；公开材料已完成凭据扫描，`.env`、`*.env` 与私有工作目录由 `.gitignore` 排除。
+
 ## 四类测试
 
 | 实现 | 操作 | 原生JMeter报告 |

@@ -1,0 +1,105 @@
+{
+  "sources": [
+    {
+      "run": "mysql-write-n4400-r8",
+      "label": "01 80/s",
+      "measurement_gzip_sha256": "0b2e1d656926a997263d318ec5a39adc1fe9235c4746af16855208243deef4cb",
+      "samples": 1600
+    },
+    {
+      "run": "mysql-write-n17600-r6",
+      "label": "02 320/s",
+      "measurement_gzip_sha256": "587cb6d6cd49de7d6b68f8ef90df027b66a1da57f22f1193561a5a3c95c68e6f",
+      "samples": 6400
+    },
+    {
+      "run": "mysql-write-n39600-r4",
+      "label": "03 720/s",
+      "measurement_gzip_sha256": "75adb7aac418b17c692f704bf8535d6d48be4904dce2c9ff6eefd5a371fdce6f",
+      "samples": 14400
+    },
+    {
+      "run": "mysql-write-n55000-r5",
+      "label": "04 1000/s",
+      "measurement_gzip_sha256": "f108dc0f190c63ad9af565145d118632f1e37dbfbf68a632e1d24ef9537ac30e",
+      "samples": 20000
+    },
+    {
+      "run": "mysql-write-n71500-r3",
+      "label": "05 1300/s",
+      "measurement_gzip_sha256": "525af2e1ffc1bcbf0c3a64606386d2120f96054ec20985b6fe577a61dfc10e0e",
+      "samples": 26000
+    },
+    {
+      "run": "mysql-write-n93500-r3",
+      "label": "06 1700/s",
+      "measurement_gzip_sha256": "28ca2e2d6fb2a09fc79b7b5e8e345ff8e43bc9715e9248eb35d237d25734a1fe",
+      "samples": 34000
+    },
+    {
+      "run": "mysql-write-n122375-r3",
+      "label": "07 2225/s",
+      "measurement_gzip_sha256": "baf0c85f7b90e646ff1fc09052c9beaff2d863c355dd5cefd5d6600b36ae6e76",
+      "samples": 44500
+    },
+    {
+      "run": "mysql-write-n159500-r3",
+      "label": "08 2900/s",
+      "measurement_gzip_sha256": "b3e02a53692a66bfd9c6f8910959db88f1a454bd09f3325514627ef054f7fd62",
+      "samples": 58000
+    },
+    {
+      "run": "mysql-write-n207625-r4",
+      "label": "09 3775/s",
+      "measurement_gzip_sha256": "001e077d1dc4c8f206d9716ba9b6ef854aea8e8392f4b26396a5ed5f813c9a7a",
+      "samples": 75500
+    },
+    {
+      "run": "mysql-write-n221375-r3",
+      "label": "10 4025/s",
+      "measurement_gzip_sha256": "085141fe8b7b3df152c5bda556f4231371ce6d471c57e8e9701d215e5e5ed102",
+      "samples": 80500
+    },
+    {
+      "run": "mysql-write-n214500-r1",
+      "label": "11 3900/s",
+      "measurement_gzip_sha256": "43418b00e8a0dc8e3e58f0a1b16f6ba237c3387211ae1dd74b958cab64f2f180",
+      "samples": 77997
+    },
+    {
+      "run": "mysql-write-n217800-r1",
+      "label": "12 3960/s",
+      "measurement_gzip_sha256": "2b7be639863390687339623ae8e838a7d531d59340dd8955448be998ad1daca7",
+      "samples": 79201
+    },
+    {
+      "run": "mysql-write-n219450-r1",
+      "label": "13 3990/s",
+      "measurement_gzip_sha256": "5c9c5129a793e0586b2c33ef5d566b745c0fcdc2dcc47ab4b4ade4e7eef43e59",
+      "samples": 79799
+    },
+    {
+      "run": "mysql-write-n217800-r2",
+      "label": "14 3960/s",
+      "measurement_gzip_sha256": "42296e5383390f29957351594de7860c1e5fee49e275f35999216a37a12d04b7",
+      "samples": 79200
+    },
+    {
+      "run": "mysql-write-n219450-r2",
+      "label": "15 3990/s",
+      "measurement_gzip_sha256": "e7ae8469a70c2a9337806bb86007fe155153410c84a29851f4b06c5b2a236ee1",
+      "samples": 79802
+    },
+    {
+      "run": "mysql-write-n4400-r9",
+      "label": "16 80/s",
+      "measurement_gzip_sha256": "0e25eafca60ac82cbaab2dadc9e9972526cb5f7e2078e23039f2e0e926ae669d",
+      "samples": 1600
+    }
+  ],
+  "display_timezone": "Asia/Shanghai",
+  "timestamp_policy": "保留各档真实请求时刻，各正式窗口之间存在预热、重置与重启间隔",
+  "label_policy": "编号与计划速率标识序列；线程总数和重复编号在逐次结果表对应",
+  "original_jtl_unchanged": true,
+  "display_jtl_sha256": "fd6311cb033b0997850d60dac2eb5332816bc7bea21c650ca6037ff5f4c63d4c"
+}

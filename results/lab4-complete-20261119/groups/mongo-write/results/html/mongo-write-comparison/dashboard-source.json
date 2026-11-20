@@ -1,0 +1,117 @@
+{
+  "sources": [
+    {
+      "run": "mongo-write-n4400-r1",
+      "label": "01 80/s",
+      "measurement_gzip_sha256": "0defb3a1f7b6e697dcafd787ea78c6e47178e54056145091d72296e673668682",
+      "samples": 1600
+    },
+    {
+      "run": "mongo-write-n17600-r1",
+      "label": "02 320/s",
+      "measurement_gzip_sha256": "bb1f03bdea81d9677b056f9813e1b1b1d60d370300c71ad9e6257d2191980789",
+      "samples": 6400
+    },
+    {
+      "run": "mongo-write-n39600-r1",
+      "label": "03 720/s",
+      "measurement_gzip_sha256": "c8c07f4e8af71be47380b91afad4f5f605e9e3582da568160ad9f3ada8461c32",
+      "samples": 14400
+    },
+    {
+      "run": "mongo-write-n55000-r1",
+      "label": "04 1000/s",
+      "measurement_gzip_sha256": "5e1a558dc35fd9416562cd731106ae6464ec0d614ff8929fb4c09229010925c1",
+      "samples": 20000
+    },
+    {
+      "run": "mongo-write-n71500-r1",
+      "label": "05 1300/s",
+      "measurement_gzip_sha256": "17a72acf13e984becb8a54e5547e02fbab5443c7e98f43993bde89453566913a",
+      "samples": 26000
+    },
+    {
+      "run": "mongo-write-n93500-r1",
+      "label": "06 1700/s",
+      "measurement_gzip_sha256": "4ddf842968ea4f646051dc91617278f78eb2684966881c488bcc0741cb7ac04b",
+      "samples": 34000
+    },
+    {
+      "run": "mongo-write-n122375-r1",
+      "label": "07 2225/s",
+      "measurement_gzip_sha256": "1d33165a934c7047b041c4ca4a1b383a4950a6d41273196ae2d83b88c8121a46",
+      "samples": 44500
+    },
+    {
+      "run": "mongo-write-n159500-r1",
+      "label": "08 2900/s",
+      "measurement_gzip_sha256": "07fc2732b1a12e8fe79ab51a778eb84912b2e41061c8cdd15a581a14e4c693a7",
+      "samples": 58000
+    },
+    {
+      "run": "mongo-write-n207625-r1",
+      "label": "09 3775/s",
+      "measurement_gzip_sha256": "c5f5f7564be1039d4e7ce624aed484c579a908cb9d7d8c3c12ec40797d0c57c5",
+      "samples": 75504
+    },
+    {
+      "run": "mongo-write-n221375-r1",
+      "label": "10 4025/s",
+      "measurement_gzip_sha256": "8a75dc130c244b36265ecceed6378c741054fc2ef9ac426489bdc29d08833470",
+      "samples": 80500
+    },
+    {
+      "run": "mongo-write-n214500-r1",
+      "label": "11 3900/s",
+      "measurement_gzip_sha256": "442abc16ed57e3c504b3c1164ae06c6b4e2b531e79564f5e87b0b05e862d19b5",
+      "samples": 77996
+    },
+    {
+      "run": "mongo-write-n211200-r1",
+      "label": "12 3840/s",
+      "measurement_gzip_sha256": "f8816f574ab6a34f48df33488c200a51e4bbc2e40f67c3a851fa32c4a2ea5e97",
+      "samples": 76805
+    },
+    {
+      "run": "mongo-write-n209550-r1",
+      "label": "13 3810/s",
+      "measurement_gzip_sha256": "59ba997d8ab06b7b724a3d97bf756a2b4d2b92cbc4dbb08ed8c5cfb46d3dfb24",
+      "samples": 76199
+    },
+    {
+      "run": "mongo-write-n209550-r2",
+      "label": "14 3810/s",
+      "measurement_gzip_sha256": "203311bbb52463c85808f980d87fc58378141aa9bc30192a13b693a112ff6382",
+      "samples": 76199
+    },
+    {
+      "run": "mongo-write-n211200-r2",
+      "label": "15 3840/s",
+      "measurement_gzip_sha256": "73478e914543a07db337206b1f0ad5449f3abeaf336be85872f6e75296ce5983",
+      "samples": 76800
+    },
+    {
+      "run": "mongo-write-n4400-r2",
+      "label": "16 80/s",
+      "measurement_gzip_sha256": "11523b9c9149759b9e6fcdfc3086091f23aa837210871e5a1d57ec00147444c5",
+      "samples": 1600
+    },
+    {
+      "run": "mongo-write-n207625-r2",
+      "label": "17 3775/s",
+      "measurement_gzip_sha256": "9d2a816cd77be7e34816de282012cdeed1099c9f13114e01e935f71ebf75e4c8",
+      "samples": 75500
+    },
+    {
+      "run": "mongo-write-n4400-r3",
+      "label": "18 80/s",
+      "measurement_gzip_sha256": "f97822e6bd912ba1c914dd649d4064fdb6eea6d838ef76219311611b9d1f911b",
+      "samples": 1600
+    }
+  ],
+  "display_timezone": "Asia/Shanghai",
+  "timestamp_policy": "保留各档真实请求时刻，各正式窗口之间存在预热、重置与重启间隔",
+  "label_policy": "编号与计划速率标识序列；线程总数和重复编号在逐次结果表对应",
+  "original_jtl_unchanged": true,
+  "display_jtl_sha256": "ca3251a24a3d34090efa1cb60e77f909e171762eb0e7e496567b3036ec267d7b"
+}

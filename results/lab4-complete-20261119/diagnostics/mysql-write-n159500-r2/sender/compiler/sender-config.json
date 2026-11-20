@@ -1,0 +1,16 @@
+{
+  "cgroup": "/system.slice/lab4-jmeter-1795077275150652776.service",
+  "pids_max": "10000",
+  "rlimit_nofile": [
+    65536,
+    65536
+  ],
+  "rlimit_nproc": [
+    10000,
+    10000
+  ],
+  "stack_kib": 192,
+  "heap_mib": 192,
+  "http_implementation": "Java",
+  "startup_pause_s": 5
+}

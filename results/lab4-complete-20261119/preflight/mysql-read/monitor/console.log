@@ -1,0 +1,33 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using /opt/lab4/dual-1795055985941549000-monitor/run.jmx
+Starting standalone test @ 2026 Nov 19 10:39:47 CST (1795055987349)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.1/s Avg:   927 Min:   927 Max:   927 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +      1 in 00:00:06 =    0.2/s Avg:  2015 Min:  2015 Max:  2015 Err:     1 (100.00%) Active: 1940 Started: 1940 Finished: 0
+summary =      2 in 00:00:07 =    0.3/s Avg:  1471 Min:   927 Max:  2015 Err:     1 (50.00%)
+summary +   5401 in 00:00:06 =  963.3/s Avg:  2006 Min:  2000 Max:  2063 Err:  5401 (100.00%) Active: 1922 Started: 7324 Finished: 5402
+summary =   5403 in 00:00:12 =  436.0/s Avg:  2005 Min:   927 Max:  2063 Err:  5402 (99.98%)
+summary +   5755 in 00:00:06 =  960.0/s Avg:  2002 Min:  2000 Max:  2030 Err:  5755 (100.00%) Active: 1935 Started: 13091 Finished: 11156
+summary =  11158 in 00:00:18 =  606.8/s Avg:  2004 Min:   927 Max:  2063 Err: 11157 (99.99%)
+summary +   5774 in 00:00:06 =  959.1/s Avg:  2003 Min:  2000 Max:  2031 Err:  5774 (100.00%) Active: 1931 Started: 18862 Finished: 16931
+summary =  16932 in 00:00:24 =  693.7/s Avg:  2003 Min:   927 Max:  2063 Err: 16931 (99.99%)
+summary +   5760 in 00:00:06 =  963.4/s Avg:  2003 Min:  2000 Max:  2028 Err:  5760 (100.00%) Active: 1919 Started: 24611 Finished: 22692
+summary =  22692 in 00:00:30 =  746.8/s Avg:  2003 Min:   927 Max:  2063 Err: 22691 (100.00%)
+summary +   5760 in 00:00:06 =  960.0/s Avg:  2004 Min:  2000 Max:  2031 Err:  5760 (100.00%) Active: 1924 Started: 30374 Finished: 28450
+summary =  28452 in 00:00:36 =  781.9/s Avg:  2003 Min:   927 Max:  2063 Err: 28451 (100.00%)
+summary +   5750 in 00:00:06 =  958.2/s Avg:  2004 Min:  2000 Max:  2033 Err:  5750 (100.00%) Active: 1930 Started: 36130 Finished: 34200
+summary =  34202 in 00:00:42 =  806.9/s Avg:  2003 Min:   927 Max:  2063 Err: 34201 (100.00%)
+summary +   5770 in 00:00:06 =  962.0/s Avg:  2004 Min:  2000 Max:  2039 Err:  5770 (100.00%) Active: 1922 Started: 41893 Finished: 39971
+summary =  39972 in 00:00:48 =  826.1/s Avg:  2004 Min:   927 Max:  2063 Err: 39971 (100.00%)
+summary +   5760 in 00:00:06 =  959.8/s Avg:  2004 Min:  2000 Max:  2041 Err:  5760 (100.00%) Active: 1922 Started: 47653 Finished: 45731
+summary =  45732 in 00:00:54 =  840.9/s Avg:  2004 Min:   927 Max:  2063 Err: 45731 (100.00%)
+summary +   5755 in 00:00:06 =  957.9/s Avg:  2004 Min:  2000 Max:  2031 Err:  5755 (100.00%) Active: 1309 Started: 52800 Finished: 51491
+summary =  51487 in 00:01:00 =  852.5/s Avg:  2004 Min:   927 Max:  2063 Err: 51486 (100.00%)
+summary +   1314 in 00:00:08 =  173.9/s Avg:  2001 Min:  2000 Max:  2021 Err:  1314 (100.00%) Active: 0 Started: 52800 Finished: 52800
+summary =  52801 in 00:01:08 =  777.0/s Avg:  2003 Min:   927 Max:  2063 Err: 52800 (100.00%)
+Tidying up ...    @ 2026 Nov 19 10:40:55 CST (1795056055567)
+... end of run

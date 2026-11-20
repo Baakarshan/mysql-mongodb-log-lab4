@@ -1,0 +1,63 @@
+{
+  "sources": [
+    {
+      "run": "mysql-write-n4400-r8",
+      "label": "01 80/s",
+      "measurement_gzip_sha256": "0b2e1d656926a997263d318ec5a39adc1fe9235c4746af16855208243deef4cb",
+      "samples": 1600
+    },
+    {
+      "run": "mysql-write-n17600-r6",
+      "label": "02 320/s",
+      "measurement_gzip_sha256": "587cb6d6cd49de7d6b68f8ef90df027b66a1da57f22f1193561a5a3c95c68e6f",
+      "samples": 6400
+    },
+    {
+      "run": "mysql-write-n39600-r4",
+      "label": "03 720/s",
+      "measurement_gzip_sha256": "75adb7aac418b17c692f704bf8535d6d48be4904dce2c9ff6eefd5a371fdce6f",
+      "samples": 14400
+    },
+    {
+      "run": "mysql-write-n55000-r5",
+      "label": "04 1000/s",
+      "measurement_gzip_sha256": "f108dc0f190c63ad9af565145d118632f1e37dbfbf68a632e1d24ef9537ac30e",
+      "samples": 20000
+    },
+    {
+      "run": "mysql-write-n71500-r3",
+      "label": "05 1300/s",
+      "measurement_gzip_sha256": "525af2e1ffc1bcbf0c3a64606386d2120f96054ec20985b6fe577a61dfc10e0e",
+      "samples": 26000
+    },
+    {
+      "run": "mysql-write-n93500-r3",
+      "label": "06 1700/s",
+      "measurement_gzip_sha256": "28ca2e2d6fb2a09fc79b7b5e8e345ff8e43bc9715e9248eb35d237d25734a1fe",
+      "samples": 34000
+    },
+    {
+      "run": "mysql-write-n122375-r3",
+      "label": "07 2225/s",
+      "measurement_gzip_sha256": "baf0c85f7b90e646ff1fc09052c9beaff2d863c355dd5cefd5d6600b36ae6e76",
+      "samples": 44500
+    },
+    {
+      "run": "mysql-write-n159500-r3",
+      "label": "08 2900/s",
+      "measurement_gzip_sha256": "b3e02a53692a66bfd9c6f8910959db88f1a454bd09f3325514627ef054f7fd62",
+      "samples": 58000
+    },
+    {
+      "run": "mysql-write-n207625-r4",
+      "label": "09 3775/s",
+      "measurement_gzip_sha256": "001e077d1dc4c8f206d9716ba9b6ef854aea8e8392f4b26396a5ed5f813c9a7a",
+      "samples": 75500
+    }
+  ],
+  "display_timezone": "Asia/Shanghai",
+  "timestamp_policy": "保留各档真实请求时刻，各正式窗口之间存在预热、重置与重启间隔",
+  "label_policy": "编号与计划速率标识序列；线程总数和重复编号在逐次结果表对应",
+  "original_jtl_unchanged": true,
+  "display_jtl_sha256": "549bd1f4bc212da3f1c3463002104ac7852d76ef6768d9516237284090399fb1"
+}

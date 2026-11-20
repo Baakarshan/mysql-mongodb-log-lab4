@@ -1,0 +1,13 @@
+{
+  "last_normal_candidate_rps": 1200,
+  "first_stress_candidate_rps": 1225,
+  "interval_width_rps": 25,
+  "normal_confirmation": "mysql-read-n66000-r4",
+  "stress_confirmation": "mysql-read-n67375-r2",
+  "confirmed_normal": true,
+  "confirmed_stress": true,
+  "criterion": "mean elapsed >50ms or errors >1% or unhealthy application",
+  "startup_surge_removed": true,
+  "application_heap_mib": 192,
+  "conditioning": "after restart, an independent 55-second 80rps run, then 30-second target-rate warmup"
+}

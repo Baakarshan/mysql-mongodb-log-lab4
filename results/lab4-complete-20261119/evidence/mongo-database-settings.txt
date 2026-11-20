@@ -1,0 +1,26 @@
+7.0.16
+[
+  {
+    v: 2,
+    key: {
+      _id: 1
+    },
+    name: '_id_'
+  },
+  {
+    v: 2,
+    key: {
+      level: 1,
+      createdAt: -1,
+      _id: -1
+    },
+    name: 'idx_level_time_id'
+  }
+]
+{
+  wiredTiger: {
+    engineConfig: {
+      cacheSizeGB: 0.25
+    }
+  }
+}

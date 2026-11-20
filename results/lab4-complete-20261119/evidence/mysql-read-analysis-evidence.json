@@ -1,0 +1,294 @@
+[
+  {
+    "run": "mysql-read-n66000-r4",
+    "mean_ms": 11.1295,
+    "errors": 0,
+    "resources": {
+      "application": {
+        "cpu_percent": {
+          "min": 50.000000000923706,
+          "max": 60.098522165766866,
+          "mean": 54.68957066022829,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 88.31691855707709,
+          "max": 88.58951228890007,
+          "mean": 88.46184180690702,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 89.8359375,
+          "max": 93.59375,
+          "mean": 91.63125,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      },
+      "database": {
+        "cpu_percent": {
+          "min": 85.85858584726542,
+          "max": 91.49999998210626,
+          "mean": 88.26837647597304,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 53.1266136415904,
+          "max": 53.28347587619382,
+          "mean": 53.17838034861167,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 841.10546875,
+          "max": 843.9296875,
+          "mean": 842.99765625,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      }
+    },
+    "metrics": {
+      "hikari_active": {
+        "min": 3.0,
+        "max": 20.0,
+        "mean": 9.1,
+        "roles": {}
+      },
+      "hikari_pending": {
+        "min": 0.0,
+        "max": 5.0,
+        "mean": 0.5,
+        "roles": {}
+      },
+      "hikari_max": {
+        "min": 20.0,
+        "max": 20.0,
+        "mean": 20.0,
+        "roles": {}
+      },
+      "gc_pause_seconds_per_second": {
+        "min": 0.019000000000000128,
+        "max": 0.028000000000000025,
+        "mean": 0.02309999999999999,
+        "aggregation": "sum GC categories at each timestamp",
+        "roles": {}
+      },
+      "jvm_heap_used_bytes": {
+        "min": 59492576.0,
+        "max": 71741640.0,
+        "mean": 66039617.6,
+        "roles": {}
+      },
+      "host_iowait_percent": {
+        "min": 0.0,
+        "max": 0.5000000000109139,
+        "mean": 0.03333333333368197,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 0.5000000000109139,
+            "mean": 0.050000000001091394
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          }
+        }
+      },
+      "disk_busy_percent": {
+        "min": 0.0,
+        "max": 2.8000000000247383,
+        "mean": 0.14666666666926176,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 2.8000000000247383,
+            "mean": 0.4400000000077853
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          }
+        }
+      },
+      "jvm_threads_live": {
+        "min": 55.0,
+        "max": 55.0,
+        "mean": 55.0,
+        "roles": {}
+      },
+      "host_cpu_per_core": {
+        "min": 8.999999985098839,
+        "max": 91.99999999254942,
+        "mean": 53.0166666675359,
+        "roles": {
+          "application": {
+            "min": 50.0,
+            "max": 70.99999999627471,
+            "mean": 57.85000000614673
+          },
+          "database": {
+            "min": 85.99999998696148,
+            "max": 91.99999999254942,
+            "mean": 88.34999999729916
+          }
+        }
+      }
+    },
+    "oom_lines": [],
+    "healthy_after": true,
+    "write_count_difference": 0
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "mean_ms": 75.96995918367347,
+    "errors": 0,
+    "resources": {
+      "application": {
+        "cpu_percent": {
+          "min": 56.49999999679574,
+          "max": 81.90954774407773,
+          "mean": 62.0768937416546,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 89.37821024715822,
+          "max": 89.78488263188508,
+          "mean": 89.58859542752359,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 81.41015625,
+          "max": 84.171875,
+          "mean": 82.715625,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      },
+      "database": {
+        "cpu_percent": {
+          "min": 82.91457287051543,
+          "max": 92.96482411451483,
+          "mean": 90.42587192777046,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "memory_percent": {
+          "min": 53.03266986899941,
+          "max": 53.162412076873345,
+          "mean": 53.1194756505552,
+          "samples": 10,
+          "expected_samples": 10
+        },
+        "available_mib": {
+          "min": 843.0703125,
+          "max": 845.21484375,
+          "mean": 844.175,
+          "samples": 10,
+          "expected_samples": 10
+        }
+      }
+    },
+    "metrics": {
+      "hikari_active": {
+        "min": 5.0,
+        "max": 20.0,
+        "mean": 16.3,
+        "roles": {}
+      },
+      "hikari_pending": {
+        "min": 0.0,
+        "max": 20.0,
+        "mean": 12.8,
+        "roles": {}
+      },
+      "hikari_max": {
+        "min": 20.0,
+        "max": 20.0,
+        "mean": 20.0,
+        "roles": {}
+      },
+      "gc_pause_seconds_per_second": {
+        "min": 0.02400000000000002,
+        "max": 0.12899999999999995,
+        "mean": 0.04219999999999997,
+        "aggregation": "sum GC categories at each timestamp",
+        "roles": {}
+      },
+      "jvm_heap_used_bytes": {
+        "min": 46410472.0,
+        "max": 90538392.0,
+        "mean": 72765320.8,
+        "roles": {}
+      },
+      "host_iowait_percent": {
+        "min": 0.0,
+        "max": 0.5000000000109139,
+        "mean": 0.03333333333406093,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 0.5000000000109139,
+            "mean": 0.050000000001091394
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.5000000000109139,
+            "mean": 0.050000000001091394
+          }
+        }
+      },
+      "disk_busy_percent": {
+        "min": 0.0,
+        "max": 1.2000000000625732,
+        "mean": 0.06666666667115351,
+        "roles": {
+          "application": {
+            "min": 0.0,
+            "max": 1.2000000000625732,
+            "mean": 0.1600000000144064
+          },
+          "database": {
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          }
+        }
+      },
+      "jvm_threads_live": {
+        "min": 55.0,
+        "max": 55.0,
+        "mean": 55.0,
+        "roles": {}
+      },
+      "host_cpu_per_core": {
+        "min": 10.999999986961484,
+        "max": 93.0000000167638,
+        "mean": 55.3000000002794,
+        "roles": {
+          "application": {
+            "min": 55.00000002793968,
+            "max": 83.00000000745058,
+            "mean": 62.09999999962747
+          },
+          "database": {
+            "min": 89.00000001303852,
+            "max": 93.0000000167638,
+            "mean": 91.00000000093132
+          }
+        }
+      }
+    },
+    "oom_lines": [],
+    "healthy_after": true,
+    "write_count_difference": 0
+  }
+]

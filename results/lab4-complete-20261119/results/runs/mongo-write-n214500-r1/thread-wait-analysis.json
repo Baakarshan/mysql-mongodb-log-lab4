@@ -1,0 +1,285 @@
+{
+  "phase": "warmup diagnostic snapshot; timestamp retained",
+  "threads": [
+    {
+      "thread": "http-nio-8080-exec-1",
+      "timestamp": "2026-11-19T09:50:24.167158426Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-2",
+      "timestamp": "2026-11-19T09:50:24.168819904Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-3",
+      "timestamp": "2026-11-19T09:50:24.171749479Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-4",
+      "timestamp": "2026-11-19T09:50:24.172169029Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-5",
+      "timestamp": "2026-11-19T09:50:24.172626739Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-6",
+      "timestamp": "2026-11-19T09:50:24.173184898Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-7",
+      "timestamp": "2026-11-19T09:50:24.173610618Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-8",
+      "timestamp": "2026-11-19T09:50:24.174076577Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-9",
+      "timestamp": "2026-11-19T09:50:24.174645207Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-10",
+      "timestamp": "2026-11-19T09:50:24.175029406Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-11",
+      "timestamp": "2026-11-19T09:50:24.175465686Z",
+      "pool_wait": false,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-12",
+      "timestamp": "2026-11-19T09:50:24.176478394Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-13",
+      "timestamp": "2026-11-19T09:50:24.176741184Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-14",
+      "timestamp": "2026-11-19T09:50:24.176989314Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-15",
+      "timestamp": "2026-11-19T09:50:24.177212793Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-16",
+      "timestamp": "2026-11-19T09:50:24.177463023Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-17",
+      "timestamp": "2026-11-19T09:50:24.178081962Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-18",
+      "timestamp": "2026-11-19T09:50:24.178914350Z",
+      "pool_wait": false,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-19",
+      "timestamp": "2026-11-19T09:50:24.179770870Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-20",
+      "timestamp": "2026-11-19T09:50:24.180290079Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-21",
+      "timestamp": "2026-11-19T09:50:24.180513280Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-22",
+      "timestamp": "2026-11-19T09:50:24.180779908Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-23",
+      "timestamp": "2026-11-19T09:50:24.181027108Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-24",
+      "timestamp": "2026-11-19T09:50:24.181243158Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-25",
+      "timestamp": "2026-11-19T09:50:24.181847787Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-26",
+      "timestamp": "2026-11-19T09:50:24.182685186Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-27",
+      "timestamp": "2026-11-19T09:50:24.183468565Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-28",
+      "timestamp": "2026-11-19T09:50:24.183709945Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-29",
+      "timestamp": "2026-11-19T09:50:24.183949295Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-30",
+      "timestamp": "2026-11-19T09:50:24.184190125Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-31",
+      "timestamp": "2026-11-19T09:50:24.186119232Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-32",
+      "timestamp": "2026-11-19T09:50:24.186358561Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-33",
+      "timestamp": "2026-11-19T09:50:24.186774391Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-34",
+      "timestamp": "2026-11-19T09:50:24.187065500Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-35",
+      "timestamp": "2026-11-19T09:50:24.188215299Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-36",
+      "timestamp": "2026-11-19T09:50:24.188463039Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-37",
+      "timestamp": "2026-11-19T09:50:24.188732618Z",
+      "pool_wait": false,
+      "socket_read": true,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-38",
+      "timestamp": "2026-11-19T09:50:24.188971118Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-39",
+      "timestamp": "2026-11-19T09:50:24.189212598Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    },
+    {
+      "thread": "http-nio-8080-exec-40",
+      "timestamp": "2026-11-19T09:50:24.189461577Z",
+      "pool_wait": true,
+      "socket_read": false,
+      "idle": false
+    }
+  ]
+}

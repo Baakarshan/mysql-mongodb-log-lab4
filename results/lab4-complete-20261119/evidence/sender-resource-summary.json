@@ -1,0 +1,194 @@
+[
+  {
+    "run": "mysql-read-n4400-r4",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 4.186230476712548,
+    "formal_cpu_max_percent": 10.344827586206895,
+    "min_available_mib": 1058.6875,
+    "max_threads": 66
+  },
+  {
+    "run": "mysql-read-n4400-r4",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 1.8180964975311138,
+    "formal_cpu_max_percent": 3.9800995024875663,
+    "min_available_mib": 331.7265625,
+    "max_threads": 41
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 5.35377301338536,
+    "formal_cpu_max_percent": 13.5,
+    "min_available_mib": 1048.1953125,
+    "max_threads": 46
+  },
+  {
+    "run": "mysql-read-n17600-r2",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 3.4160671281633523,
+    "formal_cpu_max_percent": 15.000000000000002,
+    "min_available_mib": 314.8671875,
+    "max_threads": 36
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 5.069224447595463,
+    "formal_cpu_max_percent": 7.881773399014779,
+    "min_available_mib": 1037.21484375,
+    "max_threads": 62
+  },
+  {
+    "run": "mysql-read-n39600-r2",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 8.821398410867012,
+    "formal_cpu_max_percent": 38.0,
+    "min_available_mib": 304.15625,
+    "max_threads": 36
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 8.099117645953566,
+    "formal_cpu_max_percent": 10.89108910891089,
+    "min_available_mib": 1032.4140625,
+    "max_threads": 80
+  },
+  {
+    "run": "mysql-read-n55000-r3",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 4.675620134465128,
+    "formal_cpu_max_percent": 19.999999999999996,
+    "min_available_mib": 307.0390625,
+    "max_threads": 43
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 10.891470495333794,
+    "formal_cpu_max_percent": 15.270935960591137,
+    "min_available_mib": 1021.015625,
+    "max_threads": 160
+  },
+  {
+    "run": "mysql-read-n60500-r2",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 5.31995682414418,
+    "formal_cpu_max_percent": 15.841584158415845,
+    "min_available_mib": 305.61328125,
+    "max_threads": 65
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 10.992656116285394,
+    "formal_cpu_max_percent": 13.567839195979904,
+    "min_available_mib": 1015.16015625,
+    "max_threads": 98
+  },
+  {
+    "run": "mysql-read-n66000-r3",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 4.467338844265424,
+    "formal_cpu_max_percent": 14.500000000000002,
+    "min_available_mib": 313.5234375,
+    "max_threads": 51
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 34.88886792604734,
+    "formal_cpu_max_percent": 73.01587301587303,
+    "min_available_mib": 512.71484375,
+    "max_threads": 2316
+  },
+  {
+    "run": "mysql-read-n71500-r1",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 9.972696406732503,
+    "formal_cpu_max_percent": 25.628140703517587,
+    "min_available_mib": 156.09375,
+    "max_threads": 595
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 20.08261678188149,
+    "formal_cpu_max_percent": 26.57004830917874,
+    "min_available_mib": 707.74609375,
+    "max_threads": 1088
+  },
+  {
+    "run": "mysql-read-n68750-r1",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 9.801875877118336,
+    "formal_cpu_max_percent": 17.619047619047624,
+    "min_available_mib": 196.30078125,
+    "max_threads": 301
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 16.31102561981793,
+    "formal_cpu_max_percent": 21.499999999999996,
+    "min_available_mib": 702.08984375,
+    "max_threads": 1015
+  },
+  {
+    "run": "mysql-read-n67375-r1",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 6.926724573617676,
+    "formal_cpu_max_percent": 20.398009950248753,
+    "min_available_mib": 194.07421875,
+    "max_threads": 281
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 12.42491132172166,
+    "formal_cpu_max_percent": 15.000000000000002,
+    "min_available_mib": 802.609375,
+    "max_threads": 526
+  },
+  {
+    "run": "mysql-read-n66000-r4",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 5.004296725641194,
+    "formal_cpu_max_percent": 15.000000000000002,
+    "min_available_mib": 217.63671875,
+    "max_threads": 161
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 12.082204833843921,
+    "formal_cpu_max_percent": 15.609756097560979,
+    "min_available_mib": 788.6875,
+    "max_threads": 667
+  },
+  {
+    "run": "mysql-read-n67375-r2",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 5.638716314731535,
+    "formal_cpu_max_percent": 15.500000000000004,
+    "min_available_mib": 211.97265625,
+    "max_threads": 195
+  },
+  {
+    "run": "mysql-read-n4400-r10",
+    "role": "monitor",
+    "formal_cpu_mean_percent": 3.434979301130927,
+    "formal_cpu_max_percent": 9.090909090909093,
+    "min_available_mib": 1062.90625,
+    "max_threads": 36
+  },
+  {
+    "run": "mysql-read-n4400-r10",
+    "role": "compiler",
+    "formal_cpu_mean_percent": 2.0648502930158195,
+    "formal_cpu_max_percent": 3.9800995024875663,
+    "min_available_mib": 324.203125,
+    "max_threads": 36
+  }
+]

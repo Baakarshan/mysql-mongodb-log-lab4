@@ -1,0 +1,98 @@
+{
+  "rates": {
+    "monitor": 255,
+    "compiler": 65
+  },
+  "hosts": {
+    "monitor": {
+      "rate": 255,
+      "samples": 14025,
+      "expected": 14025,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "exit_code": 0,
+      "min_available_mib": 1051.69921875,
+      "max_threads": 41,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    },
+    "compiler": {
+      "rate": 65,
+      "samples": 3575,
+      "expected": 3575,
+      "quality": {
+        "passed": true,
+        "max_deviation_fraction": 0.0,
+        "edge_drift_fraction": 0.0,
+        "target_deviation_fraction": 0.0,
+        "reasons": []
+      },
+      "hps": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ],
+      "exit_code": 0,
+      "min_available_mib": 320.28125,
+      "max_threads": 36,
+      "native_error": false,
+      "pids_before": "max 0\n",
+      "pids_after": "max 0\n",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "errors": 0,
+  "samples": 17600,
+  "planned": 17600,
+  "clock_offset_ms": {
+    "monitor": 0,
+    "compiler": 0
+  }
+}

@@ -1,0 +1,35 @@
+# 按教师规则设置指标；1秒采集，两个规则组均每2秒计算。
+# 速率窗口为2秒；内存当前值直接相除，过滤JVM未定义的最大值。
+groups:
+  - name: spring_aop_recording_rules
+    interval: 2s
+    rules:
+      - record: spring:http_requests:rate2s
+        expr: rate(http_server_requests_seconds_count[2s])
+      - record: spring:http_request_duration:avg2s
+        expr: rate(http_server_requests_seconds_sum[2s]) / rate(http_server_requests_seconds_count[2s])
+      - record: spring:jvm_memory_heap_usage_ratio
+        expr: jvm_memory_used_bytes{area="heap"} / (jvm_memory_max_bytes{area="heap"} > 0)
+      - record: spring:jvm_memory_nonheap_usage_ratio
+        expr: jvm_memory_used_bytes{area="nonheap"} / (jvm_memory_max_bytes{area="nonheap"} > 0)
+      - record: spring:jvm_gc_pause:rate2s
+        expr: rate(jvm_gc_pause_seconds_count[2s])
+      - record: spring:jvm_threads_live_threads
+        expr: jvm_threads_live_threads
+  - name: node_recording_rules
+    interval: 2s
+    rules:
+      - record: node:cpu_usage_percent
+        expr: (1 - sum by (instance, role) (irate(node_cpu_seconds_total{mode="idle"}[2s])) / sum by (instance, role) (irate(node_cpu_seconds_total[2s]))) * 100
+      - record: node:memory_usage_percent
+        expr: (1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100
+      - record: node:filesystem_usage_percent
+        expr: (1 - node_filesystem_avail_bytes{mountpoint!="/boot"} / node_filesystem_size_bytes{mountpoint!="/boot"}) * 100
+      - record: node:network_receive_bytes:rate2s
+        expr: rate(node_network_receive_bytes_total[2s])
+      - record: node:network_transmit_bytes:rate2s
+        expr: rate(node_network_transmit_bytes_total[2s])
+      - record: node:disk_read_bytes:rate2s
+        expr: rate(node_disk_read_bytes_total[2s])
+      - record: node:disk_written_bytes:rate2s
+        expr: rate(node_disk_written_bytes_total[2s])

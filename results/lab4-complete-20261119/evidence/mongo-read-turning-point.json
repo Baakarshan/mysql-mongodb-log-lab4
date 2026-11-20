@@ -1,0 +1,13 @@
+{
+  "backend": "mongo",
+  "operation": "read",
+  "last_normal_candidate_rps": 1190,
+  "first_stress_candidate_rps": 1225,
+  "interval_width_rps": 35,
+  "normal_confirmation": "mongo-read-n65450-r2",
+  "stress_confirmation": "mongo-read-n67375-r2",
+  "confirmed_normal": true,
+  "confirmed_stress": true,
+  "application_heap_mib": 192,
+  "criterion": "mean elapsed >50ms or errors >1% or unhealthy application"
+}

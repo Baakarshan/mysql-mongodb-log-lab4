@@ -1,0 +1,13 @@
+{
+  "backend": "mysql",
+  "operation": "write",
+  "last_normal_candidate_rps": 3960,
+  "first_stress_candidate_rps": 3990,
+  "interval_width_rps": 30,
+  "normal_confirmation": "mysql-write-n217800-r2",
+  "stress_confirmation": "mysql-write-n219450-r2",
+  "confirmed_normal": true,
+  "confirmed_stress": true,
+  "application_heap_mib": 128,
+  "criterion": "mean elapsed >50ms or errors >1% or unhealthy application"
+}

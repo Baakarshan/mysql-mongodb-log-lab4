@@ -1,0 +1,17 @@
+{
+  "backend": "mongo",
+  "operation": "write",
+  "last_normal_candidate_rps": 3775,
+  "first_stress_candidate_rps": 3840,
+  "interval_width_rps": 65,
+  "normal_confirmation": "mongo-write-n207625-r2",
+  "stress_confirmation": "mongo-write-n211200-r2",
+  "confirmed_normal": true,
+  "confirmed_stress": true,
+  "mixed_classification_rates": [
+    3810
+  ],
+  "application_heap_mib": 128,
+  "criterion": "mean elapsed >50ms or errors >1% or unhealthy application",
+  "boundary_policy": "复核稳定正常与重复压力端点；混合表现档保留在表内"
+}

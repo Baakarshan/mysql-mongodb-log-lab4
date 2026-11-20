@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "run": "mongo-write-n207625-r2",
+      "label": "01 3775/s",
+      "measurement_gzip_sha256": "9d2a816cd77be7e34816de282012cdeed1099c9f13114e01e935f71ebf75e4c8",
+      "samples": 75500
+    },
+    {
+      "run": "mongo-write-n4400-r3",
+      "label": "02 80/s",
+      "measurement_gzip_sha256": "f97822e6bd912ba1c914dd649d4064fdb6eea6d838ef76219311611b9d1f911b",
+      "samples": 1600
+    }
+  ],
+  "display_timezone": "Asia/Shanghai",
+  "timestamp_policy": "保留各档真实请求时刻，各正式窗口之间存在预热、重置与重启间隔",
+  "label_policy": "编号与计划速率标识序列；线程总数和重复编号在逐次结果表对应",
+  "original_jtl_unchanged": true,
+  "display_jtl_sha256": "cbc78908e8764063573558a75c2302d5de34d049844ef1fdc1b24f213260a17a"
+}

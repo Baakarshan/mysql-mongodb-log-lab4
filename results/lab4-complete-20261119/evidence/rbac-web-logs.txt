@@ -1,0 +1,44 @@
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rbac_v33_web.1.sga8kama59e9@course-manager    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rbac_v33_web.1.sga8kama59e9@course-manager    | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rbac_v33_web.1.sga8kama59e9@course-manager    | /docker-entrypoint.sh: Configuration complete; ready for start up
+rbac_v33_web.1.sga8kama59e9@course-manager    | 2026/11/19 09:06:59 [emerg] 1#1: host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.sga8kama59e9@course-manager    | nginx: [emerg] host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | /docker-entrypoint.sh: Configuration complete; ready for start up
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | 2026/11/19 09:03:38 [emerg] 1#1: host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.q2ln4w8j2kbj@course-manager    | nginx: [emerg] host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | /docker-entrypoint.sh: Configuration complete; ready for start up
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | 2026/11/19 09:07:15 [emerg] 1#1: host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.aa7lnuxb81d0@course-manager    | nginx: [emerg] host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | /docker-entrypoint.sh: Configuration complete; ready for start up
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | 2026/11/19 09:06:42 [emerg] 1#1: host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1
+rbac_v33_web.1.x53lwnzx1pv7@course-manager    | nginx: [emerg] host not found in upstream "rbac:8080" in /etc/nginx/conf.d/default.conf:1

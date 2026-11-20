@@ -1,0 +1,99 @@
+2026-11-19 11:09:45,067 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-11-19 11:09:45,084 INFO o.a.j.JMeter: Loading user properties from: /opt/lab3/tools/apache-jmeter-5.6.3/bin/user.properties
+2026-11-19 11:09:45,084 INFO o.a.j.JMeter: Loading system properties from: /opt/lab3/tools/apache-jmeter-5.6.3/bin/system.properties
+2026-11-19 11:09:45,084 INFO o.a.j.JMeter: Setting JMeter property: jmeterengine.force.system.exit=true
+2026-11-19 11:09:45,084 INFO o.a.j.JMeter: Loading additional properties from: /opt/lab4/scripts/jmeter.properties
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: host=172.31.12.145
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: port=18080
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: operation=read
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: group_rate=3
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: ramp=55
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: Setting JMeter property: clockFile=/opt/lab4/dual-1795057783999318000-compiler/start-ms.txt
+2026-11-19 11:09:45,085 INFO o.a.j.JMeter: LogLevel: org.apache.jmeter.threads=WARN
+2026-11-19 11:09:45,087 INFO o.a.j.JMeter: Setting JMeter property: summariser.interval=5
+2026-11-19 11:09:45,092 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-11-19 11:09:45,092 INFO o.a.j.JMeter: Version 5.6.3
+2026-11-19 11:09:45,092 INFO o.a.j.JMeter: java.version=17.0.7
+2026-11-19 11:09:45,092 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-11-19 11:09:45,092 INFO o.a.j.JMeter: os.name=Linux
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: os.arch=amd64
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: os.version=4.15.0-213-generic
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: java.awt.headless=true
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: Max memory     =134217728
+2026-11-19 11:09:45,093 INFO o.a.j.JMeter: Available Processors =2
+2026-11-19 11:09:45,104 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-11-19 11:09:45,104 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-11-19 11:09:45,104 INFO o.a.j.JMeter: JMeterHome=/opt/lab3/tools/apache-jmeter-5.6.3
+2026-11-19 11:09:45,104 INFO o.a.j.JMeter: user.dir  =/
+2026-11-19 11:09:45,104 INFO o.a.j.JMeter: PWD       =/
+2026-11-19 11:09:45,105 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: course-compiler FullName: localhost.vm
+2026-11-19 11:09:45,115 INFO o.a.j.s.FileServer: Default base='/'
+2026-11-19 11:09:45,116 INFO o.a.j.s.FileServer: Set new base='/opt/lab4/dual-1795057783999318000-compiler'
+2026-11-19 11:09:45,271 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-11-19 11:09:45,291 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-11-19 11:09:45,294 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-11-19 11:09:45,296 INFO o.a.j.s.SaveService: Loading file: /opt/lab4/dual-1795057783999318000-compiler/run.jmx
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-11-19 11:09:45,354 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-11-19 11:09:45,372 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-11-19 11:09:45,390 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-11-19 11:09:45,391 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-19 11:09:45,391 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-19 11:09:45,395 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-11-19 11:09:45,395 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-11-19 11:09:45,602 INFO o.a.j.JMeter: Running test (1795057785602)
+2026-11-19 11:09:45,603 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
+2026-11-19 11:09:45,603 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : Record sampling clock 
+2026-11-19 11:09:45,603 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Record sampling clock.
+2026-11-19 11:09:45,603 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:45,606 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
+2026-11-19 11:09:45,609 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-11-19 11:09:45,609 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-11-19 11:09:45,609 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-11-19 11:09:45,609 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-11-19 11:09:46,243 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.6/s Avg:   631 Min:   631 Max:   631 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-11-19 11:09:46,243 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
+2026-11-19 11:09:46,272 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : One request group 1
+2026-11-19 11:09:46,272 INFO o.a.j.e.StandardJMeterEngine: Starting 0 threads for group One request group 1.
+2026-11-19 11:09:46,272 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:46,305 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : One request group 2
+2026-11-19 11:09:46,305 INFO o.a.j.e.StandardJMeterEngine: Starting 0 threads for group One request group 2.
+2026-11-19 11:09:46,305 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:46,309 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : One request group 3
+2026-11-19 11:09:46,309 INFO o.a.j.e.StandardJMeterEngine: Starting 0 threads for group One request group 3.
+2026-11-19 11:09:46,309 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:46,310 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : One request group 4
+2026-11-19 11:09:46,310 INFO o.a.j.e.StandardJMeterEngine: Starting 0 threads for group One request group 4.
+2026-11-19 11:09:46,310 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:46,313 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : One request group 5
+2026-11-19 11:09:46,313 INFO o.a.j.e.StandardJMeterEngine: Starting 0 threads for group One request group 5.
+2026-11-19 11:09:46,313 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-19 11:09:46,318 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-11-19 11:09:50,402 INFO o.a.j.p.h.s.HTTPJavaImpl: Maximum connection retries = 0
+2026-11-19 11:09:52,065 INFO o.a.j.r.Summariser: summary +     26 in 00:00:06 =    4.5/s Avg:     8 Min:     3 Max:    19 Err:     0 (0.00%) Active: 4 Started: 30 Finished: 26
+2026-11-19 11:09:52,066 INFO o.a.j.r.Summariser: summary =     27 in 00:00:06 =    4.2/s Avg:    31 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:09:58,065 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     5 Min:     3 Max:     9 Err:     0 (0.00%) Active: 5 Started: 120 Finished: 115
+2026-11-19 11:09:58,065 INFO o.a.j.r.Summariser: summary =    117 in 00:00:12 =    9.4/s Avg:    11 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:04,067 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     5 Min:     4 Max:     9 Err:     0 (0.00%) Active: 5 Started: 210 Finished: 205
+2026-11-19 11:10:04,068 INFO o.a.j.r.Summariser: summary =    207 in 00:00:18 =   11.2/s Avg:     8 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:10,066 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     5 Min:     3 Max:     9 Err:     0 (0.00%) Active: 5 Started: 300 Finished: 295
+2026-11-19 11:10:10,067 INFO o.a.j.r.Summariser: summary =    297 in 00:00:24 =   12.1/s Avg:     7 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:16,065 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     5 Min:     3 Max:     9 Err:     0 (0.00%) Active: 4 Started: 390 Finished: 386
+2026-11-19 11:10:16,066 INFO o.a.j.r.Summariser: summary =    387 in 00:00:30 =   12.7/s Avg:     7 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:22,063 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     5 Min:     3 Max:    21 Err:     0 (0.00%) Active: 4 Started: 480 Finished: 476
+2026-11-19 11:10:22,064 INFO o.a.j.r.Summariser: summary =    477 in 00:00:36 =   13.1/s Avg:     7 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:28,063 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     4 Min:     3 Max:     7 Err:     0 (0.00%) Active: 5 Started: 570 Finished: 565
+2026-11-19 11:10:28,064 INFO o.a.j.r.Summariser: summary =    567 in 00:00:42 =   13.4/s Avg:     6 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:34,064 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     4 Min:     3 Max:     8 Err:     0 (0.00%) Active: 5 Started: 660 Finished: 655
+2026-11-19 11:10:34,064 INFO o.a.j.r.Summariser: summary =    657 in 00:00:48 =   13.6/s Avg:     6 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:40,063 INFO o.a.j.r.Summariser: summary +     90 in 00:00:06 =   15.0/s Avg:     4 Min:     3 Max:     9 Err:     0 (0.00%) Active: 5 Started: 750 Finished: 745
+2026-11-19 11:10:40,064 INFO o.a.j.r.Summariser: summary =    747 in 00:00:54 =   13.7/s Avg:     6 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:53,393 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-11-19 11:10:53,396 INFO o.a.j.r.Summariser: summary +     79 in 00:00:13 =    5.9/s Avg:     4 Min:     3 Max:     8 Err:     0 (0.00%) Active: 0 Started: 825 Finished: 825
+2026-11-19 11:10:53,396 INFO o.a.j.r.Summariser: summary =    826 in 00:01:08 =   12.2/s Avg:     6 Min:     3 Max:   631 Err:     0 (0.00%)
+2026-11-19 11:10:53,396 INFO o.a.j.e.StandardJMeterEngine: Forced JVM shutdown requested at end of test

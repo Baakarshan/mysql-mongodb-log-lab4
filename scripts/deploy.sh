@@ -7,6 +7,7 @@ APP_IP=${APP_HOST:-172.31.12.145}
 MYSQL_IMAGE=${MYSQL_IMAGE:-mysql:8.4.13}
 MONGO_IMAGE=${MONGO_IMAGE:-docker.m.daocloud.io/library/mongo@sha256:c630c59342c1493d50345136df2af14a76b9e827dd5316bfabee07a0880a5f3a}
 JAVA_IMAGE=${JAVA_IMAGE:-docker.m.daocloud.io/library/eclipse-temurin@sha256:2a9eb226abb654c9d1f91b53cf638d20cb3abb726d1b18a67909c29515545469}
+APP_HEAP_MIB=${APP_HEAP_MIB:-192}
 case "$1" in
  mysql)
   source "$ROOT/db.env"
@@ -18,7 +19,7 @@ case "$1" in
   docker run -d --name lab4-mongo --restart unless-stopped --memory=1g -p "$DB_IP:27017:27017" -e MONGO_INITDB_ROOT_USERNAME="$DB_USER" -e MONGO_INITDB_ROOT_PASSWORD="$DB_PASSWORD" -v "$ROOT/mongo:/data/db" -v "$ROOT/fixtures:/fixtures:ro" "$MONGO_IMAGE" --wiredTigerCacheSizeGB 0.25 --bind_ip_all
   ;;
  app)
-  docker run -d --name lab4-app --restart unless-stopped --memory=560m -p "$APP_IP:18080:8080" --env-file "$ROOT/app.env" -v "$ROOT/app.jar:/app.jar:ro" "$JAVA_IMAGE" java -Xms64m -Xmx256m -Xss256k -XX:MaxMetaspaceSize=128m -jar /app.jar
+  docker run -d --name lab4-app --restart unless-stopped --memory=560m -p "$APP_IP:18080:8080" --env-file "$ROOT/app.env" -v "$ROOT/app.jar:/app.jar:ro" "$JAVA_IMAGE" java -Xms64m "-Xmx${APP_HEAP_MIB}m" -Xss256k -XX:MaxMetaspaceSize=128m -jar /app.jar
   ;;
  *) echo 'Usage: deploy.sh mysql|mongo|app' >&2; exit 2;;
 esac

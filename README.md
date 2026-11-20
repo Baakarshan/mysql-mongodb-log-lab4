@@ -80,6 +80,19 @@ python3 scripts/certified-stage.py mongo write --rate 80 --output results/reprod
 
 发送核验失败的档位退出码为1，数据仍保存以供排查。结束后停止实验应用，启动原MySQL容器，并恢复先前暂停的课程服务。
 
+## 查看当前 node_exporter 服务
+
+演示环境的 Manager、Node1、Node2 已将 node_exporter 从普通容器迁移为 Swarm 服务，各节点一个副本，继续绑定原内网地址的9100端口；Compiler保留独立容器。实验原始监控数据保持原样。部署配置见[Swarm exporter脚本](scripts/deploy-exporter-swarm.sh)。
+
+在 Manager 执行：
+
+```bash
+docker service ls --filter name=lab4-node-exporter
+docker service ps lab4-node-exporter-manager lab4-node-exporter-node1 lab4-node-exporter-node2
+```
+
+普通容器含已停止容器用 `docker ps -a` 查看；Swarm服务用 `docker service ls` 查看，任务运行及退出记录用 `docker service ps` 查看。
+
 ## 查看原始页面
 
 在仓库根目录运行：

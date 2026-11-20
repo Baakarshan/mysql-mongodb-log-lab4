@@ -34,7 +34,7 @@ def apply_page(q):
 
 def p(text,style=None):
  md.append(text+'\n');q=D.add_paragraph(text,style);apply_page(q)
- if text in ['温子健','CHIKIN WEN'] or text.startswith(('摘　要：','关键词：','Log Read and Write Performance','Abstract:','Key words:')):
+ if text in ['温子健、郑本壹','CHIKIN WEN, Benyi Zheng'] or text.startswith(('摘　要：','关键词：','Log Read and Write Performance','Abstract:','Key words:')):
   q.paragraph_format.first_line_indent=Pt(0)
   for run in q.runs:
    if text.startswith(('摘　要：','关键词：')):run._element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'),'KaiTi')
@@ -86,10 +86,10 @@ def purpose_name(s,t):
  return labels.get(s['purpose'],s['purpose'])
 N=sum(s['samples'] for s in runs)
 bounds='；'.join(f'{names[k]}{turns[k]["last_normal_candidate_rps"]}—{turns[k]["first_stress_candidate_rps"]}次/秒' for k in keys)
-p('MySQL 与 MongoDB 日志读写性能对比','Title');p('温子健')
+p('MySQL 与 MongoDB 日志读写性能对比','Title');p('温子健、郑本壹')
 p(f'摘　要：本文以相同日志业务比较Spring Data JPA/MySQL与Spring Data MongoDB/MongoDB的读取和写入性能。四台服务器分两轮复用，每档恢复相同的10万条日志，采用开放式等间隔到达计划，以平均HTTP响应时间为主指标逐级升压。Prometheus每1秒采集、每2秒计算，结合主机CPU、内存与应用等待分析响应转折。四类转折复核区间为：{bounds}。共核验{len(runs)}次正式运行、{N:,}次请求。')
 p('关键词：MySQL；MongoDB；负载测试；压力测试；平均响应时间；JMeter；Prometheus')
-p('Log Read and Write Performance of MySQL and MongoDB');p('CHIKIN WEN')
+p('Log Read and Write Performance of MySQL and MongoDB');p('CHIKIN WEN, Benyi Zheng')
 p(f'Abstract: This experiment compares log reads and writes through Spring Data JPA/MySQL and Spring Data MongoDB/MongoDB. Four servers are reused in two database rounds. Each run restores the same 100,000 logs and uses evenly spaced open arrivals. Mean HTTP response time is the primary metric. Prometheus scrapes every second and evaluates rules every two seconds. Progressive loads and boundary checks relate response degradation to CPU, memory and application queues. The four categories contain {len(runs)} verified runs and {N:,} measured requests. Results are compared at common request rates and interpreted with the corresponding resource observations.')
 p('Key words: MySQL; MongoDB; load testing; stress testing; mean response time; JMeter; Prometheus')
 h('1 问题描述')
@@ -147,4 +147,4 @@ for op,title in [('read','读取'),('write','写入')]:
 p(f'本实验完成四类逐级测试，共{len(runs)}次正式运行、{N:,}条正式样本。各类原始JTL、预热数据、逐秒HPS、监控数据、配置、日志和原生图表均按运行名关联。结果采用逐档探索及边界独立复核，重复运行分别展示。')
 h('参考文献')
 for text in ['[1] 课程实验四 Mongo的读写性能测试 实验说明。','[2] 教师示例代码 https://gitee.com/mingqcn/spring-fundamentals。','[3] Apache JMeter 5.6.3 User Manual https://jmeter.apache.org/usermanual/。','[4] Prometheus Querying and Recording Rules https://prometheus.io/docs/。','[5] Spring Data JPA and Spring Data MongoDB Reference Documentation https://spring.io/projects/spring-data。','[6] MySQL 8.4 Reference Manual https://dev.mysql.com/doc/refman/8.4/en/。','[7] MongoDB 7.0 Manual https://www.mongodb.com/docs/v7.0/。']:p(text)
-D.core_properties.author='温子健 / CHIKIN WEN';D.core_properties.title='MySQL 与 MongoDB 日志读写性能对比';D.save(O/'实验四实验报告.docx');(O/'实验四实验报告.md').write_text('\n'.join(md));print('Report built',len(runs),N)
+D.core_properties.author='温子健 / CHIKIN WEN、郑本壹 / Benyi Zheng';D.core_properties.title='MySQL 与 MongoDB 日志读写性能对比';D.save(O/'实验四实验报告.docx');(O/'实验四实验报告.md').write_text('\n'.join(md));print('Report built',len(runs),N)
